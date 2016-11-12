@@ -1,0 +1,60 @@
+baseurl: "https://hujiaweibujidao.github.io/"
+languageCode: "zh-cn"
+title: "Hujiawei Bujidao"
+paginate: 20
+Copyright: "All rights reserved &copy; 2016"
+canonifyurls: true
+# enables syntax guessing for code fences without specified language
+pygmentsCodeFencesGuessSyntax: true
+# color-codes for highlighting derived from this style #monokai
+pygmentsStyle: "hyde"
+# true: use pygments-css or false: color-codes directly
+pygmentsUseClasses: true
+disable404: true
+buildDrafts: true
+metaDataFormat: "yaml"                      # toml, yaml, or json
+theme: "casper"
+
+# hugo special directories. generally do *not* need to modify these
+contentdir: "content"
+dataDir: "data"
+defaultLayout: "post"
+layoutdir: "layouts"
+paginatePath: "page"
+publishdir: "public"
+staticdir: "static"
+
+permalinks:
+  post: /:year/:month/:title/
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+params:
+  description: "Happy Coding & Enjoy Living"
+  #cover: "https://www.bing.com/ImageResolution.aspx?w=1366&h=768"
+  cover: "images/default.jpg"
+  author: "hujiawei"
+  authorlocation: "Guangdong, China"
+  authorwebsite: "https://hujiaweibujidao.github.io/"
+  bio: "Android Developer"
+  logo: "images/logo.png"
+  githubName: "hujiaweibujidao"
+  twitterName: "hujiaweiyinger"
+  facebookName: "hujiaweiyinger"
+  linkedinName: "hujiaweibujidao"
+  hideHUGOSupport: false
+
+# menu config. this section defines the area that appears when the user clicks
+# the hamburger menu in upper-right hand corner of the site.
+menu:
+  main:
+    - name: "Blog"                          # name that appears in the menu list
+      weight: -120                          # order it appears more negative == closer to top of list
+      identifier: "blog"                    # TODO: not sure what this is responsible for
+      url: "/"                              # link address to use when user clicks on menu option
+    - name: "About"
+      weight: -110
+      identifier: "about"
+      url: "/about"
