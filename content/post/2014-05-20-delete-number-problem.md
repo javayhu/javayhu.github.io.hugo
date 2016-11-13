@@ -1,7 +1,7 @@
 ---
 title: "Problem: Delete Number Problem"
 date: "2014-05-20"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 删数问题的贪心和动规解法 <!--more-->
 

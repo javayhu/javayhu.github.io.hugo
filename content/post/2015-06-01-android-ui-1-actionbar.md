@@ -1,7 +1,7 @@
 ---
 title: "Head First Android ActionBar"
 date: "2015-06-01"
-categories: "android"
+tags: ["android"]
 ---
 本文介绍Android ActionBar的使用 <!--more-->
 

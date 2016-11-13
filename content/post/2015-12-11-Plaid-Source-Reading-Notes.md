@@ -1,6 +1,6 @@
 ---
 title: Plaid Source Reading Notes
-categories: "android"
+tags: ["android"]
 date: "2015-12-11"
 published: false
 ---

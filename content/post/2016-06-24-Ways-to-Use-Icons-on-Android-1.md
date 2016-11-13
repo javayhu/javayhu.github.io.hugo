@@ -1,6 +1,6 @@
 ---
 title: Ways to Use Icons on Android (1)
-categories: "android"
+tags: ["android"]
 date: "2016-06-24"
 ---
 本节主要介绍几种Material Design图标的使用姿势。<!--more-->

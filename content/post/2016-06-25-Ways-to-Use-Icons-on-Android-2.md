@@ -1,6 +1,6 @@
 ---
 title: Ways to Use Icons on Android (2)
-categories: "android"
+tags: ["android"]
 date: "2016-06-25"
 ---
 本节主要介绍几种图标字体的制作方法和Iconify扩展的使用姿势。<!--more-->

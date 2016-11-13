@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes
-categories: "android"
+tags: ["android"]
 date: "2015-11-29"
 ---
 **《Android群英传》读书笔记系列目录** <!--more-->

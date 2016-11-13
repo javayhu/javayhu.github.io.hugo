@@ -1,11 +1,11 @@
 ---
 title: When Math meets Android Animation (2)
-categories: "android"
+tags: ["android"]
 date: "2016-05-27"
 ---
 当数学遇上动画：讲述`ValueAnimator`、`TypeEvaluator`和`TimeInterpolator`之间的恩恩怨怨(2)<!--more-->
 
-[上一节](/blog/2016/05/26/when-math-meets-android-animation/)的结论是，`ValueAnimator`就是由`TimeInterpolator`和`TypeEvaluator`这两个简单函数组合而成的一个复合函数。如下图所示：
+[上一节](/blog/2016/05/26/when-math-meets-android-animation-1/)的结论是，`ValueAnimator`就是由`TimeInterpolator`和`TypeEvaluator`这两个简单函数组合而成的一个复合函数。如下图所示：
 
 ![img](/images/valueanimator_math.png)
 
@@ -195,4 +195,4 @@ animator2.start();
 
 关于`ValueAnimator`和`TimeInterpolator`、`TypeEvaluator`之间的恩恩怨怨讲到这里其实已经讲得差不多了，猜猜下一节我会说啥？~(≧▽≦)/~
 
-请继续看[下一节](/blog/2016/05/28/When-Math-meets-Android-Animation-3/)。
+请继续看[下一节](/blog/2016/05/28/when-math-meets-android-animation-3/)。

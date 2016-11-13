@@ -1,7 +1,7 @@
 ---
 title: "Tips about MacBook's battery health"
 date: "2015-02-15"
-categories: "life"
+tags: ["life"]
 ---
 内容摘自Mac上的一个灰常好的免费软件Battery Health中关于保养MacBook的电池寿命的建议，与大家一起分享 <!--more-->
 

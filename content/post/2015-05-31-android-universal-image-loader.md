@@ -1,7 +1,7 @@
 ---
 title: "Android Universal Image Loader"
 date: "2015-05-31"
-categories: "android"
+tags: ["android"]
 ---
 本文总结了著名的Android UIL图像加载和显示库的使用 <!--more-->
 

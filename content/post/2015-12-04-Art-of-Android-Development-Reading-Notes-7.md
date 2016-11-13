@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 7
-categories: "android"
+tags: ["android"]
 date: "2015-11-30"
 ---
 《Android开发艺术探索》读书笔记 (7) 第7章 Android动画深入分析 <!--more-->

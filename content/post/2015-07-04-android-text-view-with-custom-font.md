@@ -1,7 +1,7 @@
 ---
 title: "Android Text View with Custom Font"
 date: "2015-07-04"
-categories: "android"
+tags: ["android"]
 ---
 本文以自定义TextView为例简单实践下如何自定义View，它能够根据设置的xml属性采用不同的字体显示文字<!--more-->
 

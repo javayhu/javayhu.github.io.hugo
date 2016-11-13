@@ -1,7 +1,7 @@
 ---
 title: "Android Ndk and Opencv Development 4"
 date: "2014-02-21"
-categories: "android"
+tags: ["android"]
 ---
 本节以[XFace项目](http://github.com/hujiaweibujidao/XFace.git)为例介绍Android NDK和OpenCV整合开发的流程<!--more-->
 

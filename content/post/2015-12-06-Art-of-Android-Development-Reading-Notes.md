@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes
-categories: "android"
+tags: ["android"]
 date: "2015-12-05"
 ---
 **《Android开发艺术探索》读书笔记系列目录** <!--more-->

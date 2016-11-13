@@ -1,7 +1,7 @@
 ---
 title: "Android Training Summary (1) Getting Started"
 date: "2015-06-05"
-categories: "android"
+tags: ["android"]
 ---
 [Android Training](http://developer.android.com/training/index.html) 中Getting Started部分的阅读笔记 <!--more-->
 

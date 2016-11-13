@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 8
-categories: "android"
+tags: ["android"]
 date: "2015-12-04"
 ---
 《Android开发艺术探索》读书笔记 (8) 第8章 理解Window和WindowManager <!--more-->

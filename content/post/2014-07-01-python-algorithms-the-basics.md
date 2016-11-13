@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C2 The basics"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(2) Chapter 2: The basics <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C6 Divide and Combine and Conquer"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(6) Chapter 6: Divide and Combine and Conquer <!--more-->
 

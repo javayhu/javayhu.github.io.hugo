@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 13
-categories: "android"
+tags: ["android"]
 date: "2015-12-04"
 ---
 《Android开发艺术探索》读书笔记 (13) 第13章 综合技术、第14章 JNI和NDK编程、第15章 Android性能优化 <!--more-->

@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 12
-categories: "android"
+tags: ["android"]
 date: "2015-11-30"
 ---
 《Android开发艺术探索》读书笔记 (12) 第12章 Bitmap的加载和Cache <!--more-->

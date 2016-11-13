@@ -1,6 +1,6 @@
 ---
 title: ChromeADB Project Analysis
-categories: "android"
+tags: ["android"]
 date: "2016-10-10"
 ---
 本文记录的是chromeadb项目的源码阅读总结。 <!--more-->

@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 10
-categories: "android"
+tags: ["android"]
 date: "2015-12-04"
 ---
 《Android开发艺术探索》读书笔记 (10) 第10章 Android的消息机制 <!--more-->

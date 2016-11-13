@@ -1,6 +1,6 @@
 ---
 title: Gank Alfred Workflow
-categories: "dev"
+tags: ["dev"]
 date: "2016-05-18"
 ---
 Gank Alfred Workflow，一个自制的干货搜索器！<!--more-->
@@ -55,7 +55,7 @@ Gank Alfred Workflow，一个自制的干货搜索器！<!--more-->
 
 有了后台搜索接口之后Alfred Workflow就好写了，这里使用的是被广泛使用的Python库[deanishe/alfred-workflow](https://github.com/deanishe/alfred-workflow/)，它对workflow的很多功能和操作进行了封装，例如预处理使用者输入的数据、请求数据的缓存、workflow的更新等，作者担心我们不会用，还特意写了份很好的[入门教程](http://www.deanishe.net/alfred-workflow/tutorial.html)方便开发者迅速上手。
 
-**Gank Alfred Workflow的功能是返回前10条与使用者输入的搜索关键词相关的干货，快捷键操作将会使用默认的浏览器打开对应干货的网址。**嗯，是的，仅此而已，但是其实你如果觉得有必要还可以加上默认显示最新一期的干货数据、或者自定义各种搜索方式来玩转[gank.io](http://gank.io/api)提供的API都行。
+**Gank Alfred Workflow的功能是返回前10条与使用者输入的搜索关键词相关的干货，快捷键操作将会使用默认的浏览器打开对应干货的网址。** 嗯，是的，仅此而已，但是其实你如果觉得有必要还可以加上默认显示最新一期的干货数据、或者自定义各种搜索方式来玩转[gank.io](http://gank.io/api)提供的API都行。
 
 #### 4.界面截图
 

@@ -1,6 +1,6 @@
 ---
 title: Build Android Studio Source Code
-categories: "android"
+tags: ["android"]
 date: "2016-11-09"
 ---
 本文简单记录下如何编译Android Studio这个开发工具的源码。 <!--more-->

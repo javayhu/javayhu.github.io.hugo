@@ -1,7 +1,7 @@
 ---
 title: "Setting Up Environments on New Mac"
 date: "2014-04-08"
-categories: "dev"
+tags: ["dev"]
 ---
 本文介绍在新苹果机上搭建各种开发环境的过程<!--more-->
 

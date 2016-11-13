@@ -1,7 +1,7 @@
 ---
 title: "Android Ndk and Opencv Development 1"
 date: "2013-11-18"
-categories: "android"
+tags: ["android"]
 ---
 从本节开始之后的几节将介绍关于Android NDK和OpenCV整合开发的内容，本节介绍Android NDK 和 OpenCV 整合开发的环境搭建以及人脸检测项目的运行测试。<!--more-->
 

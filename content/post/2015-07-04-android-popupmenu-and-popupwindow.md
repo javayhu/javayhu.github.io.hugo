@@ -1,7 +1,7 @@
 ---
 title: "Android PopupMenu and PopupWindow"
 date: "2015-07-04"
-categories: "android"
+tags: ["android"]
 ---
 本文通过一个实例简单介绍下PopupMenu和PopupWindow的区别和各自使用方式。 <!--more-->
 

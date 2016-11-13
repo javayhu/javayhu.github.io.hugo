@@ -1,6 +1,6 @@
 ---
 title: Head First Stanford NLP (3)
-categories: "algorithm"
+tags: ["algorithm"]
 date: "2016-03-31"
 ---
 

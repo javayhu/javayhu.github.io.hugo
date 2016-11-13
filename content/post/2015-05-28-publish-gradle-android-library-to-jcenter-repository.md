@@ -1,7 +1,7 @@
 ---
 title: "Publish Gradle Android Library to jCenter Repository"
 date: "2015-05-28"
-categories: "android"
+tags: ["android"]
 ---
 本文主要介绍如何通过Gradle将Android库项目上传到jCenter仓库中。 <!--more-->
 

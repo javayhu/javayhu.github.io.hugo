@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C5 Traversal"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(5)  Chapter 5: Traversal <!--more-->
 

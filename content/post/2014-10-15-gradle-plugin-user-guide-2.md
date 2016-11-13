@@ -1,7 +1,7 @@
 ---
 title: "Gradle Plugin for Android Development User Guide 2"
 date: "2014-10-15"
-categories: "android"
+tags: ["android"]
 ---
 Gradle Plugin for Android Development User Guide (2) <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: When Math meets Android Animation (1)
-categories: "android"
+tags: ["android"]
 date: "2016-05-26"
 ---
 当数学遇上动画：讲述`ValueAnimator`、`TypeEvaluator`和`TimeInterpolator`之间的恩恩怨怨(1)<!--more-->

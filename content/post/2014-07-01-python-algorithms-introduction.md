@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C1 Introduction"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(1) Chapter 1: Introduction <!--more-->
 

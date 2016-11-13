@@ -1,7 +1,7 @@
 ---
 title: "Python Data Structures - C3 Data Structures"
 date: "2014-05-08"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python数据结构篇(3) 数据结构 <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes 1
-categories: "android"
+tags: ["android"]
 date: "2015-11-25"
 ---
 《Android群英传》读书笔记 (1) 第一章 Android体系与系统架构 + 第二章 Android开发工具新接触 <!--more-->

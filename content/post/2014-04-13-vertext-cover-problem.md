@@ -1,7 +1,7 @@
 ---
 title: "Problem: Vertext Cover Problem"
 date: "2014-04-13"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 顶点覆盖问题可以用几种不同的算法来实现，本文使用的是分支限界法来实现<!--more-->
 

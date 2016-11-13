@@ -1,7 +1,7 @@
 ---
 title: "Python Data Structures - C4 Trees"
 date: "2014-05-08"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python数据结构篇(4) 树 <!--more-->
 

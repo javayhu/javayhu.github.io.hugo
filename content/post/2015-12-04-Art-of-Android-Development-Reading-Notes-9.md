@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 9
-categories: "android"
+tags: ["android"]
 date: "2015-12-05"
 ---
 《Android开发艺术探索》读书笔记 (9) 第9章 四大组件的工作过程  <!--more-->

@@ -1,7 +1,7 @@
 ---
 title: "Happy Mother's Day"
 date: "2014-05-10"
-categories: "life"
+tags: ["life"]
 ---
 老妈，节日快乐！祝您永远幸福健康！<!--more-->
 

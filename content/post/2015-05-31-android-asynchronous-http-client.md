@@ -1,7 +1,7 @@
 ---
 title: "Android Asynchronous Http Client"
 date: "2015-05-31"
-categories: "android"
+tags: ["android"]
 ---
 本文总结了著名的Android的异步网络请求库Asynchronous Http Client的使用 <!--more-->
 

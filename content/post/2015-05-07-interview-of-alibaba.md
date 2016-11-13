@@ -1,7 +1,7 @@
 ---
 title: "Interview of Alibaba"
 date: "2015-05-07"
-categories: "life"
+tags: ["life"]
 ---
 阿里实习的事情终于尘埃落定了，自己的坚持也算是有了一份答复，这个过程真的要感谢很多很多人，2015年注定是我遇见我的众多贵人的一年！ <!--more-->
 

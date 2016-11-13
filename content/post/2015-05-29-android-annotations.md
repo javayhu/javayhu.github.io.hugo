@@ -1,7 +1,7 @@
 ---
 title: "Android Dependency Injection Libraries"
 date: "2015-05-31"
-categories: "android"
+tags: ["android"]
 ---
 本文总结并对比了三种Android依赖注入库：Butter Knife、RoboGuice、Android Annotations的使用 <!--more-->
 

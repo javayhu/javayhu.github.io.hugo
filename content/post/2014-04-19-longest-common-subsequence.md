@@ -1,7 +1,7 @@
 ---
 title: "Problem: Longest Common Subsequence"
 date: "2014-05-19"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 最长公共子序列(LCS)是典型的动态规划问题，如果不理解动态规划请移步先看[这篇动态规划的总结](/blog/2014/07/01/python-algorithms-dynamic-programming/)，否则本文中的代码实现会不理解的哟！<!--more-->
 

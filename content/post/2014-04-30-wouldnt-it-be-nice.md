@@ -1,7 +1,7 @@
 ---
 title: "Wouldn't it be nice"
 date: "2014-04-30"
-categories: "life"
+tags: ["life"]
 ---
 《向阳处的她》中的歌曲 Wouldn't it be nice，超爱啊 <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 6
-categories: "android"
+tags: ["android"]
 date: "2015-11-30"
 ---
 《Android开发艺术探索》读书笔记 (6) 第6章 Android的Drawable <!--more-->

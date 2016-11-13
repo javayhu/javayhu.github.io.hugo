@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 3
-categories: "android"
+tags: ["android"]
 date: "2015-12-01"
 ---
 《Android开发艺术探索》读书笔记 (3) 第3章 View的事件体系 <!--more-->

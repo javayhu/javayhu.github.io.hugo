@@ -1,7 +1,7 @@
 ---
 title: "Matlab Image Segmentation"
 date: "2014-03-30"
-categories: "dev"
+tags: ["dev"]
 ---
 本文主要介绍Matlab实现的两种自动阈值图像分割方法<!--more-->
 

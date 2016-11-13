@@ -1,7 +1,7 @@
 ---
 title: "Tiny Weibo"
 date: "2014-12-09"
-categories: "android"
+tags: ["android"]
 ---
 Android Studio 1.0终于是盼来了！强大的微微博客户端终于又可以运行啦！微微博依旧是开源的！<!--more-->
 

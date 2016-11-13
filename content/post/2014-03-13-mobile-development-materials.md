@@ -1,7 +1,7 @@
 ---
 title: "Material on Mobile Development"
 date: "2014-03-13"
-categories: "android"
+tags: ["android"]
 ---
 本文主要是推荐一些移动开发的资料，主要以Android开发为主<!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Tsinghua 9ers Pictures"
 date: "2014-05-10"
-categories: "life"
+tags: ["life"]
 ---
 
 清华9字班毕业生于海童拍摄制作，视频地址[优酷视频 时光机：清华园的延时摄影](http://v.youku.com/v_show/id_XNTkwNDYxNjIw/v.swf.html) <!--more-->

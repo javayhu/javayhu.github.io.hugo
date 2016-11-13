@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C4 Induction and Recursion and Reduction"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(4) Chapter 4: Induction and Recursion and Reduction <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes 5
-categories: "android"
+tags: ["android"]
 date: "2015-11-29"
 ---
 《Android群英传》读书笔记 (5) 第十一章 搭建云端服务器 + 第十二章 Android 5.X新特性详解 + 第十三章 Android实例提高 <!--more-->

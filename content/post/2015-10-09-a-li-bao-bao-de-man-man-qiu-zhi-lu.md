@@ -1,7 +1,7 @@
 ---
 title: Job Hunting
 date: "2015-10-09"
-categories: "life"
+tags: ["life"]
 ---
 今年我找Android开发工作的干货分享，祝大家找工作顺利。 <!--more-->
 

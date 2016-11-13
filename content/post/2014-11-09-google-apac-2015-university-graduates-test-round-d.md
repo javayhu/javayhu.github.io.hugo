@@ -1,7 +1,7 @@
 ---
 title: "Google APAC 2015 University Graduates Test Round D"
 date: "2014-11-09"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Google APAC 2015 University Graduates Test Round D <!--more-->
 

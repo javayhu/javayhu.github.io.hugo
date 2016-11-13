@@ -1,7 +1,7 @@
 ---
 title: "Make Your Octopress Easy"
 date: "2013-11-18"
-categories: "dev"
+tags: ["dev"]
 ---
 写了几个`shell`脚本让你在Octopress上写博客更加轻松些，至少让我轻松了很多，哈哈哈。 <!--more-->
 

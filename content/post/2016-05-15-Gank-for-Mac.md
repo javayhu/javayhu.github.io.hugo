@@ -1,6 +1,6 @@
 ---
 title: Gank for Mac
-categories: "swift"
+tags: ["swift"]
 date: "2016-05-15"
 ---
 干货集中营的Mac客户端Gank for Mac开发小记。 <!--more-->

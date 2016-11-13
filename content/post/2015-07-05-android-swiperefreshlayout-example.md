@@ -1,7 +1,7 @@
 ---
 title: "Head First Android SwipeRefreshLayout"
 date: "2015-07-05"
-categories: "android"
+tags: ["android"]
 ---
 本文内容和代码参考自[Implementing Swipe to Refresh, an Android Material Design UI Pattern](https://www.bignerdranch.com/blog/implementing-swipe-to-refresh/)，原博客内容中略有错误。 <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes 4
-categories: "android"
+tags: ["android"]
 date: "2015-11-28"
 ---
 《Android群英传》读书笔记 (4) 第八章 Activity和Activity调用栈分析 + 第九章 系统信息与安全机制 + 第十章 性能优化 <!--more-->

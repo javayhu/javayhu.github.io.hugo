@@ -1,7 +1,7 @@
 ---
 title: "Hadoop Installation - Single Node Setup"
 date: "2014-05-12"
-categories: "dev"
+tags: ["dev"]
 ---
 本文主要介绍Hadoop的搭建过程 <!--more-->
 

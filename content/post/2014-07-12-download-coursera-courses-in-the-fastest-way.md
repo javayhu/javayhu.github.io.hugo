@@ -1,7 +1,7 @@
 ---
 title: "Download Coursera Courses in the Fastest Way"
 date: "2014-07-12"
-categories: "life"
+tags: ["life"]
 ---
 下载C站课程资源的方法 <!--more-->
 

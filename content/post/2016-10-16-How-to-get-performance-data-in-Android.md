@@ -1,6 +1,6 @@
 ---
 title: How to get performance data in Android
-categories: "android"
+tags: ["android"]
 date: "2016-10-16"
 ---
 本文记录下在Android平台上如何获取那些系统性能相关的数据。 <!--more-->

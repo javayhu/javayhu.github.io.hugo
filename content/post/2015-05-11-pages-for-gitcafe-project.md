@@ -1,7 +1,7 @@
 ---
 title: "Pages Service for GitCafe Project"
 date: "2015-05-11"
-categories: "dev"
+tags: ["dev"]
 ---
 本文简单介绍如何在GitCafe的项目中使用Pages服务 <!--more-->
 

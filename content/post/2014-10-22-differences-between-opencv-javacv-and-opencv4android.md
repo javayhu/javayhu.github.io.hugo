@@ -1,7 +1,7 @@
 ---
 title: "Differences between OpenCV JavaCV and OpenCV4Android"
 date: "2014-10-23"
-categories: "android"
+tags: ["android"]
 ---
 OpenCV，JavaCV以及OpenCV4Android之间的关系 <!--more-->
 

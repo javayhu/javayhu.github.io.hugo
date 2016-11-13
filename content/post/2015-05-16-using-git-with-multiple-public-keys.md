@@ -1,7 +1,7 @@
 ---
 title: "Using Git with multiple Public Keys"
 date: "2015-05-16"
-categories: "dev"
+tags: ["dev"]
 ---
 本文介绍如何同时使用多个Git的公私钥 <!--more-->
 

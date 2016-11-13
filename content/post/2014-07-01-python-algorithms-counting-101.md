@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C3 Counting 101"
 date: "2014-07-01"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 Python算法设计篇(3) Chapter 3: Counting 101 <!--more-->
 

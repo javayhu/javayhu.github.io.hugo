@@ -1,7 +1,7 @@
 ---
 title: "Head First Android Testing 1"
 date: "2015-05-30"
-categories: "android"
+tags: ["android"]
 ---
 深入浅出Android测试教程 (1) <!--more-->
 

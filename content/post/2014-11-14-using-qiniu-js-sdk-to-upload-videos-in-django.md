@@ -1,7 +1,7 @@
 ---
 title: "using Qiniu JS SDK to upload Videos in Django"
 date: "2014-11-14"
-categories: "dev"
+tags: ["dev"]
 ---
 使用七牛云存储服务来存储网站(Django开发)中用户上传的视频，特此记录下来，以防以后需要。<!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 11
-categories: "android"
+tags: ["android"]
 date: "2015-12-03"
 ---
 《Android开发艺术探索》读书笔记 (11) 第11章 Android的线程和线程池 <!--more-->

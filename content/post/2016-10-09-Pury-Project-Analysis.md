@@ -1,6 +1,6 @@
 ---
 title: Pury Project Analysis
-categories: "android"
+tags: ["android"]
 date: "2016-10-09"
 ---
 本文总结下对Android平台的性能分析工具Pury的源码分析。 <!--more-->

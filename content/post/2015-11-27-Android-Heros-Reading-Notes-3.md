@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes 3
-categories: "android"
+tags: ["android"]
 date: "2015-11-27"
 ---
 《Android群英传》读书笔记 (3) 第六章 Android绘图机制与处理技巧 + 第七章 Android动画机制与使用技巧 <!--more-->

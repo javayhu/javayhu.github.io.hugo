@@ -1,7 +1,7 @@
 ---
 title: "CSU beautiful scenery"
 date: "2014-05-20"
-categories: "life"
+tags: ["life"]
 ---
 在CSU经历了四年的青春，感谢母校的培养，感谢曾经一起欢笑的小伙伴们，想你们！ <!--more-->
 

@@ -1,48 +1,57 @@
+# all configurations can be found in http://gohugo.io/overview/configuration/
 baseurl: "https://hujiaweibujidao.github.io/"
 languageCode: "zh-cn"
 title: "Hujiawei Bujidao"
 paginate: 20
-Copyright: "All rights reserved &copy; 2016"
 canonifyurls: true
+disable404: false
+enableEmoji: true
+buildDrafts: true
+metaDataFormat: "yaml"
+defaultLayout: "post"
+theme: "casper"
+Copyright: "All rights reserved &copy; 2016"
+
+# duoshuo short_name but with param name "DisqusShortname"
+DisqusShortname: hujiaweibujidao
+
 # enables syntax guessing for code fences without specified language
 pygmentsCodeFencesGuessSyntax: true
 # color-codes for highlighting derived from this style #monokai
 pygmentsStyle: "hyde"
 # true: use pygments-css or false: color-codes directly
 pygmentsUseClasses: true
-disable404: true
-buildDrafts: true
-metaDataFormat: "yaml"                      # toml, yaml, or json
-theme: "casper"
 
 # hugo special directories. generally do *not* need to modify these
+archetypedir: "archetype"
 contentdir: "content"
 dataDir: "data"
-defaultLayout: "post"
 layoutdir: "layouts"
-paginatePath: "page"
-publishdir: "public"
 staticdir: "static"
+themesdir: "themes"
+publishdir: "public"
+paginatePath: "page"
 
+# must remain the permalinks used in hexo (or octopress)
 permalinks:
-  post: /:year/:month/:title/
+  post: /blog/:year/:month/:day/:title/
 
 taxonomies:
-  category: "categories"
   tag: "tags"
 
+# params used in themes
 params:
   description: "Happy Coding & Enjoy Living"
   #cover: "https://www.bing.com/ImageResolution.aspx?w=1366&h=768"
   cover: "images/default.jpg"
   author: "hujiawei"
   authorlocation: "Guangdong, China"
-  authorwebsite: "https://hujiaweibujidao.github.io/"
-  bio: "Android Developer"
+  authorwebsite: "https://github.com/hujiaweibujidao"
+  bio: "Hujiawei is an Android Developer."
   logo: "images/logo.png"
   githubName: "hujiaweibujidao"
-  twitterName: "hujiaweiyinger"
-  facebookName: "hujiaweiyinger"
+  twitterName: "hujiaweiyinger" #use it as sinaweibo
+  #facebookName: "hujiaweiyinger"
   linkedinName: "hujiaweibujidao"
   hideHUGOSupport: false
 
@@ -54,7 +63,19 @@ menu:
       weight: -120                          # order it appears more negative == closer to top of list
       identifier: "blog"                    # TODO: not sure what this is responsible for
       url: "/"                              # link address to use when user clicks on menu option
-    - name: "About"
+    - name: "Android"
       weight: -110
+      identifier: "android"
+      url: "/android"
+    - name: "Python"
+      weight: -100
+      identifier: "python"
+      url: "/python"
+    - name: "Swift"
+      weight: -90
+      identifier: "swift"
+      url: "/swift"
+    - name: "About"
+      weight: -80
       identifier: "about"
       url: "/about"

@@ -1,7 +1,7 @@
 ---
 title: "Head First PageRank"
 date: "2014-05-12"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 深入浅出PageRank算法 <!--more-->
 

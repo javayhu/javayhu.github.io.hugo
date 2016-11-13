@@ -1,6 +1,6 @@
 ---
 title: Head First Systrace
-categories: "android"
+tags: ["android"]
 date: "2016-10-03"
 ---
 深入浅出systrace（1）systrace的简单介绍和systrace工具源码分析。 <!--more-->
@@ -534,7 +534,7 @@ class FileReaderThread(threading.Thread):
 ```
 
 **3.5.3 AtraceAgent类**
- 
+
 AtraceAgent类的实现主要是在`start`方法中构建对应的atrace命令，然后利用`subprocess`模块去执行，最后在`collect_result`方法中解析systrace结果即可。其中的内部变量`_expect_trace`是用来指示这个命令是否会创建systrace数据，`_adb`表示`subprocess`执行的命令，`_trace_data`是指systrace的数据，`_tracer_args`是指systracer的参数。
 
 ```python
@@ -900,5 +900,3 @@ class BootAgent(AtraceAgent):
 ```
 
 OK，本文的systrace工具源码分析结束，后面会抽空陆续加上Android系统中systrace相关的类和文件的源码解析，以及利用systrace数据来分析应用性能问题的方法。
-
-

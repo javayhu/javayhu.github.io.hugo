@@ -4,16 +4,12 @@
 {{$authorbio := or $author.bio .Site.Params.bio }}
 {{$authorlocation := or $author.location .Site.Params.authorlocation }}
 {{$authorwebsite := or $author.website .Site.Params.authorwebsite }}
-<section class="author">
-  <h4><a href="{{.Site.BaseURL}}">{{$authorname}}</a></h4>
-  {{if $authorbio}}
-  <p>{{$authorbio}}</p>
-  {{else}}
-  <p>Read <a href="{{.Site.BaseURL}}">more posts</a> by this author.</p>
-  {{end}}
-  <div class="author-meta">
-    {{with $authorlocation}}<span class="author-location icon-location">{{.}}</span>{{end}}
-    {{with $authorwebsite}}<span class="author-link icon-link"><a href="{{.}}">{{.}}</a></span>{{end}}
+<section class="author" style="width:100%;">
+  <div class="author-meta" style="width:100%;text-align:center;">
+    {{with $authorbio}}<span class="author-location icon-user"> {{.}}</span>{{end}}
+    {{with $authorlocation}}<span class="author-location icon-location"> {{.}}</span>{{end}}
+    {{with $authorwebsite}}<span class="author-link icon-link"><a href="{{.}}"> {{.}}</a></span>{{end}}
+    <span class="author-profile" style="width:100%;"><strong>本博客所有文章均为原创，请勿随意转载，如需转载请联系我 (<a href="mailto:hujiawei090807@gmail.com">hujiawei090807 AT gmail.com</a>)</strong></span>
   </div>
 </section>
 {{end}}

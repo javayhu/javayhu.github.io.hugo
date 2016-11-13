@@ -1,6 +1,6 @@
 ---
 title: Build Android Source Code on Mac
-categories: "android"
+tags: ["android"]
 date: "2016-10-03"
 published: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Fix Homebrew for OS X 10.10 Yosemite"
 date: "2015-06-12"
-categories: "dev"
+tags: ["dev"]
 ---
 本文主要解决系统升级到OS X 10.10 Yosemite后Homebrew出现的一些问题。<!--more-->
 

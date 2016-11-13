@@ -1,6 +1,6 @@
 ---
 title: You are My Sunshine
-categories: "life"
+tags: ["life"]
 date: "2015-11-21"
 ---
 

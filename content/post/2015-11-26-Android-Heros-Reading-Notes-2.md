@@ -1,6 +1,6 @@
 ---
 title: Android Heroes Reading Notes 2
-categories: "android"
+tags: ["android"]
 date: "2015-11-26"
 ---
 《Android群英传》读书笔记 (2) 第三章 控件架构与自定义控件详解 + 第四章 ListView使用技巧 + 第五章 Scroll分析 <!--more-->

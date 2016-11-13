@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 2
-categories: "android"
+tags: ["android"]
 date: "2015-12-05"
 ---
 《Android开发艺术探索》读书笔记 (2) 第2章 IPC机制 <!--more-->

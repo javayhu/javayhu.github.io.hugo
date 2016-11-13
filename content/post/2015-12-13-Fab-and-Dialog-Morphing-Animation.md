@@ -1,6 +1,6 @@
 ---
 title: Fab and Dialog Morphing Animation
-categories: "android"
+tags: ["android"]
 date: "2015-12-13"
 ---
 Fab and Dialog Morphing Animation on Android. <!--more-->

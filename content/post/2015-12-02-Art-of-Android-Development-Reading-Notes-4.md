@@ -1,6 +1,6 @@
 ---
 title: Art of Android Development Reading Notes 4
-categories: "android"
+tags: ["android"]
 date: "2015-12-01"
 ---
 《Android开发艺术探索》读书笔记 (4) 第4章 View的工作原理 <!--more-->

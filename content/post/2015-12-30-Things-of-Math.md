@@ -1,6 +1,6 @@
 ---
 title: Things of Math
-categories: "life"
+tags: ["life"]
 date: "2015-12-30"
 ---
 之前写过的总结系列：《微积分总结》、《线性代数那些事》以及《数值计算与应用》 <!--more-->

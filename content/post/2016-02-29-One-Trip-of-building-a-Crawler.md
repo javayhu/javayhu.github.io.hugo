@@ -1,6 +1,6 @@
 ---
 title: One Trip of building a Crawler
-categories: "java"
+tags: ["java"]
 date: "2016-02-29"
 ---
 最近需要从网上抓取大量的数据，于是体验了一下爬虫程序的开发和部署，主要是学会了一些实用工具的操作。 <!--more-->

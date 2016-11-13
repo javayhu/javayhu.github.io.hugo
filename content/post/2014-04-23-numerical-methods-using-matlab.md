@@ -1,7 +1,7 @@
 ---
 title: "Numerical Methods using Matlab"
 date: "2014-04-23"
-categories: "algorithm"
+tags: ["algorithm"]
 ---
 课余时间写的一本关于数值算法与应用的总结小书 <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Android NDK and OpenCV development with Android Studio"
 date: "2014-10-22"
-categories: "android"
+tags: ["android"]
 ---
 Android NDK and OpenCV development with Android Studio <!--more-->
 

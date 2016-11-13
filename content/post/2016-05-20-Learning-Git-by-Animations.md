@@ -1,6 +1,6 @@
 ---
 title: Learning Git by Animations
-categories: "dev"
+tags: ["dev"]
 date: "2016-05-20"
 ---
 看到一个动画版的Git教程([网址](http://learngitbranching.js.org/?demo))，动画效果真心不错，所以学了下，本文是记录其中的几个重点部分。<!--more-->

@@ -1,7 +1,7 @@
 ---
 title: "Bootcamp an open source Django site"
 date: "2014-09-16"
-categories: "dev"
+tags: ["dev"]
 ---
 一个Django开发的开源网站Bootcamp <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Mou and StackEdit and Mathjax"
 date: "2014-04-15"
-categories: "dev"
+tags: ["dev"]
 ---
 本文记录使用Mou和Stackedit中出现的一些问题，使其能够正常渲染带数学公式的文章<!--more-->
 

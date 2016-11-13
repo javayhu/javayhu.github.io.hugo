@@ -1,7 +1,7 @@
 ---
 title: "Set up Octopress environment on another computer"
 date: "2015-03-11"
-categories: "dev"
+tags: ["dev"]
 ---
 本文主要介绍如何在另一台电脑上搭建Octopress的环境。<!--more-->
 

@@ -5,7 +5,7 @@
     </a>
     <ul>
         {{ $currentNode := . }}
-        
+
         {{ range .Site.Menus.main }}
             {{.Pre}}
             <li class="nav-opened{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}} nav-current{{end}}" role="presentation">
@@ -13,11 +13,11 @@
             </li>
         {{end}}
     </ul>
-    
+
     {{ if .Site.Params.RSSLink}}
-    <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
+        <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a>
     {{else}}
-    <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
+        <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
     {{end}}
 </div>
 <span class="nav-cover"></span>

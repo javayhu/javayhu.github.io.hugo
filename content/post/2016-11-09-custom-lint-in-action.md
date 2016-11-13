@@ -1,6 +1,6 @@
 ---
 title: Custom Lint in Action
-categories: ["android"]
+tags: ["android"]
 date: "2016-11-09"
 ---
 本文记录为Android项目自定义Lint检查规则的实践研究。<!--more-->
@@ -54,10 +54,10 @@ LinkedIn提供了另一种思路：将jar放到一个aar中，然后Android项�
 
 **注意：该项目的release 1.0.0版本的lintrules依赖的是24.5.0版本的lint-api，演示的LogDetector来自下面参考资料中的美团的LogDetector。但是目前该项目最新的release 1.0.1版本依赖的是25.2.0版本的lint-api，演示的LogDetector参考自lint工具自带的LogDetector。**
 
-**其他参考资料**
-[美团-Android自定义Lint实践](http://tech.meituan.com/android_custom_lint.html)
-[segmentfault-自定义Lint规则简介](https://segmentfault.com/a/1190000004497435)
-[Android Studio配合Lint检测缺失Permission](http://www.jianshu.com/p/7b3519dc1e5f)
-[Gradle Lint support](http://avatarqing.github.io/Gradle-Plugin-User-Guide-Chinese-Verision/testing/lint_supportlint.html)
+**其他参考资料**  
+[美团-Android自定义Lint实践](http://tech.meituan.com/android_custom_lint.html)  
+[segmentfault-自定义Lint规则简介](https://segmentfault.com/a/1190000004497435)  
+[Android Studio配合Lint检测缺失Permission](http://www.jianshu.com/p/7b3519dc1e5f)  
+[Gradle Lint support](http://avatarqing.github.io/Gradle-Plugin-User-Guide-Chinese-Verision/testing/lint_supportlint.html)  
 
 OK，感兴趣的话欢迎阅读[customlint](https://github.com/hujiaweibujidao/customlint)项目源码，感谢Linkedin和MeiTuan提供的技术文档和实践源码。

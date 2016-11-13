@@ -1,7 +1,7 @@
 ---
 title: "Head First Android Toolbar"
 date: "2015-06-02"
-categories: "android"
+tags: ["android"]
 ---
 本文介绍Android Toolbar的使用 <!--more-->
 

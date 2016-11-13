@@ -1,7 +1,7 @@
 ---
 title: "Good Python Articles"
 date: "2014-05-16"
-categories: "dev"
+tags: ["dev"]
 ---
 关于Python的好文章集锦 <!--more-->
 

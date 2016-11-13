@@ -1,7 +1,7 @@
 ---
 title: "Hello Octopress"
 date: "2013-11-17"
-categories: "dev"
+tags: ["dev"]
 ---
 Hello world! Hello Octopress! <!--more-->
 

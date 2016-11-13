@@ -1,7 +1,7 @@
 ---
 title: "Talk big of West Travelling"
 date: "2014-10-24"
-categories: "life"
+tags: ["life"]
 ---
 《大话西游》观后感 <!--more-->
 

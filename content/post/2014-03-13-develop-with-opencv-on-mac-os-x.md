@@ -1,7 +1,7 @@
 ---
 title: "Develop with OpenCV on Mac"
 date: "2014-03-13"
-categories: "dev"
+tags: ["dev"]
 ---
 本文介绍如何在Mac OS X上进行OpenCV项目的开发，尝试的开发工具有Xcode(版本是4.6.1)和Eclipse，使用的OpenCV版本是2.4.6。<!--more-->
 
