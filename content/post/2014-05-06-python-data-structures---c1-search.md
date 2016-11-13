@@ -5,21 +5,16 @@ tags: ["algorithm","python"]
 ---
 Python数据结构篇(1) 搜索 <!--more-->
 
-参考内容：
-
-1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)
-
-Chapter5: Search and Sorting [online_link](http://interactivepython.org/courselib/static/pythonds/SortSearch/searching.html#searching)
-
+参考内容：  
+1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)  
+Chapter5: Search and Sorting [online_link](http://interactivepython.org/courselib/static/pythonds/SortSearch/searching.html#searching)  
 2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 
 #### 搜索(或查找)总结
 
-(1)顺序查找：O(n)
-
-(2)二分查找：O(lgn)
-
-(3)Hash查找：O(1)
+(1)顺序查找：O(n)  
+(2)二分查找：O(lgn)  
+(3)Hash查找：O(1)  
 
 概念：hash，hash table，hash function [哈希表_on_wiki](http://zh.wikipedia.org/wiki/%E5%93%88%E5%B8%8C%E8%A1%A8#.E5.A4.84.E7.90.86.E7.A2.B0.E6.92.9E)
 

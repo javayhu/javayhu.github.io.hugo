@@ -331,7 +331,7 @@ XFace应用程序的使用过程中会产生一些文件夹和文件，全部存
 ④[关于android ndk和opencv整合开发以及实例项目运行的教程](/blog/2013/11/18/android-ndk-and-opencv-developement/)
 介绍Android NDK和OpenCV整合开发的环境搭建过程和实例项目测试，重点可以参考的是其中的人脸检测和眼镜检测的两个项目，XFace中的人脸检测便来源于此。
 
-⑤[关于android ndk开发中的各种细节和问题的总结](/blog/2013/11/18/android-ndk-and-opencv-development-2/)
+⑤[关于android ndk开发中的各种细节和问题的总结](/blog/2013/11/19/android-ndk-and-opencv-development-2/)
 理解javah工具和Android.mk以及Application.mk文件的配置，如果是在Windows平台搭建环境的话，需要查看这部分关于`C/C++ Genernal -> Paths and Symbols`的配置
 
 ⑥[关于OpenCV中的人脸识别算法 - OpenCV FaceRecognizer documentation](http://bytefish.de/blog/opencv_facerecognizer_documentation/)

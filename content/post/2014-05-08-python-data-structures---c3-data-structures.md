@@ -5,22 +5,18 @@ tags: ["algorithm","python"]
 ---
 Python数据结构篇(3) 数据结构 <!--more-->
 
-参考内容：
-
-1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)
-
-Chapter 2 Algorithm Analysis   
-Chapter 3 Basic Data Structures   
-Chapter 6 Trees and Tree Algorithms   
-
-2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)
+参考内容：   
+1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)  
+Chapter 2 Algorithm Analysis    
+Chapter 3 Basic Data Structures     
+Chapter 6 Trees and Tree Algorithms       
+2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)   
 
 #### 数据结构总结
 
 1.Python内置数据结构的性能分析
 
-(1)List
-
+(1)List   
 List的各个操作的时间复杂度
 
 ![image](/images/listoptime.png)
@@ -383,4 +379,4 @@ print(bh.heap_list)
 print(bh.current_size)
 ```
 
-关于二叉查找树等内容请见[树的总结](/blog/2014/05/08/python-algorithms-Trees/)。
+关于二叉查找树等内容请见[树的总结](/blog/2014/05/09/python-data-structures---c4-trees/)。

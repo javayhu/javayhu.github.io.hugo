@@ -7,11 +7,10 @@ tags: ["android"]
 
 在Samsung呆了段时间，还是学了不少东西的，主要做的任务是做[Android NDK](http://developer.android.com/tools/sdk/ndk/index.html)开发，也涉及到了[OpenCV](http://opencv.org/)的内容，正好自己最近在开发XFace，这些知识都用得上，所以，想写几篇文章总结下这些知识。该系列内容均为原创，摘录的部分我都会引用提示，尊重版权嘛，嘿嘿，我保证这里有不少内容是搜索不到的独家秘笈哟！很多都是我的开发经验，嘿嘿。   
 
-该系列主要包括三大部分，分为下面三节来介绍，本节主要介绍第一部分
-
-1.Android NDK 和 OpenCV 整合开发的环境搭建以及人脸检测项目的运行测试
-2.[Android NDK 的核心内容和开发总结](/blog/2013/11/18/android-ndk-and-opencv-development-2/)
-3.[OpenCV 在 Android NDK 开发中的应用](/blog/2013/11/18/android-ndk-and-opencv-development-3/)
+该系列主要包括三大部分，分为下面三节来介绍，本节主要介绍第一部分  
+1.Android NDK 和 OpenCV 整合开发的环境搭建以及人脸检测项目的运行测试  
+2.[Android NDK 的核心内容和开发总结](/blog/2013/11/19/android-ndk-and-opencv-development-2/)  
+3.[OpenCV 在 Android NDK 开发中的应用](/blog/2013/11/20/android-ndk-and-opencv-development-3/)  
 
 [本文假设你是安装配置好了Java和Android SDK开发环境的，如果没有的话，可以看[我以前在点点博客写的这篇文章](http://hujiaweiyinger.diandian.com/post/2013-10-30/setup_android_ndk_environment_and_solve_some_problems)，开发工具建议使用[ADT](http://developer.android.com/sdk/installing/bundle.html)，它更加方便，包含了Android SDK 和 安装了 ADT Plugin 的 Eclipse，何乐而不为呢?]
 
@@ -121,4 +120,4 @@ OPENCVROOT = /Users/hujiawei/Android/opencv_sdk
 ![image](/images/eye_detection.png)
 
 
-OK！本节结束！如果觉得好，请看下节[Android NDK 的核心内容和开发总结](/blog/2013/11/18/android-ndk-and-opencv-development-2/)！
+OK！本节结束！如果觉得好，请看下节[Android NDK 的核心内容和开发总结](/blog/2013/11/19/android-ndk-and-opencv-development-2/)！

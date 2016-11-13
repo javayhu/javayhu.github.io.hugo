@@ -56,7 +56,7 @@ the notion of running time complexity (as described in the next section) is base
 
 (2)Tip 2: For timing things, use timeit.
 
-使用`timeit`模块对运行时间进行分析，在前面的[数据结构篇中第三部分数据结构](/blog/2014/05/08/python-algorithms-datastructures/)的list中已经介绍过了timeit模块，在使用的时候需要注意前面的运行不会影响后面的重复的运行(例如，分析排序算法运行时间，如果将前面已经排好序的序列传递给后面的重复运行是不行的)
+使用`timeit`模块对运行时间进行分析，在前面的[数据结构篇中第三部分数据结构](/blog/2014/05/08/python-data-structures---c3-data-structures/)的list中已经介绍过了timeit模块，在使用的时候需要注意前面的运行不会影响后面的重复的运行(例如，分析排序算法运行时间，如果将前面已经排好序的序列传递给后面的重复运行是不行的)
 
 ```python
 #timeit模块简单使用实例
@@ -121,7 +121,7 @@ If you want to say something conclusively about the asymptotic behavior of an al
 4.在Python中实现树和图
 
 **[Python中的dict和set]**   
-Python中很多地方都使用了hash策略，在前面的[Python数据结构篇中的搜索部分](/blog/2014/05/07/python-algorithms-search/)已经介绍了hash的内容。Python提供了`hash`函数，例如`hash("Hello, world!")`得到`-943387004357456228` (结果不一定相同)。Python中的dict和set都使用了hash机制，所以平均情况下它们获取元素都是常数时间的。
+Python中很多地方都使用了hash策略，在前面的[Python数据结构篇中的搜索部分](/blog/2014/05/06/python-data-structures---c1-search/)已经介绍了hash的内容。Python提供了`hash`函数，例如`hash("Hello, world!")`得到`-943387004357456228` (结果不一定相同)。Python中的dict和set都使用了hash机制，所以平均情况下它们获取元素都是常数时间的。
 
 (1)图的表示：最常用的两种表示方式是邻接表和邻接矩阵 [假设要表示的图如下]
 

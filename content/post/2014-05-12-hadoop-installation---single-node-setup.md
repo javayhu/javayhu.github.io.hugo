@@ -7,10 +7,8 @@ tags: ["dev"]
 
 上学期在Mac上搭建好了Hadoop，因为这学期开学重装了系统就没了，以为不会再折腾，结果大数据作业又要整hadoop，于是乎，爱折腾的程序猿又来折腾咯，有过上一次安装的经历，这次简单多了，下面简单的列举主要步骤。
 
-感谢下面两份教程：
-
-1.[en][Running Hadoop on Ubuntu Linux (Single-Node Cluster)](http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/)
-
+感谢下面两份教程：   
+1.[en][Running Hadoop on Ubuntu Linux (Single-Node Cluster)](http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/)   
 2.[cn][田俊童鞋的Hadoop的安装部署与配置](http://www.tianjun.ml/essays/16)
 
 1.下载部分

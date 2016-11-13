@@ -272,4 +272,4 @@ static char* jstringToString(JNIEnv* env, jstring jstr) {
 }
 ```
 
-哦了，还不痛快? 请看下节[OpenCV 在 Android NDK 开发中的应用](/blog/2013/11/18/android-ndk-and-opencv-development-3/)
+哦了，还不痛快? 请看下节[OpenCV 在 Android NDK 开发中的应用](/blog/2013/11/20/android-ndk-and-opencv-development-3/)

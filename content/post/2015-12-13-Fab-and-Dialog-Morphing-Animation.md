@@ -10,7 +10,7 @@ Fab and Dialog Morphing Animation on Android. <!--more-->
 ![image](/images/fabdialog.gif)
 
 #### 实现原理分析
-1.在前面的[《Android群英传》的读书笔记](/blog/2015/11/29/Android-Heroes-Reading-Notes-5/)中提到过Activity共享元素过渡动画的实现方式
+1.在前面的[《Android群英传》的读书笔记](/blog/2015/11/29/android-heroes-reading-notes-5/)中提到过Activity共享元素过渡动画的实现方式
 
 **共享元素过渡动画**：一个共享元素过渡动画决定两个Activity之间的过渡怎么共享它们的视图，包括了
 `changeBounds`：改变目标视图的布局边界；
@@ -150,7 +150,7 @@ public class MorphTransition extends ChangeBounds {
 }
 ```
 
-4.上面的代码中用到了`MorphDrawable`类，它继承自`Drawable`，并添加了前面提到的那两个属性以用于产生属性动画，默认是没有为那两个属性添加`set/get`方法的，所以需要进行扩展。关于属性动画可以看[以前的读书笔记](/blog/2015/11/27/Android-Heros-Reading-Notes-3/)，重要代码如下：
+4.上面的代码中用到了`MorphDrawable`类，它继承自`Drawable`，并添加了前面提到的那两个属性以用于产生属性动画，默认是没有为那两个属性添加`set/get`方法的，所以需要进行扩展。关于属性动画可以看[以前的读书笔记](/blog/2015/11/27/android-heroes-reading-notes-3/)，重要代码如下：
 
 ```
 /**

@@ -36,7 +36,7 @@ What the book covers only briefly or partially:
 
 学习了算法之后可以帮助我们更加高效地解决问题！
 
-下面是一个简单的线性时间和平方时间的对比例子，后者的运行速度远远慢于后者，为什么呢？这与Python中内置的list的实现机制有关，在前面的数据结构篇中介绍过了，list是类似数组一样的动态表，而不是标准的数组形式，所以对于append操作是常数时间，而对于insert操作是线性时间的！感兴趣的话移步阅读[Python数据结构篇3-数据结构](/blog/2014/05/08/python-algorithms-datastructures/)
+下面是一个简单的线性时间和平方时间的对比例子，后者的运行速度远远慢于后者，为什么呢？这与Python中内置的list的实现机制有关，在前面的数据结构篇中介绍过了，list是类似数组一样的动态表，而不是标准的数组形式，所以对于append操作是常数时间，而对于insert操作是线性时间的！感兴趣的话移步阅读[Python数据结构篇3-数据结构](/blog/2014/05/08/python-data-structures---c3-data-structures/)
 
 ```python
 from time import *

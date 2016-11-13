@@ -5,12 +5,9 @@ tags: ["algorithm","python"]
 ---
 Python数据结构篇(2) 排序 <!--more-->
 
-参考内容：
-
-1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)
-
-Chapter5: Search and Sorting [online_link](http://interactivepython.org/courselib/static/pythonds/SortSearch/sorting.html)
-
+参考内容：   
+1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)  
+Chapter5: Search and Sorting [online_link](http://interactivepython.org/courselib/static/pythonds/SortSearch/sorting.html)  
 2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 
 #### 排序总结
@@ -245,13 +242,10 @@ print(a_list)
 
 想法二：如下图所示(摘自算法导论)，它选择最后的那个元素作为主元，它的思路是将数组划分成4部分：
 
-第一部分：$p \le k \le i, A[k] \le pivot$
-
-第二部分：$i+1 \le k \le j-1, A[k] \gt pivot$
-
-第三部分：$j \le k \le r-1, A[k]$可以取任何值(因为它们还没有进行处理)。
-
-第四部分：$p \le k \le i, A[k] = pivot$
+第一部分：$p \le k \le i, A[k] \le pivot$  
+第二部分：$i+1 \le k \le j-1, A[k] \gt pivot$  
+第三部分：$j \le k \le r-1, A[k]$可以取任何值(因为它们还没有进行处理)  
+第四部分：$p \le k \le i, A[k] = pivot$  
 
 **首先，让i指向要排序的数组的第一个元素的前面，p和j都指向第一个元素；然后，一直移动j直到主元前一个位置，一旦发现一个小于主元的元素就让i指向它的下一个位置，然后交换i和j对应位置上的元素。这样一定是可行的，因为i一直都是指向已发现的小于主元的元素中的最后一个，从i+1开始就大于主元了(或者还未确定/未处理)，而j一直都是指向大于主元的元素中最后一个的后面一个位置，所以i+1和j位置上的元素交换就可以使得j发现的这个小于主元的元素移动到第一部分，而i+1位置上大于主元的元素移动到j的位置上，即第二部分的最后一个位置上。**
 
@@ -344,7 +338,7 @@ shell_sort(a_list)
 print(a_list)
 ```
 
-7.堆排序请参见该系列文章中的[DataStrctures章节中的二叉堆部分的内容](/blog/2014/05/08/python-algorithms-datastructures/)。
+7.堆排序请参见该系列文章中的[DataStrctures章节中的二叉堆部分的内容](/blog/2014/05/08/python-data-structures---c3-data-structures/)。
 
 8.其他线性排序可以参见算法导论第8章或者看下[这篇不错的文章](http://www.cnblogs.com/Anker/archive/2013/01/25/2876397.html)
 
@@ -379,4 +373,4 @@ seq = counting_sort(seq)
 
 ![image](/images/sortbucket.png)
 
-本节只是对各种排序进行一个介绍然后用python实现而已，更加详细地解释各种排序的内部思想的内容可以参见后面的[Python算法设计篇之Induction&Recursion&Reduction](/blog/2014/07/01/python-algorithms-induction/)
+本节只是对各种排序进行一个介绍然后用python实现而已，更加详细地解释各种排序的内部思想的内容可以参见后面的[Python算法设计篇之Induction&Recursion&Reduction](/blog/2014/07/01/python-algorithms---c4-induction-and-recursion-and-reduction/)

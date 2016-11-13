@@ -3,7 +3,7 @@ title: "Problem: Matrix Chain Problem"
 date: "2014-05-18"
 tags: ["algorithm"]
 ---
-矩阵链乘问题是最典型的动态规划问题，本文介绍如何用动规算法解决这个问题，要理解下面的内容请先阅读[这篇动态规划的总结](/blog/2014/07/01/python-algorithms-dynamic-programming/)。<!--more-->
+矩阵链乘问题是最典型的动态规划问题，本文介绍如何用动规算法解决这个问题，要理解下面的内容请先阅读[这篇动态规划的总结](/blog/2014/07/01/python-algorithms---c8-dynamic-programming/)。<!--more-->
 
 1.问题描述
 

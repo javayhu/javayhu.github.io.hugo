@@ -59,7 +59,7 @@ JavaCV现在已经支持人脸识别算法了，在Samples中可以找到一份�
 
 因为是移动应用，所以要能够从移动设备中获取摄像头返回的数据是关键！而这个恰恰是这类应用要考虑的一个重要因素，因为它直接决定了你的应用需要使用的技术方案！
 
-关于摄像头的使用其实我已经在前面的博文[Android Ndk and Opencv Development 3](/blog/2013/11/18/android-ndk-and-opencv-development-3/)中详细介绍过了，这里我引用部分内容，如果想了解更多的话，不妨先看下前面的内容。 [下面提到的`OpenCV library` 是 `OpenCV4Android SDK` 的一部分]
+关于摄像头的使用其实我已经在前面的博文[Android Ndk and Opencv Development 3](/blog/2013/11/20/android-ndk-and-opencv-development-3/)中详细介绍过了，这里我引用部分内容，如果想了解更多的话，不妨先看下前面的内容。 [下面提到的`OpenCV library` 是 `OpenCV4Android SDK` 的一部分]
 
 [其实还有一种获取摄像头数据的方式，那就是直接在Native层操作摄像头，OpenCV4Android SDK的Samples中提供了一个样例`native-activity`，这种方式其实是极其不推荐使用的，一方面代码不好写，不便操作；另一方面据说这部分的API经常变化，不便维护]
 

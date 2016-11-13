@@ -5,13 +5,10 @@ tags: ["algorithm","python"]
 ---
 Python数据结构篇(4) 树 <!--more-->
 
-参考内容：
-
-1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)
-
+参考内容：   
+1.[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html)    
 Chapter 6 Trees and Tree Algorithms   
-
-2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)
+2.[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)   
 
 #### 树总结
 

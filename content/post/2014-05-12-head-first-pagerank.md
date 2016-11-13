@@ -9,26 +9,19 @@ PageRank算法是谷歌曾经独步天下的“倚天剑”，该算法由Larry 
 
 本文首先通过一些参考文献引出问题，然后给出了PageRank的几种实现算法，最后将其推广至在MapReduce框架下如何实现PageRank算法。
 
-PageRank的核心思想有2点：
-
-1.如果一个网页被很多其他网页链接到的话说明这个网页比较重要，也就是pagerank值会相对较高；
-
-2.如果一个pagerank值很高的网页链接到一个其他的网页，那么被链接到的网页的pagerank值会相应地因此而提高。
+PageRank的核心思想有2点：   
+1.如果一个网页被很多其他网页链接到的话说明这个网页比较重要，也就是pagerank值会相对较高；   
+2.如果一个pagerank值很高的网页链接到一个其他的网页，那么被链接到的网页的pagerank值会相应地因此而提高。  
 
 下面是一张来自[WikiPedia](http://en.wikipedia.org/wiki/PageRank)的图，每个球代表一个网页，球的大小反应了网页的pagerank值的大小。指向网页B和网页E的链接很多，所以B和E的pagerank值较高，另外，虽然很少有网页指向C，但是最重要的网页B指向了C，所以C的pagerank值比E还要大。
 
 ![image](/images/algos/pagerank-fig.png)
 
-参考内容：
-
-1.[Wiki about PageRank](http://en.wikipedia.org/wiki/PageRank)
-
-2.[Google 的秘密- PageRank 彻底解说 中文版](http://www.itlearner.com/good/pagerank_cn.htm)
-
-3.[数值分析与算法](http://book.douban.com/subject/7161824/) Page 161 应用实例：Google的PageRank算法
-
-4.[Numeric Methods with Matlab](http://www.mathworks.cn/moler/chapters.html) 或者[中文翻译版本Matlab数值计算](http://book.douban.com/subject/1836464/)
-
+参考内容：   
+1.[Wiki about PageRank](http://en.wikipedia.org/wiki/PageRank)   
+2.[Google 的秘密- PageRank 彻底解说 中文版](http://www.itlearner.com/good/pagerank_cn.htm)   
+3.[数值分析与算法](http://book.douban.com/subject/7161824/) Page 161 应用实例：Google的PageRank算法   
+4.[Numeric Methods with Matlab](http://www.mathworks.cn/moler/chapters.html) 或者[中文翻译版本Matlab数值计算](http://book.douban.com/subject/1836464/)   
 5.[使用 MapReduce 思想计算 PageRank](http://www.chenjunlu.com/2012/10/pagerank-on-mapreduce/) Page 62 PageRank和马尔可夫链
 
 ### 1.问题背景

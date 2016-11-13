@@ -5,7 +5,7 @@ date: "2015-11-30"
 ---
 《Android开发艺术探索》读书笔记 (6) 第6章 Android的Drawable <!--more-->
 
-本节和《Android群英传》中的**第六章Android绘图机制与处理技巧**有关系，[建议先阅读该章的总结](/blog/2015/11/27/Android-Heros-Reading-Notes-3/)
+本节和《Android群英传》中的**第六章Android绘图机制与处理技巧**有关系，[建议先阅读该章的总结](/blog/2015/11/27/android-heroes-reading-notes-3/)
 
 ### 第6章 Android的Drawable
 #### 6.1 Drawable简介
@@ -131,15 +131,15 @@ drawable.startTransition(5000);
     android:gravity="bottom" />
 ```
 
-#### 6.3 自定义Drawable
-(1)Drawable的工作核心就是`draw`方法，所以自定义drawable就是重写`draw`方法，当然还有`setAlpha`、`setColorFilter`和`getOpacity`这几个方法。当自定义Drawable有固有大小的时候最好重写`getIntrinsicWidth`和`getIntrinsicHeight`方法。
-(2)Drawable的内部大小不等于Drawable的实际区域大小，Drawable的实际区域大小可以通过它的`getBounds`方法来得到，一般来说它和view的尺寸相同。
+#### 6.3 自定义Drawable  
+(1)Drawable的工作核心就是`draw`方法，所以自定义drawable就是重写`draw`方法，当然还有`setAlpha`、`setColorFilter`和`getOpacity`这几个方法。当自定义Drawable有固有大小的时候最好重写`getIntrinsicWidth`和`getIntrinsicHeight`方法。  
+(2)Drawable的内部大小不等于Drawable的实际区域大小，Drawable的实际区域大小可以通过它的`getBounds`方法来得到，一般来说它和view的尺寸相同。  
 
-其他学习资料：
-1.[Android样式的开发:shape篇](http://keeganlee.me/post/android/20150830)
-2.[Android样式的开发:drawable篇](http://keeganlee.me/post/android/20150916)
-3.[Android样式的开发:selector篇](http://keeganlee.me/post/android/20150905)
-4.[Android样式的开发:layer-list篇](http://keeganlee.me/post/android/20150909)
-5.[Android样式的开发:Style篇](http://keeganlee.me/post/android/20151031)
+其他学习资料：  
+1.[Android样式的开发:shape篇](http://keeganlee.me/post/android/20150830)  
+2.[Android样式的开发:drawable篇](http://keeganlee.me/post/android/20150916)  
+3.[Android样式的开发:selector篇](http://keeganlee.me/post/android/20150905)  
+4.[Android样式的开发:layer-list篇](http://keeganlee.me/post/android/20150909)  
+5.[Android样式的开发:Style篇](http://keeganlee.me/post/android/20151031)  
 
 OK，本章结束，谢谢阅读。

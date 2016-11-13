@@ -10,12 +10,12 @@ image: "/images/default.jpg"
 但是，上了研究生发现用Python的人很多，而且这货简直被神化了，无所不能，吊炸天的Edx的后台竟然就是用的Python，于是花了一个下午刷了本《Head First Python》，感觉没啥特别，只是写起来轻便，甚至还能开发Android，让我大吃一惊。后来，又接着看了些Python书，发现真的如此，很多时候用Java写了几十行的代码用Python几行就搞定了，而且它同样拥有大量的第三方模块，于是我就这么走进了Python的世界。Python要入门很简单，毕竟我搞Java这么多年了，这俩太多的相似点了，看完书之后写写数据结构，写写算法，熟悉一些高级特性，使用一些第三方模块之后应该就算入门了吧。现在，做任何事情，我首先想到的是用Python如何实现?！嘿嘿，**"Life is short, go start Python"！**
 
 本人才疏学浅，学识大多浅尝辄止，故文章若有错误，不论是文字笔误还是理解有错，烦请您留言以告知，感激不尽！
-**Python分类下的系列文章，不断更新中，如果你迫不及待地想要看看写得如何可以先试试这篇[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms-induction/)，如果觉得好就留言点个赞呗，如果觉得不好那就直接关掉这个博客网站吧**
+**Python分类下的系列文章，不断更新中，如果你迫不及待地想要看看写得如何可以先试试这篇[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms---c4-induction-and-recursion-and-reduction/)，如果觉得好就留言点个赞呗，如果觉得不好那就直接关掉这个博客网站吧**
 
 **[感谢@Google爱好者给该系列的命名，我很喜欢，叫做“码农与蛇的故事”]**
 
 1.Python基础知识篇  
-[Python Basics](/blog/2014/05/10/python-tips1/) 和 [Python Advances](/blog/2014/05/16/python-tips3/)
+[Python Basics](/blog/2014/05/10/python-basics/) 和 [Python Advances](/blog/2014/05/16/good-python-articles/)
 前者是Python基础的简单总结(大部分摘自[网上恩师@廖雪峰老师的Python教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000))，后者推荐了些关于Python高级特性的好文章(大部分摘自[伯乐在线Python分类的文章](http://blog.jobbole.com/category/python/))
 
 2.Python数据结构篇  
@@ -23,16 +23,16 @@ image: "/images/default.jpg"
 
 **这一部分是下面算法设计篇的前篇，如果数据结构还不错的可以直接看算法设计篇，遇到问题可以回来看数据结构篇中的某个具体内容充电一下，我个人认为直接读算法设计篇比较好，因为大家时间也都比较宝贵，如果你会来读这些文章说明你肯定有一定基础了，后面的算法设计篇中更多的是思想，这里更多的是代码而已，嘿嘿。**
 
-(1)[搜索](/blog/2014/05/07/python-algorithms-search/)   
+(1)[搜索](/blog/2014/05/06/python-data-structures---c1-search/)   
 简述顺序查找和二分查找，详述Hash查找(hash函数的设计以及如何避免冲突)
 
-(2)[排序](/blog/2014/05/07/python-algorithms-sort/)  
+(2)[排序](/blog/2014/05/07/python-data-structures---c2-sort/)  
 简述各种排序算法的思想以及它的图示和实现
 
-(3)[数据结构](/blog/2014/05/08/python-algorithms-datastructures/)  
+(3)[数据结构](/blog/2014/05/08/python-data-structures---c3-data-structures/)  
 简述Python内置数据结构的性能分析和实现常用的数据结构：栈、队列和二叉堆
 
-(4)[树总结](/blog/2014/05/08/python-algorithms-Trees/)  
+(4)[树总结](/blog/2014/05/09/python-data-structures---c4-trees/)  
 简述二叉树，详述二叉搜索树和AVL树的思想和实现
 
 3.Python算法设计篇  
@@ -48,33 +48,33 @@ image: "/images/default.jpg"
 
 **3.如果你细读本系列的话我保证你会有不少收获的，需要看算法导论哪个部分的地方我会给出提示的，嘿嘿。温馨提示，前面三节内容都是介绍基础知识，所以精彩内容从第4节开始哟，么么哒 O(∩_∩)O~**
 
-(1)[Python Algorithms - C1 Introduction](/blog/2014/07/01/python-algorithms-introduction/)   
+(1)[Python Algorithms - C1 Introduction](/blog/2014/07/01/python-algorithms---c1-introduction/)   
 本节主要是对原书中的内容做些简单介绍，说明算法的重要性以及各章节的内容概要。
 
-(2)[Python Algorithms - C2 The basics](/blog/2014/07/01/python-algorithms-the-basics/)   
+(2)[Python Algorithms - C2 The basics](/blog/2014/07/01/python-algorithms---c2-the-basics/)   
 **本节主要介绍了三个内容：算法渐近运行时间的表示方法、六条算法性能评估的经验以及Python中树和图的实现方式。**
 
-(3)[Python Algorithms - C3 Counting 101](http://hujiaweibujidao.github.io//blog/2014/07/01/python-algorithms-counting-101/)   
+(3)[Python Algorithms - C3 Counting 101](/blog/2014/07/01/python-algorithms---c3-counting-101/)   
 原书主要介绍了一些基础数学，例如排列组合以及递归循环等，但是本节只重点介绍计算算法的运行时间的三种方法
 
-(4)[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms-induction/)   
+(4)[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms---c4-induction-and-recursion-and-reduction/)   
 **本节主要介绍算法设计的三个核心知识：Induction(推导)、Recursion(递归)和Reduction(规约)，这是原书的重点和难点部分**
 
-(5)[Python Algorithms - C5 Traversal](/blog/2014/07/01/python-algorithms-traversal/)   
+(5)[Python Algorithms - C5 Traversal](/blog/2014/07/01/python-algorithms---c5-traversal/)   
 **本节主要介绍图的遍历算法BFS和DFS，以及对拓扑排序的另一种解法和寻找图的(强)连通分量的算法**
 
-(6)[Python Algorithms - C6 Divide and Combine and Conquer](/blog/2014/07/01/python-algorithms-divide-and-combine-and-conquer/)   
+(6)[Python Algorithms - C6 Divide and Combine and Conquer](/blog/2014/07/01/python-algorithms---c6-divide-and-combine-and-conquer/)   
 **本节主要介绍分治法策略，提到了树形问题的平衡性以及基于分治策略的排序算法**
 
-(7)[Python Algorithms - C7 Greedy](/blog/2014/07/01/python-algorithms-greedy/)   
+(7)[Python Algorithms - C7 Greedy](/blog/2014/07/01/python-algorithms---c7-greedy/)   
 **本节主要通过几个例子来介绍贪心策略，主要包括背包问题、哈夫曼编码和最小生成树等等**
 
-(8)[Python Algorithms - C8 Dynamic Programming](/blog/2014/07/01/python-algorithms-dynamic-programming/)   
+(8)[Python Algorithms - C8 Dynamic Programming](/blog/2014/07/01/python-algorithms---c8-dynamic-programming/)   
 **本节主要结合一些经典的动规问题介绍动态规划的备忘录法和迭代法这两种实现方式，并对这两种方式进行对比**
 
-(9)[Python Algorithms - C9 Graphs](/blog/2014/07/01/python-algorithms-graphs/)   
+(9)[Python Algorithms - C9 Graphs](/blog/2014/07/01/python-algorithms---c9-graphs/)   
 **本节主要介绍图算法中的各种最短路径算法，从不同的角度揭示它们的内核以及它们的异同**
 
 ~~原书后面的2个章节(网络流和NP)暂未总结，后期如果阅读之后有所感悟必将添加到该系列，感谢阅读~~
 
-该书的中文翻译版本已经出版，以后就不会再更新啦。
+该书的中文翻译版本已经出版，以后就不会再更新啦，有时间我也买来读一读 ~\(^o^)/~

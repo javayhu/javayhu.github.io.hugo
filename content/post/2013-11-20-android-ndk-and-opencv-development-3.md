@@ -5,11 +5,11 @@ tags: ["android"]
 ---
 本节的主要内容是OpenCV在Android NDK开发中的应用。<!--more-->
 
-本节包括下面几个方面的内容：    
-1.如何实现Static Initialization从而不需要安装OpenCV Manager运行含OpenCV library的app
-2.对十份论文和报告中的关于OpenCV和Android NDK开发的总结
-3.如何使用Android中的摄像头，常见的问题有哪些?
-4.OpenCV 和 Android NDK 整合开发的一般途径    
+本节包括下面几个方面的内容：  
+1.如何实现Static Initialization从而不需要安装OpenCV Manager运行含OpenCV library的app  
+2.对十份论文和报告中的关于OpenCV和Android NDK开发的总结  
+3.如何使用Android中的摄像头，常见的问题有哪些?  
+4.OpenCV 和 Android NDK 整合开发的一般途径      
 
 #### 1.实现Static Initialization
 
@@ -256,8 +256,11 @@ protected void deliverAndDrawFrame(CvCameraViewFrame frame) {
 
 在进行这类开发的时候，需要考虑如何在Android中使用OpenCV，并且如果需要调用摄像头的话，要考虑以下内容：  
 首先，是否是在原有的C/C++代码上进行移植，如果是的话，那么尽量考虑使用ndk开发，否则使用OpenCV for Android编写Java代码进行开发，效率不会比native代码低多少；   
+
 其次，如果是需要OpenCV library，是否能够容忍运行应用还需要安装OpenCV Manager，如果不能的话，则在开发时要考虑将OpenCV binaries添加到应用中进行static initialization，但其实使用OpenCV Manager是有很多好处的，上面的论文和OpenCV官网都有相应的文档介绍它的好处和使用方式；   
+
 接着，是否需要调用摄像头，如果需要的话，是使用原生Android的Camera还是使用OpenCV的Camera，如果是OpenCV Camera的话，是使用Java调用摄像头还是Native调用摄像头；  
+
 最后，图片如何进行传递，如果是单张静态图片进行处理的话，只需要路径就行了，但是如果是在视频状态下对图片进行处理的话，那么就只能传递图像数据了，这里涉及到了Android中如何获取预览的图像数据以及如何将其传递到底层，又如何进行转换(一般是YUV转成RGB)使得OpenCV可以进行处理，处理完了之后，又如何将处理得到的图片传递给Java层。
 
 推荐一本书籍《Mastering OpenCV with Practical Computer Vision Projects》，电子书可以在[皮皮书屋](http://www.ppurl.com/2012/12/mastering-OpenCV-with-practical-computer-vision-projects.html)下载，[原书源码在Github上](https://github.com/MasteringOpenCV)。该书第一章介绍如何开发一个使用OpenCV的Android项目-`Cartoonifer and Skin Changer for Android`，这个项目涉及到了OpenCV在Android中的方方面面，采用的是第二种图像数据传递方式，其中他提出了很多可以优化的地方，包括：   
