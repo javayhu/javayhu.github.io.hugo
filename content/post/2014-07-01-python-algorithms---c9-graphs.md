@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C9 Graphs"
 date: "2014-07-01"
-tags: ["algorithm"]
+tags: ["algorithm","python"]
 ---
 Python算法设计篇(9) Chapter 9: From A to B with Edsger and Friends <!--more-->
 

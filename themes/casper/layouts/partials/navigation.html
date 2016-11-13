@@ -14,6 +14,16 @@
         {{end}}
     </ul>
 
+    <h3 class="nav-title-tag">Tags</h3>
+    <ul>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/android/">android</a></li>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/python/">python</a></li>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/algorithm/">algorithm</a></li>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/java/">java</a></li>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/dev/">dev</a></li>
+        <li class="nav-opened" role="presentation"><a href="{{ .Site.BaseURL }}tags/life/">life</a></li>
+    </ul>
+
     {{ if .Site.Params.RSSLink}}
         <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a>
     {{else}}

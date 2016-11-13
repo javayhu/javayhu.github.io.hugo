@@ -1,7 +1,7 @@
 ---
 title: "Python Data Structures - C1 Search"
-date: "2014-05-07"
-tags: ["algorithm"]
+date: "2014-05-06"
+tags: ["algorithm","python"]
 ---
 Python数据结构篇(1) 搜索 <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Python Data Structures - C2 Sort"
 date: "2014-05-07"
-tags: ["algorithm"]
+tags: ["algorithm","python"]
 ---
 Python数据结构篇(2) 排序 <!--more-->
 

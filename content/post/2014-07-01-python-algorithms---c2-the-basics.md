@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C2 The basics"
 date: "2014-07-01"
-tags: ["algorithm"]
+tags: ["algorithm","python"]
 ---
 Python算法设计篇(2) Chapter 2: The basics <!--more-->
 
@@ -396,5 +396,3 @@ Consider the following graph representation: you use a dictionary and let each k
 The advantages and disadvantages depend on what you’re using it for. It works well for looking up edge weights efficiently but less well for iterating over the graph’s nodes or a node’s neighbors, for example. You could improve that part by using some extra structures (for example, a global list of nodes, if that’s what you need or a simple adjacency list structure, if that’s required).
 
 返回[Python数据结构与算法设计篇目录](/python/)
-
-

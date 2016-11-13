@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C7 Greedy"
 date: "2014-07-01"
-tags: ["algorithm"]
+tags: ["algorithm","python"]
 ---
 Python算法设计篇(7) Chapter 7: Greed is good? Prove it! <!--more-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Python Algorithms - C8 Dynamic Programming"
 date: "2014-07-01"
-tags: ["algorithm"]
+tags: ["algorithm","python"]
 ---
 Python算法设计篇(8) Chapter 8 Tangled Dependencies and Memoization <!--more-->
 

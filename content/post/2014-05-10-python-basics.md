@@ -1,7 +1,7 @@
 ---
 title: "Python Basics"
 date: "2014-05-10"
-tags: ["dev"]
+tags: ["dev","python"]
 ---
 Python代码片段 <!--more-->
 

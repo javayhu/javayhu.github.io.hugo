@@ -2,7 +2,6 @@
 title: "Android Development Code Snippets"
 date: "2015-05-31"
 tags: ["android"]
-published: false
 ---
 Android开发代码片段 <!--more-->
 
@@ -151,7 +150,3 @@ void shortcut() {
     }.execute("Polaris");
 }
 ```
-
-
-
-
