@@ -1,7 +1,7 @@
 {{ if ne .Params.comments false}}
 {{ if .Site.DisqusShortname }}
 <!-- 多说评论框 start page.source-->
-<div class="ds-thread" data-thread-key="{{ (substr .Permalink (len .Site.BaseURL)) }}" data-title="{{ .Title }}" data-url="{{ .Permalink }}"></div>
+<div style="font-weight:bold;" class="ds-thread" data-thread-key="{{ (substr .Permalink (len .Site.BaseURL)) }}" data-title="{{ .Title }}" data-url="{{ .Permalink }}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

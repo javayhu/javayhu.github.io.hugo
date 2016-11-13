@@ -46,7 +46,8 @@ Palette.generateAsync(bitmap,
         });
 ```
 显示效果如下面右图所示
-{% img /images/androidheros_colorpalette.png 200 360 %} {% img /images/androidheros_palette.png 200 360 %}
+![img](/images/androidheros_colorpalette.png)
+![img](/images/androidheros_palette.png)
 
 (3)阴影效果
 View增加了Z属性，对应垂直方向上的高度变化，Z由elevation和translationZ两部分组成(Z=elevation+translationZ)，它们都是5.X引入的新属性。elevation是静态的成员，translationZ可以在代码中用来实现动画效果。
@@ -331,8 +332,9 @@ public void headsupNotify(View view) {
 }
 ```
 显示效果如下：
-
-{% img /images/androidheros_basicnotification.png 200 360 %} {% img /images/androidheros_collapsenotification.png 200 360 %} {% img /images/androidheros_headsupnotification.png 200 360 %}
+![img](/images/androidheros_basicnotification.png)
+![img](/images/androidheros_collapsenotification.png)
+![img](/images/androidheros_headsupnotification.png)
 
 **通知的显示等级**
 Android 5.x将通知分为了三个等级：
@@ -345,5 +347,3 @@ Android 5.x将通知分为了三个等级：
 1.[使用 Android Design 支持库构建 Material Design Android 应用](https://www.code-labs.io/codelabs/Material-Design-Style/index.html)
 
 OK，本节结束，谢谢阅读。
-
-

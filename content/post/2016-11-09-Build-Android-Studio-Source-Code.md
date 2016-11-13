@@ -37,15 +37,15 @@ repo init -u https://android.googlesource.com/platform/manifest -b studio-2.2
 3.1 使用ant
 最简单的编译运行方式是在tools/idea目录下执行`ant`，最终会在tools/idea/out/中生成可运行的Android Studio应用程序
 
-3.2 使用Intellij (推荐)
-tools/idea目录下的README.md文档说明了如何编译Android Studio源码
-(1)下载Intellij Community版本并安装
-(2)使用IDEA打开项目的tools/idea目录
-(3)在Project Structure的SDKs中新建名为`IDEA jdk`的jdk，路径设置为jdk 6的根目录
-如果是在Linux/Mac上运行的话，还需要将<JDK_HOME>/lib/tools.jar添加到`IDEA jdk`中
-(4)在Project Structure的SDKs中新建名为`1.8`的jdk，路径设置为jdk 8的根目录
-(5)点击Build下的`Make Project`来编译项目源码
-(6)选择`IDEA`这个运行配置来运行或者调试代码
+3.2 使用Intellij (推荐)  
+tools/idea目录下的README.md文档说明了如何编译Android Studio源码  
+(1)下载Intellij Community版本并安装  
+(2)使用IDEA打开项目的tools/idea目录  
+(3)在Project Structure的SDKs中新建名为`IDEA jdk`的jdk，路径设置为jdk 6的根目录  
+如果是在Linux/Mac上运行的话，还需要将<JDK_HOME>/lib/tools.jar添加到`IDEA jdk`中  
+(4)在Project Structure的SDKs中新建名为`1.8`的jdk，路径设置为jdk 8的根目录  
+(5)点击Build下的`Make Project`来编译项目源码  
+(6)选择`IDEA`这个运行配置来运行或者调试代码  
 
 运行起来就可以看到AS第一次安装时选择settings的界面，然后就进入到启动界面了
 
@@ -72,11 +72,9 @@ To develop IntelliJ IDEA, you can use either IntelliJ IDEA Community Edition or 
 - To run the code, use the provided shared run configuration "IDEA".
 
 ### 4.其他参考资料
-(1) [Build Android Studio](http://tools.android.com/build/studio)
-(2) hierarchyviewer工具的学习，从使用到源码实现
+(1) [Build Android Studio](http://tools.android.com/build/studio)  
+(2) hierarchyviewer工具的学习，从使用到源码实现  
 [http://www.cnblogs.com/vowei/archive/2012/07/30/2614353.html](http://www.cnblogs.com/vowei/archive/2012/07/30/2614353.html)
 [http://www.cnblogs.com/vowei/archive/2012/08/03/2618753.html](http://www.cnblogs.com/vowei/archive/2012/08/03/2618753.html)
 [http://www.cnblogs.com/vowei/archive/2012/08/08/2627614.html](http://www.cnblogs.com/vowei/archive/2012/08/08/2627614.html)
 [http://www.cnblogs.com/vowei/archive/2012/08/22/2650722.html](http://www.cnblogs.com/vowei/archive/2012/08/22/2650722.html)
-
-

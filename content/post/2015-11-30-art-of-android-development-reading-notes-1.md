@@ -1,7 +1,7 @@
 ---
 title: Art of Android Development Reading Notes 1
 tags: ["android"]
-date: "2015-11-29"
+date: "2015-11-30"
 ---
 《Android开发艺术探索》读书笔记 (1) 第1章 Activity的生命周期和启动模式 <!--more-->
 
@@ -125,5 +125,3 @@ data的下面两种写法作用是一样的：
 ```
 
 OK，本章结束，谢谢阅读。
-
-

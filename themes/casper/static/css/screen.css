@@ -167,8 +167,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 .icon-linkedin:before {
     content: "\f208";
 }
-.icon-arrow-left:before {
+.icon-arrow-down:before {
     content: "\f431";
+}
+.icon-arrow-up:before {
+    content: "\f432";
 }
 .icon-stats:before {
     content: "\f508";
@@ -352,6 +355,7 @@ code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
+    font-weight: bold;
     white-space: pre-wrap;
     border: #E3EDF3 1px solid;
     background: #F7FAFB;
@@ -1451,6 +1455,7 @@ body:not(.post-template) .post-title {
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
+    text-align: center;
 }
 
 .site-footer a {
@@ -1465,15 +1470,15 @@ body:not(.post-template) .post-title {
 
 .poweredby {
     display: block;
-    width: 45%;
-    float: right;
-    text-align: right;
+    /*width: 45%;*/
+    /*float: right;*/
+    /*text-align: right;*/
 }
 
 .copyright {
     display: block;
-    width: 45%;
-    float: left;
+    /*width: 45%;*/
+    /*float: left;*/
 }
 
 

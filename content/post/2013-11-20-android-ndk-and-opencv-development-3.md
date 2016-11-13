@@ -1,6 +1,6 @@
 ---
 title: "Android Ndk and Opencv Development 3"
-date: "2013-11-18"
+date: "2013-11-20"
 tags: ["android"]
 ---
 本节的主要内容是OpenCV在Android NDK开发中的应用。<!--more-->

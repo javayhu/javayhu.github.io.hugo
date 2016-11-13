@@ -13,7 +13,7 @@ XFace项目地址：[https://github.com/hujiaweibujidao/XFace](https://github.co
 
 ***[注：以下所有下载的sdk都保存在虚拟机的`/home/xface/tools`目录下，也可以到百度网盘下载，地址是[http://pan.baidu.com/s/1mg2Wdx2](http://pan.baidu.com/s/1mg2Wdx2)，不同版本的配置方式可能有些变化，如果不是很清楚版本问题的话，推荐使用虚拟机中使用的版本]***
 
-{% img /images/tools.png%}
+![img](/images/tools.png)
 
 1.配置Java环境
 
@@ -28,11 +28,11 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 如下图所示，后面环境配置中添加内容也是如此
 
-{% img /images/etcprofile.png%}
+![img](/images/etcprofile.png)
 
 ④重启虚拟机，打开终端输入`java -version`进行测试（重启虚拟机也可以等待下面的Android SDK和Android NDK环境都配置好了之后再重启也行）
 
-{% img /images/javaversion.png%}
+![img](/images/javaversion.png)
 
 
 2.配置Android SDK环境
@@ -54,7 +54,7 @@ sudo apt-get install ia32-libs
 
 ⑤重启虚拟机，打开终端输入`adb version`进行测试
 
-{% img /images/adbversion.png%}
+![img](/images/adbversion.png)
 
 
 3.配置Android NDK环境
@@ -69,7 +69,7 @@ export PATH=${PATH}:${ANDROID_NDK_ROOT}
 ```
 ④重启虚拟机，打开终端输入`ndk-build -v`进行测试
 
-{% img /images/ndkversion.png%}
+![img](/images/ndkversion.png)
 
 
 4.配置OpenCV环境
@@ -84,11 +84,11 @@ export PATH=${PATH}:${ANDROID_NDK_ROOT}
 
 Android SDK路径的设置
 
-{% img /images/androidsdk.png%}
+![img](/images/androidsdk.png)
 
 Android NDK路径的设置
 
-{% img /images/androidndk.png%}
+![img](/images/androidndk.png)
 
 ③打开`window->preferences`，找到左侧的`C/C++ Build->Environment`添加下面两个环境变量：
 
@@ -97,7 +97,7 @@ NDKROOT=/home/xface/android/adt-bundle/ndk
 OPENCVROOT=/home/xface/android/opencv_sdk
 ```
 
-{% img /images/environment.png%}
+![img](/images/environment.png)
 
 ④按如下步骤配置**万能的javah工具**的方法（这里javah工具的用途是根据Java类生成C++头文件）
 
@@ -107,12 +107,12 @@ OPENCVROOT=/home/xface/android/opencv_sdk
 (4)`Arguments`设置为`-jni -verbose -d "${project_loc}${system_property:file.separator}jni" ${java_type_name}`
 (5)OK，以后只要选中要进行"反编译"的Java Class，然后运行这个External Tool就可以了！
 
-{% img /images/javah.png%}
+![img](/images/javah.png)
 
 
 ⑤为了提高编写代码的速度，打开`window->preferences`，找到左侧`Java->Editor->Content Assist`，在`Auto activation triggers for Java`中添加26个英文字母，这样，在编写Java代码时任何一个字母被按下的话都会出现智能代码提示。
 
-{% img /images/codeassist.png%}
+![img](/images/codeassist.png)
 
 ⑥为了验证环境没有问题，可以尝试新建一个Android Project并运行于移动设备上，虚拟机中eclipse下的项目xfacetest便是用来测试环境是否配置成功的默认Android应用程序，可以尝试插上手机，选中项目xfacetest点击右键，选择`Run As` -> `Android Application`，如果都没问题了，说明开发环境搭建成功了。
 
@@ -122,17 +122,17 @@ OPENCVROOT=/home/xface/android/opencv_sdk
 
 XFace是一个小型的人脸识别程序，主要功能就是注册和识别人脸，界面分为3个，首先是主界面，使用者选择要进行的操作，sign up是注册，输入用户名然后保存头像即可；sign in是登录，其实就是人脸识别的过程。
 
-{% img /images/xface.png%}
+![img](/images/xface.png)
 
 XFace的源码保存在虚拟机中`/home/xface/android/xface`目录下，包括两个项目，一个是`OpenCV Library - 2.4.4`，这是XFace所需的OpenCV库项目，另一个是`XFace`，这个XFace核心的Android应用程序。下面介绍如何将这两个项目导入到Eclipse开发环境中，并在手机上运行。
 
 1.运行Eclipse，选择`File->Import...`，在导入窗口中，选择`General`下面的`Existing Projects into Workspace`，然后点击`Next->`，在之后的窗口中，点击`Browser...`，选中`/home/xface/android/xface/`下的`OpenCV Library - 2.4.4`文件夹，建议勾选`Copy projects into workspace`（可以防止意外操作导致项目出现问题无法修复时可以删除该项目重新将其导入进来），点击`Finish`即可，如下图所示：
 
-{% img /images/import.png%}
+![img](/images/import.png)
 
 2.按照步骤1中的导入操作导入`/home/xface/android/xface/`下的`XFace`项目，导入之后，如果报出问题，可以尝试以下步骤：选中项目`XFace`，点击右键，选择`Properties`，在属性配置窗口中，选择左侧的`Android`项，查看下面的`Library`的配置，如果有错误，则选中错误的项，点击`Remove`；如果内容为空则点击`Add...`，在弹出的窗口中选中步骤1中添加的`OpenCV Library - 2.4.4`项目即可，效果如下图所示：
 
-{% img /images/library.png%}
+![img](/images/library.png)
 
 3.至此，开发环境搭建和项目导入部分都完成了，下面可以进行XFace程序了。首先插入设备（手机），如果是在虚拟机中运行，要确保手机是和虚拟机连接的，而不是和主机连接的（可以通过虚拟机右下角状态栏中`USB设备按钮`或者菜单`虚拟机`中的`USB和Bluetooth`进行设置）；然后，选中`XFace`项目，点击右键，选择`Run As -> Android Application`，然后选中插入的手机，点击`OK`即可。有些情况下可能在列表中没有出现设备，可以尝试以下步骤：首先要确保手机开启了USB调试功能(一般是`设置`->`开发人员选项`->选中`USB调试`)；其次可以尝试重新插入手机或者重启Eclipse；若还是不行尝试在终端输入`adb kill-server`和`adb devices`命令；若还是不行的话尝试重启电脑。实在是不行的话，将编译好的apk文件（保存在项目的`bin`目录下）拷贝到手机中直接运行。
 
@@ -140,7 +140,7 @@ XFace的源码保存在虚拟机中`/home/xface/android/xface`目录下，包括
 
 1.项目结构和主要文件功能大致介绍
 
-{% img /images/xfacecode.png%}
+![img](/images/xfacecode.png)
 
 2.关键部分介绍
 

@@ -280,7 +280,8 @@ protected void onDraw(Canvas canvas) {
 ```
 
 仪表盘和Layer图层效果如下：
-{% img /images/androidheros_canvas.png 200 360 %} &nbsp;&nbsp; {% img /images/androidheros_layer.png 200 360 %}
+![img](/images/androidheros_canvas.png)
+![img](/images/androidheros_layer.png)
 
 5.Android图像处理 **[TODO：该部分略过了，自己暂时用的比较少，等需要用的时候学习下再补充]**
 色彩特效处理、图形特效处理、画笔特效处理
@@ -630,5 +631,3 @@ public class CustomAnim extends Animation {
 本章最后还有几个很常用的动画实例，感兴趣可以看下。
 
 OK，本节结束，谢谢阅读。
-
-

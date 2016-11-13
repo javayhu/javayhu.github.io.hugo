@@ -105,7 +105,8 @@ imshow(result);
 ```
 
 对比结果：
-{% img /images/whole.png 320 210 %} {% img /images/partial.png 320 210 %}
+![img](/images/whole.png)
+![img](/images/partial.png)
 
 2.基于OSTU算法的自动阈值图像分割
 
@@ -113,7 +114,7 @@ imshow(result);
 Matlab内置的`graythresh`使用的便是OSTU算法，使得白色像素和黑色像素的类间方差最大。
 因为上面测试图像的亮度存在明显的水平差异，所以我写了一个将图像沿水平方向分成几部分分别进行OSTU算法，效果明显又比上面两种方式要好些。
 
-{% img /images/postu.png %}
+![img](/images/postu.png)
 
 ```
 function [ result ] = partialostu( image,part,isrgb )

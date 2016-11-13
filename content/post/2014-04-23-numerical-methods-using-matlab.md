@@ -24,9 +24,7 @@ tags: ["algorithm"]
 内容包括：曲线拟合，拉格朗日插值多项式，牛顿插值多项式，分段线性插值，保形分段三次插值，三次样条插值
 
 
-{% img  /images/nm-cover.png 600 600  %}
-{% img  /images/nm-chapter.png 600 600  %}
-{% img  /images/nm-math.png 600 600  %}
-{% img  /images/nm-code.png 600 600  %}
-
-
+![img](/images/nm-cover.png)
+![img](/images/nm-chapter.png)
+![img](/images/nm-math.png)
+![img](/images/nm-code.png)

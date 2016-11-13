@@ -1,7 +1,7 @@
 ---
 title: Custom Lint in Action
 tags: ["android"]
-date: "2016-11-09"
+date: "2016-11-10"
 ---
 本文记录为Android项目自定义Lint检查规则的实践研究。<!--more-->
 

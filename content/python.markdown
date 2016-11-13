@@ -1,5 +1,5 @@
 ---
-title: "Pyhton"
+title: "Python"
 date: "2014-05-18"
 image: "/images/default.jpg"
 ---

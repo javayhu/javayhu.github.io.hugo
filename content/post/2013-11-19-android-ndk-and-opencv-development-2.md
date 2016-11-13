@@ -1,6 +1,6 @@
 ---
 title: "Android Ndk and Opencv Development 2"
-date: "2013-11-18"
+date: "2013-11-19"
 tags: ["android"]
 ---
 本节主要介绍的内容是[Android NDK](http://developer.android.com/tools/sdk/ndk/index.html)开发的核心内容和开发总结(包括很多常见问题的解决方案)。<!--more-->

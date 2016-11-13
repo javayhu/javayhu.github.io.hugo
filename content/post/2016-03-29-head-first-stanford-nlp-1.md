@@ -1,7 +1,7 @@
 ---
 title: Head First Stanford NLP (1)
 tags: ["algorithm"]
-date: "2016-03-30"
+date: "2016-03-29"
 ---
 
 (深入浅出Stanford NLP 基础篇) 本文主要介绍Stanford NLP工具的基本使用方法。 <!--more-->

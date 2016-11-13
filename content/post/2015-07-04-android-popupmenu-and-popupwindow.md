@@ -12,8 +12,8 @@ tags: ["android"]
 PopupMenu显示效果类似上下文菜单(Menu)，而PopupWindow的显示效果实际上类似对话框(Dialog)，两者效果如下图所示：
 
 PopupMenu显示效果
-
-{% img /images/showmenu1.png 144 256 %} {% img /images/showmenu2.png 144 256 %}
+![img](/images/showmenu1.png)
+![img](/images/showmenu2.png)
 
 PopupWindow显示效果
 
