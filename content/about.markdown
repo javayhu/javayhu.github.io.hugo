@@ -3,23 +3,23 @@ title: "About"
 date: "2013-11-17"
 image: "/images/default.jpg"
 ---
-大家好，我叫家威(Javay)，目前工作于魅族科技Flyme核心系统组。    
-
+大家好，我叫胡家威(Javay)，目前工作于魅族科技Flyme核心系统组。    
 微博账号是[宅男潇涧](http://weibo.com/hujiaweiyinger)，以前有个花名叫做`潇涧`，`潇`谐音`笑`，`涧`谐音`键`，寓意是`一笑一键走江湖`。
 
-研究僧就读于伟大的[五道口男子职业技术与艺术学院](http://www.tsinghua.edu.cn/publish/th/index.html)计算机系，本科就读于同样伟大的[左家垅男子职业技术学院](http://www.csu.edu.cn/)。
-曾经在阿里巴巴集团和三星中国研究院等机构做过Android开发实习生。
+研究僧就读于伟大的[五道口男子职业技术与艺术学院](http://www.tsinghua.edu.cn/publish/th/index.html)计算机系，本科就读于同样伟大的[左家垅男子职业技术学院](http://www.csu.edu.cn/)。  
+曾经在阿里巴巴集团和三星中国研究院等地方做过Android开发实习生。
 
 热爱编程，喜欢折腾，搞过Android/Java/Python/JavaFx/JavaWeb/RCP/C#等类型的开发。  
 梦想是希望有一天能够成为一名优秀的工程师，参与有意义的项目开发改变世界。
 
 热爱开源的我自然有GitHub账号啦，欢迎关注： <https://github.com/hujiaweibujidao>
 
-[欢迎阅读以前的博客中比较好的内容](/aboutme/oldblogs.html)，成长之路不可谓不艰辛。
+<!-- [欢迎阅读以前的博客中比较好的内容](/aboutme/oldblogs.html)，成长之路不可谓不艰辛。 -->
 
 各位小爷如果觉得小站还不错的话可以考虑打赏下哈！😘
 
-{% img /images/weixinpayblog.png %} {% img /images/zfbpay.png %}
+![img](/images/weixinpayblog.png) ![img](/images/zfbpay.png)
+
 
 **友情链接**
 

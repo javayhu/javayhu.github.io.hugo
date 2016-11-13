@@ -14,16 +14,16 @@ image: "/images/default.jpg"
 
 **[感谢@Google爱好者给该系列的命名，我很喜欢，叫做“码农与蛇的故事”]**
 
-1.Python基础知识篇
+1.Python基础知识篇  
 [Python Basics](/blog/2014/05/10/python-tips1/) 和 [Python Advances](/blog/2014/05/16/python-tips3/)
 前者是Python基础的简单总结(大部分摘自[网上恩师@廖雪峰老师的Python教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000))，后者推荐了些关于Python高级特性的好文章(大部分摘自[伯乐在线Python分类的文章](http://blog.jobbole.com/category/python/))
 
-2.Python数据结构篇
+2.Python数据结构篇  
 数据结构篇主要是阅读[Problem Solving with Python](http://interactivepython.org/courselib/static/pythonds/index.html) [该网址链接可能会比较慢]时写下的阅读记录，当然，也结合了部分[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)中的内容，此外还有不少wikipedia上的内容，所以内容比较多，可能有点杂乱。这部分主要是介绍了如何使用Python实现常用的一些数据结构，例如堆栈、队列、二叉树等等，也有Python内置的数据结构性能的分析，同时还包括了搜索和排序(在算法设计篇中会有更加详细的介绍)的简单总结。每篇文章都有实现代码，内容比较多，简单算法一般是大致介绍下思想及算法流程，复杂的算法会给出各种图示和代码实现详细介绍。
 
 **这一部分是下面算法设计篇的前篇，如果数据结构还不错的可以直接看算法设计篇，遇到问题可以回来看数据结构篇中的某个具体内容充电一下，我个人认为直接读算法设计篇比较好，因为大家时间也都比较宝贵，如果你会来读这些文章说明你肯定有一定基础了，后面的算法设计篇中更多的是思想，这里更多的是代码而已，嘿嘿。**
 
-(1)[搜索](/blog/2014/05/07/python-algorithms-search/)
+(1)[搜索](/blog/2014/05/07/python-algorithms-search/)   
 简述顺序查找和二分查找，详述Hash查找(hash函数的设计以及如何避免冲突)
 
 (2)[排序](/blog/2014/05/07/python-algorithms-sort/)  
@@ -35,8 +35,8 @@ image: "/images/default.jpg"
 (4)[树总结](/blog/2014/05/08/python-algorithms-Trees/)  
 简述二叉树，详述二叉搜索树和AVL树的思想和实现
 
-3.Python算法设计篇
-算法设计篇主要是阅读[Python Algorithms: Mastering Basic Algorithms in the Python Language](http://link.springer.com/book/10.1007%2F978-1-4302-3238-4)[**点击链接可进入Springer免费下载原书电子版**]之后写下的读书总结，原书大部分内容结合了经典书籍[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)，内容更加细致深入，主要是介绍了各种常用的算法设计思想，以及如何使用Python高效巧妙地实现这些算法，这里有别于前面的数据结构篇，部分算法例如排序就不会详细介绍它的实现细节，而是侧重于它内在的算法思想。这部分使用了一些与数据结构有关的第三方模块，因为这篇的重点是算法的思想以及实现，所以并没有去重新实现每个数据结构，但是在介绍算法的同时会分析Python内置数据结构以及第三方数据结构模块的优缺点，也就意味着该篇比前面都要难不少，但是我想我的介绍应该还算简单明了，因为我用的都是比较朴实的语言，并没有像算法导论一样列出一堆性质和定理，主要是对着某个问题一步步思考然后算法就出来了，嘿嘿，除此之外，里面还有很多关于python开发的内容，精彩真的不容错过！
+3.Python算法设计篇  
+算法设计篇主要是阅读[Python Algorithms: Mastering Basic Algorithms in the Python Language](http://link.springer.com/book/10.1007%2F978-1-4302-3238-4)[**点击下载**]之后写下的读书总结，原书大部分内容结合了经典书籍[算法导论](http://en.wikipedia.org/wiki/Introduction_to_Algorithms)，内容更加细致深入，主要是介绍了各种常用的算法设计思想，以及如何使用Python高效巧妙地实现这些算法，这里有别于前面的数据结构篇，部分算法例如排序就不会详细介绍它的实现细节，而是侧重于它内在的算法思想。这部分使用了一些与数据结构有关的第三方模块，因为这篇的重点是算法的思想以及实现，所以并没有去重新实现每个数据结构，但是在介绍算法的同时会分析Python内置数据结构以及第三方数据结构模块的优缺点，也就意味着该篇比前面都要难不少，但是我想我的介绍应该还算简单明了，因为我用的都是比较朴实的语言，并没有像算法导论一样列出一堆性质和定理，主要是对着某个问题一步步思考然后算法就出来了，嘿嘿，除此之外，里面还有很多关于python开发的内容，精彩真的不容错过！
 
 这里每篇文章都有实现代码，但是代码我一般都不会分析，更多地是分析算法思想，所以内容都比较多，即便如此也没有包括原书对应章节的所有内容，因为内容实在太丰富了，所以我只是选择经典的算法实例来介绍算法核心思想，除此之外，还有不少内容是原书没有的，部分是来自算法导论，部分是来自我自己的感悟，嘻嘻。该篇对于大神们来说是小菜，请一笑而过，对于菜鸟们来说可能有点难啃，所以最适合的是和我水平差不多的，对各个算法都有所了解但是理解还不算深刻的半桶水的程序猿，嘿嘿。
 
@@ -48,31 +48,33 @@ image: "/images/default.jpg"
 
 **3.如果你细读本系列的话我保证你会有不少收获的，需要看算法导论哪个部分的地方我会给出提示的，嘿嘿。温馨提示，前面三节内容都是介绍基础知识，所以精彩内容从第4节开始哟，么么哒 O(∩_∩)O~**
 
-(1)[Python Algorithms - C1 Introduction](/blog/2014/07/01/python-algorithms-introduction/)
+(1)[Python Algorithms - C1 Introduction](/blog/2014/07/01/python-algorithms-introduction/)   
 本节主要是对原书中的内容做些简单介绍，说明算法的重要性以及各章节的内容概要。
 
-(2)[Python Algorithms - C2 The basics](/blog/2014/07/01/python-algorithms-the-basics/)
+(2)[Python Algorithms - C2 The basics](/blog/2014/07/01/python-algorithms-the-basics/)   
 **本节主要介绍了三个内容：算法渐近运行时间的表示方法、六条算法性能评估的经验以及Python中树和图的实现方式。**
 
-(3)[Python Algorithms - C3 Counting 101](http://hujiaweibujidao.github.io//blog/2014/07/01/python-algorithms-counting-101/)
+(3)[Python Algorithms - C3 Counting 101](http://hujiaweibujidao.github.io//blog/2014/07/01/python-algorithms-counting-101/)   
 原书主要介绍了一些基础数学，例如排列组合以及递归循环等，但是本节只重点介绍计算算法的运行时间的三种方法
 
-(4)[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms-induction/)
+(4)[Python Algorithms - C4 Induction and Recursion and Reduction](/blog/2014/07/01/python-algorithms-induction/)   
 **本节主要介绍算法设计的三个核心知识：Induction(推导)、Recursion(递归)和Reduction(规约)，这是原书的重点和难点部分**
 
-(5)[Python Algorithms - C5 Traversal](/blog/2014/07/01/python-algorithms-traversal/)
+(5)[Python Algorithms - C5 Traversal](/blog/2014/07/01/python-algorithms-traversal/)   
 **本节主要介绍图的遍历算法BFS和DFS，以及对拓扑排序的另一种解法和寻找图的(强)连通分量的算法**
 
-(6)[Python Algorithms - C6 Divide and Combine and Conquer](/blog/2014/07/01/python-algorithms-divide-and-combine-and-conquer/)
+(6)[Python Algorithms - C6 Divide and Combine and Conquer](/blog/2014/07/01/python-algorithms-divide-and-combine-and-conquer/)   
 **本节主要介绍分治法策略，提到了树形问题的平衡性以及基于分治策略的排序算法**
 
-(7)[Python Algorithms - C7 Greedy](/blog/2014/07/01/python-algorithms-greedy/)
+(7)[Python Algorithms - C7 Greedy](/blog/2014/07/01/python-algorithms-greedy/)   
 **本节主要通过几个例子来介绍贪心策略，主要包括背包问题、哈夫曼编码和最小生成树等等**
 
-(8)[Python Algorithms - C8 Dynamic Programming](/blog/2014/07/01/python-algorithms-dynamic-programming/)
+(8)[Python Algorithms - C8 Dynamic Programming](/blog/2014/07/01/python-algorithms-dynamic-programming/)   
 **本节主要结合一些经典的动规问题介绍动态规划的备忘录法和迭代法这两种实现方式，并对这两种方式进行对比**
 
-(9)[Python Algorithms - C9 Graphs](/blog/2014/07/01/python-algorithms-graphs/)
+(9)[Python Algorithms - C9 Graphs](/blog/2014/07/01/python-algorithms-graphs/)   
 **本节主要介绍图算法中的各种最短路径算法，从不同的角度揭示它们的内核以及它们的异同**
 
-**原书后面的2个章节(网络流和NP)暂未总结，后期如果阅读之后有所感悟必将添加到该系列，感谢阅读**
+~~原书后面的2个章节(网络流和NP)暂未总结，后期如果阅读之后有所感悟必将添加到该系列，感谢阅读~~
+
+该书的中文翻译版本已经出版，以后就不会再更新啦。

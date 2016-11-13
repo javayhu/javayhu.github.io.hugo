@@ -5,18 +5,20 @@ tags: ["dev"]
 ---
 Hello world! Hello Octopress! <!--more-->
 
-曾经因为很多问题的答案都在[**博客园**](http://www.cnblogs.com)上，于是我在那里驻扎了，但是，它的广告让我不能忍！
-后来因为[**点点博客**](http://www.diandian.com)的小清新我瞬间就爱上了它，于是我搬家了，但是，它的冷清让我想要离开！
-再后来[**Wordpress**](http://wordpress.com)进入了我的眼帘，苦于没有host，只好在BAE上安营，但是，它的龟速简直让我发指！
-最后我终于走进了我一直忽视了的[**Octopress**](http://octopress.org/)，那一瞬间，我才发现，这才是我想要的！这才是我想要的博客！
+**2016-11-13 update: 后来我的博客先后从Octopress进化到Hexo以及现在的Hugo**
+
+曾经因为很多问题的答案都在[**博客园**](http://www.cnblogs.com)上，于是我在那里驻扎了，但是，它的广告让我不能忍！  
+后来因为[**点点博客**](http://www.diandian.com)的小清新我瞬间就爱上了它，于是我搬家了，但是，它的冷清让我想要离开！  
+再后来[**Wordpress**](http://wordpress.com)进入了我的眼帘，苦于没有host，只好在BAE上安营，但是，它的龟速简直让我发指！  
+最后我终于走进了我一直忽视了的[**Octopress**](http://octopress.org/)，那一瞬间，我才发现，这才是我想要的！这才是我想要的博客！  
 
 > A blogging framework for hackers.         -- Parker Moore
 
-今天从早上开始一直到晚上终于把Octopress搭建和配置好了，好开心啊有木有！
-下面介绍安装过程：[不是很轻松，但是也不会很难哟！]
-安装步骤如下：
+今天从早上开始一直到晚上终于把Octopress搭建和配置好了，好开心啊有木有！  
+下面介绍安装过程：[不是很轻松，但是也不会很难哟！]  
+安装步骤如下：  
 
-[安装rbenv和ruby](http://octopress.org/docs/setup/rbenv/)
+**[安装rbenv和ruby](http://octopress.org/docs/setup/rbenv/)**  
 请确保ruby版本是1.9.3以上！我试过，如果版本低的话会出错，但是如果版本很高的话也有可能出错(我试过1.9.3-p2xx)，建议就安装1.9.3-p0，也可以使用[rvm](http://octopress.org/docs/setup/rvm/)来管理ruby版本，我两个都试过了，推荐使用rbenv。
 
 ```
@@ -31,7 +33,7 @@ ruby --version  #查看系统ruby版本
 
 [注：如果install 1.9.3-p0时报错，提示llvm不行，需要安装gcc时按照提示的命令执行即可：`brew tap homebrew/dupes ; brew install apple-gcc42`]
 
-[安装Octopress](http://octopress.org/docs/setup/)
+**[安装Octopress](http://octopress.org/docs/setup/)**  
 这部分耗时会长一些，其中的octopress目录名称可以随便修改，例如myblog等，`gem list`命令可以查看已经安装好了的依赖包，`rake install`就类似`make install`进行安装(Octopress的主题)，一定要确保这里执行的命令都是正确执行了的，否则后面可能出错。
 
 ```
@@ -43,7 +45,7 @@ bundle install
 rake install
 ```
 
-[发布到Github上](http://octopress.org/docs/deploying/github/)
+**[发布到Github上](http://octopress.org/docs/deploying/github/)**  
 以前个人博客是在位于`http://username.github.com`这个域名下，现在改成了`http://username.github.io`，所以大家可以看到两种不同域名下的博客。另外，[Github Pages](https://help.github.com/categories/20/articles)分为两类，一类是个人或者组织的博客，另一类是项目的介绍博客，这里只介绍如果搭建不介绍后者，但是两者基本上相同。
 
 首先新建repository，名称为`username.github.io`，其中`username`是你的github用户名，拷贝repository的SSH地址，类似`git@github.com:username/username.github.io.git`。然后执行下面代码``，它主要是进行以下操作(不难理解，我就不翻译了，原文看着舒坦，嘿嘿)：

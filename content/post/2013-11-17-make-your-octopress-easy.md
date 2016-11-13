@@ -9,7 +9,7 @@ tags: ["dev"]
 
 操作步骤：
 
-#### [1]新建环境变量`OCTOPRESS_HOME`，它是你的octopress的根目录，并添加到`PATH`中
+**[1]新建环境变量`OCTOPRESS_HOME`，它是你的octopress的根目录，并添加到`PATH`中**
 
 [下面是我在Mac上的操作，其他系统自行修改]
 
@@ -22,7 +22,7 @@ echo $OCTOPRESS_HOME  #验证是否变量存在
 echo $PATH  #验证path是否设置成功
 ```
 
-#### [2]编写几个`shell`脚本，放在`OCTOPRESS_HOME`目录下，作用分别如下：
+**[2]编写几个`shell`脚本，放在`OCTOPRESS_HOME`目录下，作用分别如下：**
 
 - gen：等价于`rake generate`操作
 
@@ -131,7 +131,7 @@ echo "$postpath"
 open -a Mou $postpath
 ```
 
-#### [3]使用`chmod 777 xxx`修改脚本的权限，测试执行下
+**[3]使用`chmod 777 xxx`修改脚本的权限，测试执行下**
 
 ```
 cd $OCTOPRESS_HOME

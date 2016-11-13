@@ -2,7 +2,7 @@
 baseurl: "https://hujiaweibujidao.github.io/"
 languageCode: "zh-cn"
 title: "Hujiawei Bujidao"
-paginate: 20
+paginate: 120
 canonifyurls: true
 disable404: false
 enableEmoji: true
@@ -14,13 +14,6 @@ Copyright: "All rights reserved &copy; 2016"
 
 # duoshuo short_name but with param name "DisqusShortname"
 DisqusShortname: hujiaweibujidao
-
-# enables syntax guessing for code fences without specified language
-pygmentsCodeFencesGuessSyntax: true
-# color-codes for highlighting derived from this style #monokai
-pygmentsStyle: "hyde"
-# true: use pygments-css or false: color-codes directly
-pygmentsUseClasses: true
 
 # hugo special directories. generally do *not* need to modify these
 archetypedir: "archetype"

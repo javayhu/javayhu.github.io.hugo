@@ -2,7 +2,6 @@
 title: Plaid Source Reading Notes
 tags: ["android"]
 date: "2015-12-11"
-draft: true
 ---
 Plaid源码阅读笔记。 <!--more-->
 
@@ -116,13 +115,3 @@ dependencies {
     ...
 }
 ```
-
-5.
-
-ItemTouchHelper.SimpleCallback
-
-
-
-401 Unauthorized
-
-https://dribbble.com/oauth/authorize?client_id=6524bd42d3fa3e35eda63d3e0afce0db8b96575b1db4f7580344a9cb2dd89495&redirect_uri=plaid%3A%2F%2Fdribbble-auth-callback&scope=public+write+comment+upload
