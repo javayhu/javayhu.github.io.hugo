@@ -11,8 +11,7 @@ image: "images/default.jpg"
 
 ![image](/images/gank-screenshot.png)
 
-**计划阅读的资源和项目**
-
+**计划阅读的资源和项目**  
 1.[30DaysofSwift: A self-taught project to learn Swift](https://github.com/allenwong/30DaysofSwift)  
 2.[15DaysofAnimationsinSwift: A project to learn  animations](https://github.com/larrynatalicio/15DaysofAnimationsinSwift)  
 3.[swift-a-day: Project files for my personal experiments on Swift A Day](https://github.com/lindadong/swift-a-day)  

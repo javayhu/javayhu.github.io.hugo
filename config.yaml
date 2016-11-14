@@ -2,7 +2,7 @@
 baseurl: "https://hujiaweibujidao.github.io/"
 languageCode: "zh-cn"
 title: "Hujiawei Bujidao"
-paginate: 120
+paginate: 20
 canonifyurls: true
 disable404: false
 enableEmoji: true
