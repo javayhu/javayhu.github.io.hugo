@@ -9,7 +9,6 @@ date: "2016-10-16"
 
 读取文件节点`/proc/loadavg`，分别是1min/5min/15min内CPU的负载情况。  
 读取方式的代码示例：
-
 ```java
 private static final int[] LOAD_AVERAGE_FORMAT = new int[]{
        PROC_SPACE_TERM | PROC_OUT_FLOAT,                 // 0: 1 min
@@ -39,11 +38,10 @@ private void getLoadAverage() {
 
 ##### 2. CPU的频率
 
-CPU的核数：统计 `/sys/devices/system/cpu/` 目录下名称以`cpu`开始的文件夹的数目
-正在工作的核： `/sys/devices/system/cpu/online`
-注意：可能是`1-4`或者`2,3`或者`1-3,5-7`等各种组合形式
-
-正在工作的核的频率，例如cpu0的频率节点： `/sys/devices/system/cpu/`cpu0`/cpufreq/scaling_cur_freq`
+CPU的核数：统计 `/sys/devices/system/cpu/` 目录下名称以`cpu`开始的文件夹的数目  
+正在工作的核： `/sys/devices/system/cpu/online`  
+注意：可能是`1-4`或者`2,3`或者`1-3,5-7`等各种组合形式  
+正在工作的核的频率，例如cpu0的频率节点： `/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq`
 
 ##### 3. 内存碎片化程度
 
@@ -51,12 +49,12 @@ CPU的核数：统计 `/sys/devices/system/cpu/` 目录下名称以`cpu`开始�
 
 ```
 $ cat /sys/kernel/debug/extfrag/unusable_index                      
-Node 0, zone      DMA 0.000 0.802 0.894 0.971 0.985 0.995 1.000 1.000 1.000 1.000 1.000 
-Node 0, zone  Movable 0.000 0.000 0.000 0.000 0.002 0.003 0.003 0.003 0.004 0.006 0.006 
+Node 0, zone      DMA 0.000 0.802 0.894 0.971 0.985 0.995 1.000 1.000 1.000 1.000 1.000
+Node 0, zone  Movable 0.000 0.000 0.000 0.000 0.002 0.003 0.003 0.003 0.004 0.006 0.006
 ```
 
-*(1)zone的个数不确定，名称也不确定*
-*(2)先计算单个zone的平均值，再计算zone的整体平均内存碎片化程度*
+*(1)zone的个数不确定，名称也不确定*  
+*(2)先计算单个zone的平均值，再计算zone的整体平均内存碎片化程度*  
 
 参考资料：[https://chengyihe.wordpress.com/2015/11/28/kernel-mm-syskerneldebugextfragunusable_index/](https://chengyihe.wordpress.com/2015/11/28/kernel-mm-syskerneldebugextfragunusable_index/)
 
@@ -94,9 +92,9 @@ SwapFree:        1153856 kB
 Dirty:                 4 kB
 ```
 
-*1.swap cached 不等于 swap used, swap used = swap total - swap free*
-*2.Memory Free = MemFree + Cached + Buffers*
-*3.Memory Used = Memory Total - Memory Free*
+*1.swap cached 不等于 swap used, swap used = swap total - swap free*  
+*2.Memory Free = MemFree + Cached + Buffers*  
+*3.Memory Used = Memory Total - Memory Free*  
 
 参考资料：[linux内存管理原理](http://www.cnblogs.com/zhaoyl/p/3695517.html) [buffers和cached的区别](http://linuxperf.com/?p=32) [active和inactive的区别](http://linuxperf.com/?p=97)
 
@@ -112,39 +110,37 @@ cpu0 111250 7718 210302 3466017 764 6 209 0 0 0
 
 jiffies是内核中的一个全局变量，用来记录自系统启动一来产生的节拍数。在linux中，一个节拍大致可理解为操作系统进程调度的最小时间片，不同linux内核可能值有不同，通常在1ms到10ms之间。
 
-user (229649) 从系统启动开始累计到当前时刻，用户态的CPU时间（单位：jiffies），不包含nice值为负的进程。
-nice (59778) 从系统启动开始累计到当前时刻，nice值为负的进程所占用的CPU时间（单位：jiffies）
-system (316872) 从系统启动开始累计到当前时刻，核心系统进程占用的时间（单位：jiffies）
-idle (3688440) 从系统启动开始累计到当前时刻，除硬盘IO等待时间以外其它等待时间（单位：jiffies）
-iowait (3308) 从系统启动开始累计到当前时刻，硬盘IO等待时间（单位：jiffies） 
-irq (6) 从系统启动开始累计到当前时刻，硬中断时间（单位：jiffies）
-softirq (357) 从系统启动开始累计到当前时刻，软中断时间（单位：jiffies）
+user (229649) 从系统启动开始累计到当前时刻，用户态的CPU时间（单位：jiffies），不包含nice值为负的进程  
+nice (59778) 从系统启动开始累计到当前时刻，nice值为负的进程所占用的CPU时间（单位：jiffies）  
+system (316872) 从系统启动开始累计到当前时刻，核心系统进程占用的时间（单位：jiffies）  
+idle (3688440) 从系统启动开始累计到当前时刻，除硬盘IO等待时间以外其它等待时间（单位：jiffies）  
+iowait (3308) 从系统启动开始累计到当前时刻，硬盘IO等待时间（单位：jiffies）  
+irq (6) 从系统启动开始累计到当前时刻，硬中断时间（单位：jiffies）  
+softirq (357) 从系统启动开始累计到当前时刻，软中断时间（单位：jiffies）  
 
 上面结果中的后面三个数据在Android中不统计，所以  
-total = user + nice + system + idle + iowait + irq + softirq
-
+`total = user + nice + system + idle + iowait + irq + softirq`  
 百分比的计算方式一般是：  
-USER%=(user+nice)/total，SYS%=system/total，IOW%=iowait/total，IRQ%=(irq+softirq)/total
+`USER%=(user+nice)/total，SYS%=system/total，IOW%=iowait/total，IRQ%=(irq+softirq)/total`  
 
 参考资料：[cpu被占用的时间比信息详解](http://www.cnblogs.com/yjf512/p/3383915.html)  
 
 ##### 7. 进程/线程的占用信息
 
-进程数据文件的节点： `/proc/[pid]`
-线程数据文件的节点： `/proc/[pid]/task/[tid]`
+进程数据文件的节点： `/proc/[pid]`  
+线程数据文件的节点： `/proc/[pid]/task/[tid]`  
 
 进程和线程的状态信息从`stat`文件中获取，名称从`cmdline`文件中获取，cpuset从`cpuset`文件中获取等。进程的`stat`文件中保存了该进程的`user time`和`system time`，两者之和可以用来对进程进行排序，一般进程和线程的排序方式都是按照它们占用的CPU时长来排序的。
 
-*(1)Process.getPids方法既可以用来获取某个目录下的所有进程数组，也可以用来获取某个进程的task目录下的所有线程数组*
-*(2)Process.getPss方法可以用来统计进程的pss数据，但是很多进程的pss数据都没法获取到*
+*(1)Process.getPids方法既可以用来获取某个目录下的所有进程数组，也可以用来获取某个进程的task目录下的所有线程数组*  
+*(2)Process.getPss方法可以用来统计进程的pss数据，但是很多进程的pss数据都没法获取到*  
 
 参考资料：[关于/proc/pid/stat](http://blog.csdn.net/zjl_1026_2001/article/details/2294036)
 
-进程和线程部分的实现相对有点难度，一方面要统计系统所有的进程和线程的信息，另一方面要对它们进行排序。不过庆幸的是Android系统源码中有一个[`LoadAverageService`]()，这个service也就是开发者选项中`显示CPU使用情况`的内部实现，它的代码非常具有参考价值，我们可以在它的基础上进行扩展开发自己的工具。
+进程和线程部分的实现相对有点难度，一方面要统计系统所有的进程和线程的信息，另一方面要对它们进行排序。不过庆幸的是Android系统源码中有一个[`LoadAverageService`](http://androidxref.com/6.0.0_r1/xref/frameworks/base/packages/SystemUI/src/com/android/systemui/LoadAverageService.java)，这个service也就是开发者选项中`显示CPU使用情况`的内部实现，它的代码非常具有参考价值，我们可以在它的基础上进行扩展开发自己的工具。
 
 上面只是列举了部分常见的重要数据的获取方法，其他数据的获取方式也都差不多，主要是要知道当前平台的相应数据的文件节点，还需要注意的是是否具有文件的读权限。
 
-下图是我最近开发的悟空监视器(公司内部项目，源码不能公开，仅供参考，原理同上)
+下图是我最近开发的悟空监视器，入口在Flyme系统的开发者选项中(公司内部项目，源码不能公开，仅供参考，原理同上)
 
 ![img](/images/wukong.jpg)
-

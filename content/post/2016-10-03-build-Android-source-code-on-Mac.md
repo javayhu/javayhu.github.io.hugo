@@ -12,11 +12,11 @@ published: true
 
 如果是在Ubuntu系统下进行编译的话，中文文档请参考[自己动手编译最新Android源码及SDK](http://blog.csdn.net/dd864140130/article/details/51718187)或者Gityuan写的编译最新的7.0源码的文章[搭建Android 7.0的源码环境](http://gityuan.com/2016/08/20/Android_N/)，英文文档主要看Google官方的文档，包括[前提要求篇](https://source.android.com/source/requirements.html)、[环境准备篇](https://source.android.com/source/initializing.html)以及[源码编译篇](https://source.android.com/source/building.html)，如果磁盘空间充足并且网络环境通畅的话，编译通过是没啥问题的。
 
-特别需要注意以下几点：
-0.磁盘空间的大小
+特别需要注意以下几点：  
+0.磁盘空间的大小  
 按照Google官方的说法是，checkout代码至少需要100GB空间，单个编译的话至少需要150GB空间，多类型的编译的话至少需要200GB空间(实际我下载完代码之后大约占用了50GB左右)。而且，如果你是在虚拟机的Linux中编译的话，还需要满足至少有16GB的RAM/swap。
 
-1.Ubuntu系统的版本和JDK的版本
+1.Ubuntu系统的版本和JDK的版本  
 Ubuntu系统推荐使用14.04，而且安装好系统之后如果有提示软件更新，建议更新一下。此外，推荐在设置中设置软件更新的远程服务器，将其设置为China下的aliyun服务器，这样速度会快很多。
 
 JDK版本需要根据你要编译的Android系统版本来确定，而且还需要注意是Oracle JDK还是Open JDK！可以在系统中多安装几个版本的JDK，以后使用`update-alternatives --config`命令来切换。
@@ -44,7 +44,4 @@ JDK版本需要根据你要编译的Android系统版本来确定，而且还需�
 
 最后一步是执行编译，lunch时我选择`aosp_arm64_eng`为target，并启动6个线程进行编译`make -j6`。
 
-
-
-
-
+Anyway，最后我还是没能在Mac上编译成功，貌似机器的配置还是不够，算了，还是用来看代码吧。

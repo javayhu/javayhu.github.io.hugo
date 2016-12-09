@@ -1,7 +1,6 @@
 ---
 title: "Python"
 date: "2014-05-18"
-image: "/images/default.jpg"
 ---
 的确，正如偶像Bruce Eckel所说，**"Life is short, you need Python"！**
 如果你正在考虑学Java还是Python的话，那就别想了，选Python吧，你的人生会有更多的时间做其他有意思的事情。

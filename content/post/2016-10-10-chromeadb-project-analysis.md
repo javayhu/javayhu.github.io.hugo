@@ -5,24 +5,20 @@ date: "2016-10-10"
 ---
 本文记录的是chromeadb项目的源码阅读总结。 <!--more-->
 
-chromeadb项目源码：[https://github.com/importre/chromeadb](https://github.com/importre/chromeadb)
-
+chromeadb项目源码：[https://github.com/importre/chromeadb](https://github.com/importre/chromeadb)  
 chromeadb工具的本质就是利用adb命令以可视化的方式提供了一些简便操作和数据查看的功能。
 
 ![img](/images/chromeadb.png)
 
 从该项目的目前提交记录以及[issue](https://github.com/importre/chromeadb/issues/12)来看，这个项目已经被放弃了，因为Google的Chrome浏览器未来将不支持Chrome扩展应用。此外，项目源码用的是Angular JS来开发的，我并不是很熟悉，所以主要是阅读下源码理解其大致的实现流程。要体验ChromeADB的MousePad功能还需要安装一个应用[chromeadb_for_android](https://github.com/importre/chromeadb_for_android)，这个应用我们也会稍微介绍一下。
 
-**（1）源码结构**
+### 1.源码结构
+1.1 项目根目录是package.json、Gruntfile.js、bower.json等相关说明和依赖管理文件；  
+1.2 test目录下是测试代码；  
+1.3 src目录下是核心源码，其中assets目录是资源文件夹，里面都是图片；styles目录是样式文件`chromeadb.css`；views目录是各个子界面的模板页面，例如`packages.html`、`controller.html`等；scripts目录是控制脚本，例如`chromeadb.js`、`controllers.js`等。  
 
-1.1 项目根目录是package.json、Gruntfile.js、bower.json等相关说明和依赖管理文件；
-1.2 test目录下是测试代码；
-1.3 src目录下是核心源码，其中assets目录是资源文件夹，里面都是图片；styles目录是样式文件`chromeadb.css`；views目录是各个子界面的模板页面，例如`packages.html`、`controller.html`等；scripts目录是控制脚本，例如`chromeadb.js`、`controllers.js`等。
-
-**（2）核心文件及代码分析**
-
-**2.1 index.html**
-
+### 2.核心文件及代码分析
+**2.1 index.html**    
 控制应用的主界面布局，界面顶部显示设备连接的操作，中间左侧显示设备列表和设备信息，中间右侧显示packages、processes、memory以及disk等信息，界面底部显示chromeadb的github地址。
 
 ```html
@@ -52,8 +48,7 @@ chromeadb工具的本质就是利用adb命令以可视化的方式提供了一�
 </div>
 ```
 
-**2.2 utils.js**
-
+**2.2 utils.js**  
 定义一些通用的方法以供其他地方调用，例如services.js中就利用了这些方法来转换数据。
 
 ```js
@@ -83,8 +78,7 @@ function arrayBufferToBinaryString(buf, callback) {
 }
 ```
 
-**2.3 background.js**
-
+**2.3 background.js**  
 应用启动时的初始化，应用是从这里开始的。
 
 ```js
@@ -98,8 +92,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
 });
 ```
 
-**2.4 chromeadb.js**
-
+**2.4 chromeadb.js**  
 控制转发中心，点击不同的tab显示不同的html模板文件所在的界面，这里创建了chromeADB这个module。
 
 ```js
@@ -128,8 +121,7 @@ adb.config(function ($routeProvider) {//配置url路由控制转发
 });
 ```
 
-**2.5  chrome.js**
-
+**2.5  chrome.js**  
 主要有三个初始化方法，这里会初始化chrome.socket，后面的SocketService会用到。这里还初始化了初始化ChromeRuntime，这个在上面的路由转发中用到了。
 
 ```js
@@ -231,8 +223,7 @@ function initChromeRuntime(chrome) {//初始化ChromeRuntime
 }
 ```
 
-**2.6 parser.js**
-
+**2.6 parser.js**  
 主要是利用正则表达式来提供一些解析adb命令返回结果的方法
 
 ```js
@@ -262,8 +253,7 @@ function parsePackageList(data) {//解析包列表
 }
 ```
 
-**2.7 services.js**
-
+**2.7 services.js**  
 利用前面初始化好的chrome.socket来建立一个socketService，这个service负责和指定的host和port进行连接并提供数据读写服务的功能，这里的host和port是指adb-server的host和port，所以一般拿手机连接PC的话，这里host和port通常分别就是127.0.0.1和5037。
 
 ```js
@@ -325,12 +315,10 @@ function parsePackageList(data) {//解析包列表
   }
 ```
 
-**2.8 controllers.js**
-
+**2.8 controllers.js**  
 核心控制脚本
 
-2.8.1 loadDevices
-
+2.8.1 loadDevices  
 命令：adb devices -l
 
 ```
@@ -341,8 +329,7 @@ List of devices attached
 
 parseDeviceInfoList方法的作用就是从输出结果中解析出设备的序列号(serial)、usb、product、model、device、state等信息
 
-2.8.2 loadPackages
-
+2.8.2 loadPackages  
 命令：adb shell pm list packages
 
 ```
@@ -372,20 +359,17 @@ function parsePackageList(data) {
 }
 ```
 
-2.8.3 其他与package相关的方法
+2.8.3 其他与package相关的方法  
+installPackage：adb shell pm install -r <package>  
+uninstallPackage：adb shell pm uninstall <package>  
+stopPackage：adb shell am force-stop <package>  
+clearData：adb shell pm clear <package>  
+removeApkFile：adb shell rm -rf <packagePath>  
 
-installPackage：adb shell pm install -r <package>
-uninstallPackage：adb shell pm uninstall <package>
-stopPackage：adb shell am force-stop <package>
-clearData：adb shell pm clear <package>
-removeApkFile：adb shell rm -rf <packagePath>
+从源码来看，chromeadb实现应用安装的方法是先将apk文件保存到手机的`/data/local/tmp/`目录，然后执行`adb shell pm install -r <packagePath>`方法来安装应用的(这个操作步骤和Android Studio中安装apk的逻辑是一样的)。
 
-从源码来看，chromeadb实现应用安装的方法是先将apk文件保存到手机的`/data/local/tmp/`目录，然后执行`adb shell pm install -r <packagePath>`方法来安装应用的。
-
-2.8.4 loadProcessList
-
-命令：adb shell ps
-
+2.8.4 loadProcessList  
+命令：adb shell ps  
 parseProcessList方法用于从输出结果中解析出进程列表，Android 4.4版本之前和之后的输出结果的格式略有差异，所以需要两个不同的正则表达式。
 
 ```js
@@ -412,12 +396,11 @@ function parseProcessList(data) {
 }
 ```
 
-2.8.5 loadMemInfo
-
-命令：adb shell dumpsys meminfo
+2.8.5 loadMemInfo  
+命令：adb shell dumpsys meminfo  
 
 ```
-➜  ~ adb shell dumpsys meminfo 
+➜  ~ adb shell dumpsys meminfo
 Applications Memory Usage (kB):
 Uptime: 46425131 Realtime: 178910170
 
@@ -473,8 +456,7 @@ function parseMemInfo(data) {
 }
 ```
 
-命令：adb shell dumpsys meminfo [pid/package]
-
+命令：adb shell dumpsys meminfo [pid/package]  
 带pid/package参数的dumpsys meminfo可以得到该进程的详细内存占用信息
 
 ```
@@ -546,8 +528,7 @@ function parsePackageMemInfo(data) {
 ![img](/images/chromeadb_chart.png)
 
 
-2.8.6 loadDiskSpace
-
+2.8.6 loadDiskSpace  
 命令：adb shell df
 
 ```
@@ -580,10 +561,9 @@ function parseDiskSpace(data) {
 }
 ```
 
-2.8.7 controller面板下的操作
-
-sendText：adb shell input text <text>
-onClickButton：adb shell input keyevent <keyCode>
+2.8.7 controller面板下的操作  
+sendText：adb shell input text <text>  
+onClickButton：adb shell input keyevent <keyCode>  
 
 chromeadb在controller面板中还有一个MousePad功能，但是这个功能需要先在手机上安装chromeadb_for_android应用。[ChromeADB for Android这个应用的源码地址](https://github.com/importre/chromeadb_for_android)，这个项目创建于2年前，可能不太好编译，建议直接创建新项目然后拷贝源码过来进行编译。
 
@@ -591,8 +571,7 @@ chromeadb在controller面板中还有一个MousePad功能，但是这个功能�
 
 ![img](/images/chromeadb_mousepad_controller.png)
 
-**（3）chromeadb_for_android 应用源码分析**
-
+### 3.chromeadb_for_android应用源码分析
 从chromeadb的源码来看，chromeadb会启动这个应用中的ChromeAdbService，然后实现各种移动和点击操作，所以ChromeAdbService是该应用的核心。
 
 ```java
@@ -786,8 +765,7 @@ public class ChromeAdbService extends Service implements TailerListener {
 
 chromeadb_for_android应用的代码看起来很简单，那么chromeadb是如何将坐标发送到事件文件中的呢？其实就是执行类似下面的命令`adb shell echo move 522,1108,530,1108 >> /sdcard/chromeadb.event`而已。ChromeAdbService这个服务会监听那个文件的变化，一旦有新的数据过来了就会解析参数执行相应的命令。
 
-** (4) 与adbserver通信的秘密 **
-
+### 4.与adbserver通信的秘密
 通过前面的分析我们知道了chromeadb实际上是连接adbserver，将命令通过socket发送给adbserver，然后adbserver去执行命令并返回结果给chromeadb。那通过socket发送的是什么内容呢？
 
 parse.js文件中有一个很重要的方法`makeCommand`，这个方法用来构造发送的数据，从方法内容来看就是在命令的前面填充4位十六进制形式的数字，表示命令的总长度，方便server那边解析。例如想要发送`shell:dumpsys snowden`命令，那么实际发送的数据是`0015shell:dumpsys snowden`。
@@ -899,11 +877,8 @@ public class Snowden {
 }
 ```
 
-** 总结 **
+### 5.总结
 
 虽然chromeadb工具的功能有限而且未来可能真的不会再有新的进展，但是利用当前这个版本进行扩展使用更多有用的功能还是非常方便的，例如我最近利用之前开发的手机版本的悟空监视器改造了一个新的斯诺登监视器。
 
 ![img](/images/SnowdenMonitor.png)
-
-
-

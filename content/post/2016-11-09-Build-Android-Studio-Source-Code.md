@@ -13,12 +13,12 @@ android studio的源码涉及到aosp中的sdk.git，ndk.git，external/qemu.git�
 `ndk.git` is the project hosting the Android NDK source files.
 `external/qemu.git` is the project for our qemu-based emulator.
 
-sdk.git项目是一个核心项目，大部分基于Java开发的工具都在这个项目里面，包含了ddms，traceview， hierarchyviewer，lint等工具，其中的eclipse目录是android device monitor的工具的源码，包含了各种插件，例如ddms，traceview，hierarchyviewer等。
+sdk.git项目是一个核心项目，大部分基于Java开发的工具都在这个项目里面，包含了ddms，hierarchyviewer，lint，traceview等工具，其中的eclipse目录是android device monitor的工具的源码，包含了各种插件，例如ddms，traceview，hierarchyviewer等。
 
-sdk.git项目根目录下的[README文档](http://androidxref.com/7.0.0_r1/xref/sdk/)的主要内容是关于sdk.git这个项目的变化以及使用需知
-其中解答了几个重要的问题，例如如何只构建某个单独的工具？如何修改工具源码来构建一个新的sdk？
-(1)I don't build full SDKs but I want to change tool X
-(2)How do I change some tools sources and build a new SDK using these?
+sdk.git项目根目录下的[README文档](http://androidxref.com/7.0.0_r1/xref/sdk/)的主要内容是关于sdk.git这个项目的变化以及使用需知  
+其中解答了几个重要的问题，例如如何只构建某个单独的工具？如何修改工具源码来构建一个新的sdk？  
+(1)I don't build full SDKs but I want to change tool X  
+(2)How do I change some tools sources and build a new SDK using these?  
 
 文档[http://tools.android.com/build](http://tools.android.com/build)中给出了编译sdk的方法
 ```
@@ -34,8 +34,8 @@ repo init -u https://android.googlesource.com/platform/manifest -b studio-2.2
 ```
 
 ### 3.编译源码
-3.1 使用ant
-最简单的编译运行方式是在tools/idea目录下执行`ant`，最终会在tools/idea/out/中生成可运行的Android Studio应用程序
+3.1 使用ant  
+最简单的编译运行方式是在tools/idea目录下执行`ant`，最终会在tools/idea/out/中生成可运行的Android Studio应用程序  
 
 3.2 使用Intellij (推荐)  
 tools/idea目录下的README.md文档说明了如何编译Android Studio源码  
@@ -53,23 +53,22 @@ tools/idea目录下的README.md文档说明了如何编译Android Studio源码
 
 如果遇到`java: package com.sun.source.tree does not exist`这个错误的话记得检查是否已经将`<JDK_HOME>/lib/tools.jar`添加到IDEA jdk中
 
-下面是README.md文档的原文，其中第一步执行tools/idea目录下的`getPlugins.sh`脚本，这个脚本会去下载两个repository，但是**这个步骤在我这里一直没能成功，两个git项目能访问但是网络连接很慢源码下载不下来**，不过幸运的是这个步骤对后面的操作并没有影响。
-`git clone git://git.jetbrains.org/idea/android.git android`
-`git clone git://git.jetbrains.org/idea/adt-tools-base.git android/tools-base`
+下面是README.md文档的原文，其中第一步执行tools/idea目录下的`getPlugins.sh`脚本，它会去下载两个repository，但是**这个步骤在我这里一直没能成功，两个git项目能访问但是网络连接很慢源码下载不下来**，不过幸运的是这个步骤对后面的操作貌似并没有影响。  
+`git clone git://git.jetbrains.org/idea/android.git android`  
+`git clone git://git.jetbrains.org/idea/adt-tools-base.git android/tools-base`  
 
-**Building and Running from the IDE**
-To develop IntelliJ IDEA, you can use either IntelliJ IDEA Community Edition or IntelliJ IDEA Ultimate not older than 15.0. To build and run the code:
-
-- Run getPlugins.sh / getPlugins.bat from the project root directory to check out additional modules.
-- If this git repository is not on 'master' branch you need to checkout the same branches/tags in android and android/tools-base git repositories.
-- Open the project.
-- If an error notification about a missing required plugin (e.g. Kotlin) is shown enable or install that plugin.
-- Configure a JDK named "IDEA jdk" (case sensitive), pointing to an installation of JDK 1.6.
-- Unless you're running on a Mac with an Apple JDK, add <JDK_HOME>/lib/tools.jar to the set of "IDEA jdk" jars.
-- Configure a JDK named "1.8", pointing to an installation of JDK 1.8.
-- Add <JDK_18_HOME>/lib/tools.jar to the set of "1.8" jars.
-- Use Build | Make Project to build the code.
-- To run the code, use the provided shared run configuration "IDEA".
+**Building and Running from the IDE**  
+To develop IntelliJ IDEA, you can use either IntelliJ IDEA Community Edition or IntelliJ IDEA Ultimate not older than 15.0.   To build and run the code:  
+- Run getPlugins.sh / getPlugins.bat from the project root directory to check out additional modules.  
+- If this git repository is not on 'master' branch you need to checkout the same branches/tags in android and android/tools-base git repositories.  
+- Open the project.  
+- If an error notification about a missing required plugin (e.g. Kotlin) is shown enable or install that plugin.  
+- Configure a JDK named "IDEA jdk" (case sensitive), pointing to an installation of JDK 1.6.  
+- Unless you're running on a Mac with an Apple JDK, add <JDK_HOME>/lib/tools.jar to the set of "IDEA jdk" jars.  
+- Configure a JDK named "1.8", pointing to an installation of JDK 1.8.  
+- Add <JDK_18_HOME>/lib/tools.jar to the set of "1.8" jars.  
+- Use Build | Make Project to build the code.  
+- To run the code, use the provided shared run configuration "IDEA".  
 
 ### 4.其他参考资料
 (1) [Build Android Studio](http://tools.android.com/build/studio)  

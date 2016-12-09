@@ -35,8 +35,8 @@ taxonomies:
 # params used in themes
 params:
   description: "Happy Coding & Enjoy Living"
-  #cover: "https://www.bing.com/ImageResolution.aspx?w=1366&h=768"
-  cover: "images/default.jpg"
+  cover: "https://www.bing.com/ImageResolution.aspx?w=1366&h=768"
+  #cover: "images/default.jpg"
   author: "hujiawei"
   authorlocation: "Guangdong, China"
   authorwebsite: "https://github.com/hujiaweibujidao"
@@ -52,9 +52,9 @@ params:
 # the hamburger menu in upper-right hand corner of the site.
 menu:
   main:
-    - name: "Blog"                          # name that appears in the menu list
+    - name: "Home"                          # name that appears in the menu list
       weight: -120                          # order it appears more negative == closer to top of list
-      identifier: "blog"                    # TODO: not sure what this is responsible for
+      identifier: "home"                    # TODO: not sure what this is responsible for
       url: "/"                              # link address to use when user clicks on menu option
     - name: "Android"
       weight: -110
