@@ -2,7 +2,6 @@
 date: 2016-12-01T10:46:33+08:00
 title: Builtin Lint Detectors (1)
 tags: ["android"]
-published: false
 ---
 Lint工具中自带的与Android开发相关的lint检查项。 <!--more-->
 
@@ -171,15 +170,5 @@ public static Integer valueOf(int i) {
 **(24) Mismatched Log Tags**  
 实现：`LogDetector`  
 说明：这个检查项是检查打log时判断是否可以打印的tag与实际打印的log的tag是否是统一的，也就是`Log.isLoggable(tag)`和`Log.v(tag, ...)`这两个语句中的tag必须是一致的。
-
-
-
-
-
-
-
-
-
-
 
 持续添加中...
