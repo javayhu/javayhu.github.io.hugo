@@ -54,7 +54,8 @@ Toolbar supports a more focused feature set than ActionBar. From start to end, a
 
 3.让Toolbar充当ActionBar
 
-如何让Toolbar充当ActionBar？参考[Android Tips: Hello Toolbar, Goodbye Action Bar](http://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) 和 [Android Lollipop Toolbar Example](http://javatechig.com/android/android-lollipop-toolbar-example)。
+如何让Toolbar充当ActionBar？  
+参考[Android Tips: Hello Toolbar, Goodbye Action Bar](http://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) 和 [Android Lollipop Toolbar Example](http://javatechig.com/android/android-lollipop-toolbar-example)。
 
 (3.1)设置Theme
 
@@ -70,7 +71,7 @@ Toolbar supports a more focused feature set than ActionBar. From start to end, a
 </style>
 ```
 
-正确的设置是要么直接设置为`Theme.AppCompat.NoActionBar` 主题；要么提供一个原有Theme的``扩展版本Theme，如下所示：
+正确的设置是要么直接设置为`Theme.AppCompat.NoActionBar` 主题；要么提供一个原有Theme的`.NoActionBar`扩展版本，如下所示：
 
 参考[StackOverflow: AppCompat does not support the current theme features](http://stackoverflow.com/questions/29790070/upgraded-to-appcompat-v22-1-0-and-now-getting-illegalargumentexception-appcompa)
 
