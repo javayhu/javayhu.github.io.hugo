@@ -6,15 +6,16 @@ date: "2015-11-27"
 《Android群英传》读书笔记 (3) 第六章 Android绘图机制与处理技巧 + 第七章 Android动画机制与使用技巧 <!--more-->
 
 ### **第六章 Android绘图机制与处理技巧**
-1.屏幕尺寸信息
-屏幕大小：屏幕对角线长度，单位“寸”；
-分辨率：手机屏幕像素点个数，例如720x1280分辨率；
-PPI(Pixels Per Inch)：即DPI(Dots Per Inch)，它是对角线的像素点数除以屏幕大小得到的；
-系统屏幕密度：android系统定义了几个标准的DPI值作为手机的固定DPI。
-**注：下图中有两处笔误，hdpi应该是480x800，xxhdpi应该是1080x1920**
+1.屏幕尺寸信息  
+屏幕大小：屏幕对角线长度，单位“寸”；  
+分辨率：手机屏幕像素点个数，例如720x1280分辨率；  
+PPI(Pixels Per Inch)：即DPI(Dots Per Inch)，它是对角线的像素点数除以屏幕大小得到的；  
+系统屏幕密度：android系统定义了几个标准的DPI值作为手机的固定DPI。  
+**注：下图中有两处笔误，hdpi应该是480x800，xxhdpi应该是1080x1920**  
 ![img](/images/androidheros_dpi.png)
-独立像素密度(DP)：android系统使用mdpi屏幕作为标准，在这个屏幕上1dp=1px，其他屏幕可以通过比例进行换算。在hdpi中，1dp=1.5px。在xhdpi中，1dp=2px。在xxhdpi中，1dp=3px。
-单位转换：常用的单位转换的辅助类DisplayUtil
+
+独立像素密度(DP)：android系统使用mdpi屏幕作为标准，在这个屏幕上1dp=1px，其他屏幕可以通过比例进行换算。在hdpi中，1dp=1.5px。在xhdpi中，1dp=2px。在xxhdpi中，1dp=3px。  
+单位转换：常用的单位转换的辅助类DisplayUtil  
 ```
 /**
  * 常用单位转换的辅助类
@@ -54,22 +55,22 @@ public class DisplayUtil {
 }
 ```
 
-2.2D绘图基础
-(1)Canvas对象
+2.2D绘图基础  
+(1)Canvas对象  
 `drawPoint`，`drawLine`，`drawRect`，`drawRoundRect`，`drawCircle`，`drawArc`，`drawOval`，`drawText`，`drawPosText`(在指定位置绘制文本)，`drawPath`(绘制路径)
 
-(2)Paint对象
-`setAntiAlias`：设置画笔的锯齿效果
-`setColor`：设置画笔的颜色
-`setARGB`：设置画笔的A、R、G、B值
-`setAlpha`：设置画笔的透明度值
-`setTextSize`：设置字体大小
-`setStyle`：设置画笔的效果（空心STROKE或者实心FILL）
-`setStrokeWidth`：设置空心边框的宽度
+(2)Paint对象  
+`setAntiAlias`：设置画笔的锯齿效果  
+`setColor`：设置画笔的颜色  
+`setARGB`：设置画笔的A、R、G、B值  
+`setAlpha`：设置画笔的透明度值  
+`setTextSize`：设置字体大小  
+`setStyle`：设置画笔的效果（空心STROKE或者实心FILL）  
+`setStrokeWidth`：设置空心边框的宽度  
 
-3.Android XML绘图
-(1)Bitmap
-在XML中定义Bitmap的语法
+3.Android XML绘图  
+(1)Bitmap  
+在XML中定义Bitmap的语法  
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap
@@ -84,8 +85,8 @@ public class DisplayUtil {
     android:tileMode=["disabled" | "clamp" | "repeat" | "mirror"] />
 ```
 
-(2)Shape
-在XML中定义Shape的语法
+(2)Shape  
+在XML中定义Shape的语法  
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <shape    
@@ -125,8 +126,8 @@ public class DisplayUtil {
 </shape>
 ```
 
-(3)Layer
-在XML中定义Layer的语法，layer类似PS中图层的概念，语法如下
+(3)Layer  
+在XML中定义Layer的语法，layer类似PS中图层的概念，语法如下  
 ```
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@[package:]drawable/drawable_resource" />
@@ -135,8 +136,8 @@ public class DisplayUtil {
 </layer-list>
 ```
 
-(4)Selector
-selector的用法很多，一般是定义控件在不同状态下的显示形态，可以是图片drawable，也可以是形状shape，还可以只是颜色color！
+(4)Selector  
+selector的用法很多，一般是定义控件在不同状态下的显示形态，可以是图片drawable，也可以是形状shape，还可以只是颜色color！  
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -155,7 +156,7 @@ selector的用法很多，一般是定义控件在不同状态下的显示形态
 </selector>
 ```
 
-selector与shape结合的例子
+selector与shape结合的例子  
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -182,7 +183,7 @@ selector与shape结合的例子
 </selector>
 ```
 
-selector可以用来指定不同状态下文本的颜色，例如按钮上的文本的颜色
+selector可以用来指定不同状态下文本的颜色，例如按钮上的文本的颜色   
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -195,14 +196,15 @@ selector可以用来指定不同状态下文本的颜色，例如按钮上的文
 
 结合这篇博文[Android开发：shape和selector和layer-list](http://blog.csdn.net/brokge/article/details/9713041)以及博主的实现的[圆角镂空按钮](http://blog.csdn.net/brokge/article/details/41318117)例子(综合使用了Shape、Layer和Selector实现了圆角镂空按钮)一起看还是挺不错的。
 
-4.Android绘图技巧
-(1)Canvas 画布
-四个主要方法：
-`save`：保存画布，将之前绘制的内容保存起来；
-`restore`：合并画布，将save方法之后绘制的内容与之前绘制的内容合并起来；
-`translate`：移动画布，其实是画布所在的坐标系的移动；
-`rotate`：旋转画布，其实是画布所在的坐标系的旋转。
-后面两个方法主要是用来方便在某些特殊情况下的绘制，例如书中介绍的仪表盘的绘制
+4.Android绘图技巧  
+(1)Canvas 画布  
+四个主要方法：  
+`save`：保存画布，将之前绘制的内容保存起来；  
+`restore`：合并画布，将save方法之后绘制的内容与之前绘制的内容合并起来；  
+`translate`：移动画布，其实是画布所在的坐标系的移动；  
+`rotate`：旋转画布，其实是画布所在的坐标系的旋转。  
+
+后面两个方法主要是用来方便在某些特殊情况下的绘制，例如书中介绍的仪表盘的绘制  
 ```
 @Override
 protected void onDraw(Canvas canvas) {
@@ -263,8 +265,8 @@ protected void onDraw(Canvas canvas) {
 }
 ```
 
-(2)Layer 图层
-在Android中图层是基于栈的结构来管理的，通过调用`saveLayer`、`saveLayerAlpha`方法来创建图层，使用`restore`、`restoreToCount`方法将一个图层入栈。入栈的时候，后面所有的操作都发生在这个图层上，而出栈的时候则会把图像绘制在上层Canvas上。
+(2)Layer 图层  
+在Android中图层是基于栈的结构来管理的，通过调用`saveLayer`、`saveLayerAlpha`方法来创建图层，使用`restore`、`restoreToCount`方法将一个图层入栈。入栈的时候，后面所有的操作都发生在这个图层上，而出栈的时候则会把图像绘制在上层Canvas上。  
 ```
 @Override
 protected void onDraw(Canvas canvas) {
@@ -279,22 +281,22 @@ protected void onDraw(Canvas canvas) {
 }
 ```
 
-仪表盘和Layer图层效果如下：
+仪表盘和Layer图层效果如下：  
 ![img](/images/androidheros_canvas.png)
 ![img](/images/androidheros_layer.png)
 
-5.Android图像处理 **[TODO：该部分略过了，自己暂时用的比较少，等需要用的时候学习下再补充]**
-色彩特效处理、图形特效处理、画笔特效处理
+5.Android图像处理 **[TODO：该部分略过了，自己暂时用的比较少，等需要用的时候学习下再补充]**  
+色彩特效处理、图形特效处理、画笔特效处理  
 
-6.SurfaceView
-**SurfaceView与View的区别**
-(1)View主要适用于主动更新的情况下，而SurfaceView主要适用于被动更新，例如频繁地刷新；
-(2)View在主线程中对画面进行刷新，而SurfaceView通常会通过一个子线程来进行页面刷新；
-(3)View在绘图时没有使用双缓冲机制，而SurfaceView在底层实现机制中就已经实现了双缓冲机制。
+6.SurfaceView  
+**SurfaceView与View的区别**  
+(1)View主要适用于主动更新的情况下，而SurfaceView主要适用于被动更新，例如频繁地刷新；  
+(2)View在主线程中对画面进行刷新，而SurfaceView通常会通过一个子线程来进行页面刷新；  
+(3)View在绘图时没有使用双缓冲机制，而SurfaceView在底层实现机制中就已经实现了双缓冲机制。  
 
-SurfaceView的使用
-(1)创建SurfaceView，一般继承自SurfaceView，并实现接口SurfaceHolderCallback。
-SurfaceHolderCallback接口的三个回调方法
+SurfaceView的使用  
+(1)创建SurfaceView，一般继承自SurfaceView，并实现接口SurfaceHolderCallback。  
+SurfaceHolderCallback接口的三个回调方法  
 ```
 @Override
 public void surfaceCreated(SurfaceHolder holder) {
@@ -310,8 +312,8 @@ public void surfaceDestroyed(SurfaceHolder holder) {
 }
 ```
 
-(2)初始化SurfaceView
-初始化SurfaceHolder对象，并设置Callback
+(2)初始化SurfaceView  
+初始化SurfaceHolder对象，并设置Callback  
 ```
 private void initView() {
     mHolder = getHolder();
@@ -320,9 +322,9 @@ private void initView() {
 }
 ```
 
-(3)使用SurfaceView
-通过lockCanvas方法获取Canvas对象进行绘制，并通过unlockCanvasAndPost方法对画布内容进行提交
-**需要注意的是每次调用lockCanvas拿到的Canvas都是同一个Canvas对象，所以之前的操作都会保留，如果需要擦除，可以在绘制之前调用`drawColor`方法来进行清屏。**
+(3)使用SurfaceView  
+通过lockCanvas方法获取Canvas对象进行绘制，并通过unlockCanvasAndPost方法对画布内容进行提交  
+**需要注意的是每次调用lockCanvas拿到的Canvas都是同一个Canvas对象，所以之前的操作都会保留，如果需要擦除，可以在绘制之前调用`drawColor`方法来进行清屏。**  
 ```
 private void draw() {
     try {
@@ -336,7 +338,7 @@ private void draw() {
 }
 ```
 
-书中使用SurfaceView实现了简易画板
+书中使用SurfaceView实现了简易画板  
 ```
 public class SimpleDraw extends SurfaceView implements SurfaceHolder.Callback, Runnable {
 
@@ -439,26 +441,29 @@ public class SimpleDraw extends SurfaceView implements SurfaceHolder.Callback, R
 ```
 
 <br/>
-### **第七章 Android动画机制与使用技巧**
-1.View动画 （视图动画）
-视图动画(Animation)框架定义了透明度(AlphaAnimation)、旋转(RotateAnimation)、缩放(ScaleAnimation)和位移(TranslateAnimation)几种常见的动画，控制的是View的内容，所以视图动画的缺陷就在于当某个元素发生视图动画后，其响应事件的位置还依然停留在原来的地方！
-**实现原理是每次绘制视图时View所在的ViewGroup中的drawChild方法获取该View的Animation的Transformation值，然后调用canvas.concat(transformationToApply.getMatrix())，通过矩阵运算完成动画帧。如果动画没有完成，就继续调用invalidate方法，启动下次绘制来驱动动画，从而完成整个动画的绘制。**
-动画集合(AnimationSet)：将多个视图动画组合起来
-动画监听器(AnimationListener)：提供动画的监听回调方法
 
-2.属性动画
+### **第七章 Android动画机制与使用技巧**  
+1.View动画 （视图动画）  
+视图动画(Animation)框架定义了透明度(AlphaAnimation)、旋转(RotateAnimation)、缩放(ScaleAnimation)和位移(TranslateAnimation)几种常见的动画，控制的是View的内容，所以视图动画的缺陷就在于当某个元素发生视图动画后，其响应事件的位置还依然停留在原来的地方！  
+
+**实现原理是每次绘制视图时View所在的ViewGroup中的drawChild方法获取该View的Animation的Transformation值，然后调用canvas.concat(transformationToApply.getMatrix())，通过矩阵运算完成动画帧。如果动画没有完成，就继续调用invalidate方法，启动下次绘制来驱动动画，从而完成整个动画的绘制。**
+
+动画集合(AnimationSet)：将多个视图动画组合起来  
+动画监听器(AnimationListener)：提供动画的监听回调方法  
+
+2.属性动画  
 Android 3.0之后添加了属性动画(Animator)框架，其中核心类ObjectAnimator能够自动驱动，在不影响动画效果的情况下减少CPU资源消耗。
 
-**ObjectAnimator**
-创建ObjectAnimator只需通过它的静态工厂方法直接返回一个ObjectAnimator对象，参数包括view对象，以及view的属性名字，这个属性必须要有get/set方法，因为ObjectAnimator内部会通过反射机制来修改属性值。常用的可以直接使用属性动画的属性包括：
-(1)`translationX`和`translationY`：控制view从它布局容器左上角坐标偏移的位置；
-(2)`rotation`、`rotationX`和`rotationY`：控制view围绕支点进行2D和3D旋转；
-(3)`scaleX`和`scaleY`：控制view围绕着它的支点进行2D缩放；
-(4)`pivotX`和`pivotY`：控制支点位置，围绕这个支点进行旋转和缩放处理。默认情况下，支点是view的中心点；
-(5)`x`和`y`：控制view在它的容器中的最终位置，它是最初的左上角坐标和translationX、translationY的累计和；
-(6)`alpha`：控制透明度，默认是1（不透明）。
+**ObjectAnimator**  
+创建ObjectAnimator只需通过它的静态工厂方法直接返回一个ObjectAnimator对象，参数包括view对象，以及view的属性名字，这个属性必须要有get/set方法，因为ObjectAnimator内部会通过反射机制来修改属性值。常用的可以直接使用属性动画的属性包括：  
+(1)`translationX`和`translationY`：控制view从它布局容器左上角坐标偏移的位置；  
+(2)`rotation`、`rotationX`和`rotationY`：控制view围绕支点进行2D和3D旋转；  
+(3)`scaleX`和`scaleY`：控制view围绕着它的支点进行2D缩放；  
+(4)`pivotX`和`pivotY`：控制支点位置，围绕这个支点进行旋转和缩放处理。默认情况下，支点是view的中心点；  
+(5)`x`和`y`：控制view在它的容器中的最终位置，它是最初的左上角坐标和translationX、translationY的累计和；  
+(6)`alpha`：控制透明度，默认是1（不透明）。  
 
-ObjectAnimator的常见使用方式如下：
+ObjectAnimator的常见使用方式如下：  
 ```
 ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationX", 300);
 animator.setDuration(1000);
@@ -469,7 +474,7 @@ animator.start();
 
 动画监听器：监听动画事件可以使用`AnimatorListener`或者简易的适配器`AnimatorListenerAdapter`
 
-**如果一个属性没有get/set方法怎么办？**
+**如果一个属性没有get/set方法怎么办？**  
 (1)自定义包装类，间接地给属性提供get/set方法，下面就是一个包装类的例子，为width属性提供了get/set方法
 ```
 public class WrapperView {
@@ -491,7 +496,7 @@ public class WrapperView {
 }
 ```
 
-(2)使用`ValueAnimator`
+(2)使用`ValueAnimator`  
 ObjectAnimator就是继承自ValueAnimator的，它是属性动画的核心，ValueAnimator不提供任何动画效果，它就是一个数值产生器，用来产生具有一定规律的数字，从而让调用者来控制动画的实现过程，控制的方式是使用`AnimatorUpdateListener`来监听数值的变换。
 ```
 ValueAnimator animator = ValueAnimator.ofFloat(0,100);
@@ -507,7 +512,7 @@ animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 });
 ```
 
-**在XML中使用属性动画**
+**在XML中使用属性动画**  
 下面是一个简单例子：
 ```
 <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
@@ -523,7 +528,7 @@ animator.setTarget(view);
 animator.start();
 ```
 
-**View的animate方法**
+**View的animate方法**  
 Android 3.0之后View新增了animate方法直接驱动属性动画，它其实是属性动画的一种简写方式
 ```
 imageView.animate().alpha(0).y(100).setDuration(1000)
@@ -546,9 +551,9 @@ imageView.animate().alpha(0).y(100).setDuration(1000)
         });
 ```
 
-3.布局动画
-布局动画是作用在ViewGroup上的，给ViewGroup添加view时添加动画过渡效果。
-(1)简易方式（但是没有什么效果）：在xml中添加如下属性 `android:animateLayoutChanges="true`
+3.布局动画  
+布局动画是作用在ViewGroup上的，给ViewGroup添加view时添加动画过渡效果。  
+(1)简易方式（但是没有什么效果）：在xml中添加如下属性 `android:animateLayoutChanges="true`  
 (2)通过`LayoutAnimationController`来自定义子view的过渡效果，下面是一个常见的使用例子：
 ```
 LinearLayout linearLayout = (LinearLayout) findViewById(R.id.ll);
@@ -559,9 +564,9 @@ controller.setOrder(LayoutAnimationController.ORDER_NORMAL);//NORMAL 顺序 RAND
 linearLayout.setLayoutAnimation(controller);
 ```
 
-4.自定义动画
+4.自定义动画  
 创建自定义动画就是要实现它的`applyTransformation`的逻辑，不过通常还需要覆盖父类的`initialize`方法来实现初始化工作。
-下面是一个模拟电视机关闭的动画，
+下面是一个模拟电视机关闭的动画  
 ```
 public class CustomTV extends Animation {
 
@@ -585,10 +590,10 @@ public class CustomTV extends Animation {
     }
 }
 ```
-applyTransformation方法的第一个参数interpolatedTime是插值器的时间因子，取值在0到1之间；第二个参数Transformation是矩阵的封装类，一般使用它来获得当前的矩阵Matrix对象，然后对矩阵进行操作，就可以实现动画效果了。
+applyTransformation方法的第一个参数interpolatedTime是插值器的时间因子，取值在0到1之间；第二个参数Transformation是矩阵的封装类，一般使用它来获得当前的矩阵Matrix对象，然后对矩阵进行操作，就可以实现动画效果了。  
 
-**如何实现3D动画效果呢？**
-使用`android.graphics.Camera`中的Camera类，它封装了OpenGL的3D动画。可以把Camera想象成一个真实的摄像机，当物体固定在某处时，只要移动摄像机就能拍摄到具有立体感的图像，因此通过它可以实现各种3D效果。
+**如何实现3D动画效果呢？**  
+使用`android.graphics.Camera`中的Camera类，它封装了OpenGL的3D动画。可以把Camera想象成一个真实的摄像机，当物体固定在某处时，只要移动摄像机就能拍摄到具有立体感的图像，因此通过它可以实现各种3D效果。  
 下面是一个3D动画效果的例子
 ```
 public class CustomAnim extends Animation {
@@ -627,7 +632,7 @@ public class CustomAnim extends Animation {
 }
 ```
 
-5.Android 5.X SVG矢量动画机制 **[TODO：该部分略过了，自己暂时用的比较少，等需要用的时候学习下再补充]**
+5.Android 5.X SVG矢量动画机制 **[TODO：该部分略过了，自己暂时用的比较少，等需要用的时候学习下再补充]**  
 本章最后还有几个很常用的动画实例，感兴趣可以看下。
 
 OK，本节结束，谢谢阅读。
