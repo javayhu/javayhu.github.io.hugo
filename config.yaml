@@ -10,7 +10,7 @@ buildDrafts: true
 metaDataFormat: "yaml"
 defaultLayout: "post"
 theme: "casper"
-Copyright: "All rights reserved &copy; 2016"
+Copyright: "All rights reserved &copy; 2013 - 2017"
 
 # duoshuo short_name but with param name "DisqusShortname"
 DisqusShortname: hujiaweibujidao
@@ -40,7 +40,7 @@ params:
   author: "hujiawei"
   authorlocation: "Guangdong, China"
   authorwebsite: "https://github.com/hujiaweibujidao"
-  bio: "Hujiawei is a mobile developer."
+  bio: "Hujiawei is a mobile developer"
   logo: "images/logo.png"
   githubName: "hujiaweibujidao"
   twitterName: "hujiaweiyinger" #use it as sinaweibo
