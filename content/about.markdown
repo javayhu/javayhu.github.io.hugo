@@ -17,9 +17,10 @@ date: "2013-11-17"
 `2013/09-2016/06`  研究僧就读于伟大的[五道口男子职业技术与艺术学院](http://www.tsinghua.edu.cn/publish/th/index.html)的计算机系  
 `2009/09-2013/06`  本科就读于同样伟大的[左家垅男子职业技术学院](http://www.csu.edu.cn/)的计科专业  
 热爱开源的我自然有GitHub账号啦，欢迎关注： <https://github.com/hujiaweibujidao>  
-各位小爷如果觉得小站还不错的话可以考虑打赏下哈！😘
 
-![img](/images/payblog.png) 
+<!-- 各位小爷如果觉得小站还不错的话可以考虑打赏下哈！😘 -->
+
+<!-- ![img](/images/payblog.png)  -->
 
 **友情链接**
 

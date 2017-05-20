@@ -1,5 +1,5 @@
 # all configurations can be found in http://gohugo.io/overview/configuration/
-baseurl: "https://hujiaweibujidao.github.io/"
+baseurl: "http://javayhu.me/"
 languageCode: "zh-cn"
 title: "Hujiawei Bujidao"
 paginate: 20
@@ -39,7 +39,7 @@ params:
   #cover: "images/default.jpg"
   author: "hujiawei"
   authorlocation: "Guangdong, China"
-  authorwebsite: "https://github.com/hujiaweibujidao"
+  authorwebsite: "http://javayhu.me/"
   bio: "Hujiawei is a mobile developer"
   logo: "images/logo.png"
   githubName: "hujiaweibujidao"
