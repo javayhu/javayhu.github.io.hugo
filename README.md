@@ -1,6 +1,4 @@
 
-archetypes contains 'default.md' file
+Personal blog files.
 
-normal post: layouts/_default/single.html
-
-menu page: layouts/page/single.html
+Welcome to visit [http://javayhu.me](http://javayhu.me).
