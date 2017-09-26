@@ -1,6 +1,6 @@
 ---
 date: 2017-09-25T10:46:33+08:00
-title: Camera development on Android
+title: Camera development experience on Android
 tags: ["android"]
 ---
 本文主要总结下Android端相机相关开发的经验。<!--more-->
@@ -35,14 +35,10 @@ tags: ["android"]
 
 搞清楚了前面的图表再去阅读cameraview的源码就清晰很多了，其他的类都是围绕着CameraView而展开的。
 
-`Size`就是描述宽和高，例如800x600、400x300或者640x360等；
-
-`AspectRatio`就是描述Size的宽高比，例如800x600和400x300这两个Size都是4:3，但是640x360是16:9；
-
-`SizeMap`就是维护`AspectRatio`到`Size`的映射列表，例如{"4:3": {800x600, 400x300}, "16:9": {640x360}} 这种形式。
-
-`DisplayOrientationDetector`就是用来监测相机界面屏幕旋转，然后通知相关组件应对屏幕旋转的变化，例如对预览画面进行调整。
-
+`Size`就是描述宽和高，例如800x600、400x300或者640x360等；  
+`AspectRatio`就是描述Size的宽高比，例如800x600和400x300这两个Size都是4:3，但是640x360是16:9；  
+`SizeMap`就是维护`AspectRatio`到`Size`的映射列表，例如{"4:3": {800x600, 400x300}, "16:9": {640x360}} 这种形式；  
+`DisplayOrientationDetector`就是用来监测相机界面屏幕旋转，然后通知相关组件应对屏幕旋转的变化，例如对预览画面进行调整。  
 
 
 **2. 关于Camera1和Camera2的选择**
@@ -102,6 +98,8 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 2.`isPictureCaptureInProgress`这个变量的问题：因为debug另一个问题让我发现一个由`isPictureCaptureInProgress`变量带来的新问题，场景是如果用户点击拍照，在拍照结果还没来得及出现之前立即按下Home键退出到桌面，这个时机很难控制，但是还是有办法复现的，一旦复现了，那么`isPictureCaptureInProgress.set(false)`这句是没有被调用的，这将导致之后都没法再调用`takePicture`进行拍照了。这个的解决方案是在`Camera1`的`stop`方法中将`isPictureCaptureInProgress`重置为false。
 
 3.某些手机上调用`autoFocus`方法会crash掉：这个问题是应用灰度之后发现的，也许是自动对焦过程出现了什么问题吧，我这里的处理是暂时将其catch住了，出现异常的话就直接调用`takePictureInternal`方法。在[Android相机开发那些坑](https://zhuanlan.zhihu.com/p/20559606)中也有提到过这个问题，“在拍照按钮事件响应中执行camera.autofocus或camera.takepicture前，一定要检验camera有没有设置预览Surfaceview并开启了相机预览。这里有个方法可以判断预览状态：Camera.setPreviewCallback是预览帧数据的回调函数，它会在SurfaceView收到相机的预览帧数据时被调用，因此在里面可以设置是否允许对焦和拍照的标志位。”
+
+改进之后的takePicture过程代码如下
 
 ![img](/images/cameraview_takepicture2.png)
 
