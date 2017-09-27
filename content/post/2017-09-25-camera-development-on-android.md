@@ -16,7 +16,6 @@ tags: ["android"]
 本文主要说的是自己在做相机模块需求或者说使用cameraview的过程中遇到了哪些问题以及相应的解决方案，最终我对cameraview进行了一番enhancement，感兴趣可以看下这个库[CameraView](https://github.com/hujiaweibujidao/cameraview)，主要改进的点已经在README文档中说明了，可能最有用的是补齐重要路径的log以及修复几个上线后的crash bug吧。
 
 
-
 **1. 简述cameraview组件的设计**
 
 通过阅读cameraview组件的源码可知，内部设计如下图表所示：
@@ -54,7 +53,6 @@ tags: ["android"]
 ![img](/images/cameraview_start_enhancement.png)
 
 
-
 **3. AspectRatio的选择**
 
 下面看下AspectRatio的选择问题，前面提到AspectRatio实际上就是图像的宽高比，可能是4:3，也可能是16:9，也可能是其他的比例。另外，我们还需要知道相机模块这里有好几个地方需要设置宽高比，这里建议阅读[Android相机开发那些坑](https://zhuanlan.zhihu.com/p/20559606)这篇文章，其中详细解析了下面的三个尺寸之间的关系：
@@ -84,7 +82,6 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 [注2：不过即使是保证了三个尺寸的比例是一致的，在某些手机上还是会出现一些奇怪的现象，比如cameraview的issues列表中的[这个](https://github.com/google/cameraview/issues/153)和[这个](https://github.com/google/cameraview/issues/192)，也就是保存的图片和预览时看到的图片不一样！这个现象我在一台华为荣耀手机上必现，暂时还没有很好的解决方案，好在问题机型并不多，可以延期解决]
 
 
-
 **4. 相机拍照**
 
 相机拍照也存在着不少潜在的坑，下面我们来说道说道。下面的代码片段是Camera1这个类中相机拍照的实现，它的大致流程是，在相机开启的情况下，如果相机能自动对焦的话，那么就先调用`autoFocus`方法自动对焦，对焦完成之后就调用`takePictureInternal`方法进行拍照，如果不能自动对焦的话，那么就直接调用`takePictureInternal`方法进行拍照。`takePictureInternal`方法的实现就是先看`isPictureCaptureInProgress`是否是false，如果是的话那么就将其置为true，然后立即调用`takePicture`进行拍照，成功之后再将`isPictureCaptureInProgress`置为false。
@@ -102,7 +99,6 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 改进之后的takePicture过程代码如下
 
 ![img](/images/cameraview_takepicture2.png)
-
 
 
 **5. 相机权限**
@@ -126,7 +122,6 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 这里需要注意的是，原生系统的设置中都有个“应用“选项，进入之后可以找到对应应用的详情界面，但是只有部分系统支持在这里直接管理这个应用的权限，所以说让用户跳转到这里是不可以的。更值得注意的是，小米系统在这里有个bug，小米系统在这个应用详情中看似支持直接修改权限，但是权限修改之后根本就没有用，只有到系统中的安全中心改权限才有效！
 
 
-
 **6. 输出图像**
 
 你以为不同手机的坑就上面这些？NO！三星手机告诉你，你还是太年轻了！某一天，测试同学拿着一台三星手机过来问你，“为什么我是竖着拍照，怎么上传到服务器之后再点开查看的时候图片是横着的呢？”，这个时候你接过手机，打开文件管理找到这张图片的保存路径，然后一看这张图，发现它明明是竖着的，此时你肯定会想这锅一定要甩出去，回道，“这一定是后台开发同学的bug！一定是他旋转了图片！”。结果一问后台同学，他说，“我不会旋转图片的，不是我的锅”，然后没有再回复你了。此时此刻，你才焕然大悟，想到了三星手机那个一直存在的bug，拍照得到的图片会自动旋转90！哎，看来cameraview并没有兼容这种情况啊！
@@ -140,7 +135,6 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 ![img](/images/cameraview_exif.png)
 
 [注：关于三星手机的这个问题可以看下[这个issue](https://github.com/google/cameraview/issues/22)]
-
 
 
 **7. 手动对焦**
@@ -158,11 +152,9 @@ Picturesize：相机硬件提供的拍摄帧数据尺寸。拍摄帧数据可以
 ![img](/images/cameraview_resetfocus2.png)	
 
 
-
 OK，以上就是我这次做Android端自定义相机模块需求开发的总结，撒花完结啦，希望能有点作用~~~
 
 **At last，从前面的内容可以看出官方推出的非正式组件cameraview存在着不少的问题，issues中堆积了不少手机兼容性问题和异常crash问题，use it at your own risk。这个库并不适合所有的自定义相机场景的开发，但是如果它能够达到你的基本诉求的话，也是一个不错的库。最后，如果你决定使用cameraview的话，推荐使用我改进过后的[CameraView](https://github.com/hujiaweibujidao/cameraview) 😎**
-
 
 
 **补充资料**
