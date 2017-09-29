@@ -7,11 +7,11 @@ tags: ["android"]
 
 众所周知，Android平台不仅系统碎片化严重，而且不同手机的硬件配置差异导致开发某些模块的时候坑比较多，相机模块就是其中之一。为什么呢？首先，Android系统目前已经提供了两套Camera API，其中Camera 2 API是从Android 5.0(API Level 21)开始提供的。你可能会想了，那岂不是现在市面上很多机型都可以使用Camera 2 API啦？然而并不是，原因就是下面要说的第二点，很多Android手机对Camera 2 API的支持都不到位，即使是很多现在刚发的新机，它们有些依然只支持老的Camera API！这就导致做相机开发的时候不得不根据手机的实际情况切换不同的Camera API。
 
-很显然，自己从零开始构建这么一个Camera模块是比较困难的，这里推荐Google提供的一个非官方库[cameraview](https://github.com/google/cameraview)，如果你的需求是相机预览、切换前后摄像头、切换闪光灯、切换预览图片的比例以及拍照等功能的话，那么这款小巧的库是一个不错的选择。CameraView这个项目可以帮助Android开发者快速创建一个可以适配不同Android系统和不同Android设备，并且包含各种基本功能的相机界面，它的使用正如它的说明文档中那样，引入一个自定义的CameraView，其他一切和Camera有关的事情都由它来处理。
+很显然，自己从零开始构建这么一个Camera模块是比较困难的，这里推荐Google提供的一个非官方库[cameraview](https://github.com/google/cameraview)，CameraView这个项目可以帮助Android开发者快速创建一个可以适配不同Android系统和不同Android设备，并且包含各种基本功能的相机界面，它的使用正如它的说明文档中那样，引入一个自定义的CameraView，其他一切和Camera有关的事情都由它来处理。如果你的需求是相机预览、切换前后摄像头、切换闪光灯、切换预览图片的比例以及拍照等功能的话，那么这款小巧的库是一个不错的选择。
 
 既然已经有cameraview这个轮子了，那这篇文章是不是就完结了？图森破！前面提到过，这个库是非官方库，所以它已经有很长时间没有更新了，issues中堆了很多已知bug竟然没人去解！但是，又能怎样呢？还不是只能原谅它，难不成要自己撸一个？(看完cameraview的代码你就知道撸一个这个库多么不容易，需要很熟悉Camera API和Camera 2 API，而且要适配那么多机型也确实是困难啊，一个版本迭代的时间根本做不完呐)
 
-言归正传，这次自己做相机模块的需求开发之前调研了几个轮子，最终还是决定使用cameraview这个库，因为它比较小巧简洁，没有多余的废代码或者废功能，也方便我自己定制相机界面。Github上还有几个star特别高的Camera模块封装，但是个人感觉有点复杂了，可能不便于定制。
+言归正传，这次自己做相机模块的需求开发之前调研了几个轮子，最终还是决定使用cameraview这个库，因为它比较小巧简洁，没有多余的废代码或者废功能，也方便我自己定制相机界面。Github上还有几个star特别高的Camera模块封装，比如[CameraKit-Android](https://github.com/wonderkiln/CameraKit-Android)，但是个人感觉有点复杂了，连视频录制的功能都有了，可能不适用于小场景下界面和功能上的定制。
 
 本文主要说的是自己在做相机模块需求或者说使用cameraview的过程中遇到了哪些问题以及相应的解决方案，最终我对cameraview进行了一番enhancement，感兴趣可以看下这个库[CameraView](https://github.com/hujiaweibujidao/cameraview)，主要改进的点已经在README文档中说明了，可能最有用的是补齐重要路径的log以及修复几个上线后的crash bug吧。
 
