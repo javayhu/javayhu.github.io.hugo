@@ -10,15 +10,15 @@
         <!-- <small>{{.Description}}</small> -->
 
         <section class="post-meta">
+        {{ range .Params.tags }}
+          <span class="post-tag small"><a href="{{ $baseurl }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
+        {{ end }}
+        &nbsp;&nbsp;
         {{ if eq .Section "post"}}
           <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-            {{ .Date.Format "Jan 2, 2006" }}
+            {{ .Date.Format "2006/1/2" }}
           </time>
         {{end}}
-        &nbsp;&nbsp;
-         {{ range .Params.tags }}
-          <span class="post-tag small"><a href="{{ $baseurl }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
-         {{ end }}
         </section>
         <br/>
     </header>

@@ -8,24 +8,24 @@
     </section>
     <footer class="post-meta">
         {{$author:= .Site.Params.author}}
-        {{if .Params.author }}
+        <!-- {{if .Params.author }}
             {{$author:= .Params.author}}
             {{if isset .Site.Data.authors $author}}
                 {{$author := index .Site.Data.authors .Params.author }}
             {{end}}
-        {{end}}
+        {{end}} -->
 
-        {{ if isset $author "thumbnail" }}
+        <!-- {{ if isset $author "thumbnail" }}
             <img class="author-thumb" src="{{ .Site.BaseURL }}{{ $author.thumbnail }}" alt="Author image" nopin="nopin" />
         {{else if .Site.Params.logo }}
             <img class="author-thumb" src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Author image" nopin="nopin" />
-        {{end}}
+        {{end}} -->
 
-        {{ if isset $author "name" }}
+        <!-- {{ if isset $author "name" }}
             {{$author.name}}
         {{else if .Site.Params.author}}
             {{.Site.Params.author}}
-        {{end}}
+        {{end}} -->
 
         {{if .Params.tags }} &nbsp;
             {{ range $index, $tag := .Params.tags }}
@@ -34,7 +34,7 @@
         {{end}}
 
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-            {{ .Date.Format "2 Jan 2006" }}
+            {{ .Date.Format "2006/1/2" }}
         </time>
     </footer>
 </article>
