@@ -129,7 +129,9 @@ Python中很多地方都使用了hash策略，在前面的[Python数据结构篇
 
 ![image](/images/algos/graphrep.png)
 
-邻接表 Adjacency Lists：因为历史原因，邻接表往往都是指链表list，但实际上也可以是其他的，例如在python中也可以是set或者dict，不同的表示方式有各自的优缺点，它们判断节点的连接关系和节点的度的方式甚至两个操作的性能都不太一样。
+**邻接表 Adjacency Lists**
+
+因为历史原因，邻接表往往都是指链表list，但实际上也可以是其他的，例如在python中也可以是set或者dict，不同的表示方式有各自的优缺点，它们判断节点的连接关系和节点的度的方式甚至两个操作的性能都不太一样。
 
 ① adjacency lists 表示形式
 
@@ -173,7 +175,7 @@ len(N[f]) # Degree -> 3
 
 基本上和adjacency lists表示形式一样对吧？但是，对于list，判断一个元素是否存在是线性时间$O(N(v))$，而在set中是常数时间$O(1)$，所以对于稠密图使用adjacency sets要更加高效。
 
-③ adjacency dicts 表示形式
+③ adjacency dicts 表示形式，这种情况下如果边是带权值的都没有问题！
 
 ```python
 # A Straightforward Adjacency Dict Representation
@@ -194,8 +196,6 @@ len(N[f]) # Degree -> 3
 N[a][b] # Edge weight for (a, b) -> 2
 ```
 
-这种情况下如果边是带权值的都没有问题！
-
 除了上面三种方式外，还可以改变外层数据结构，上面三个都是list，其实也可以使用dict，例如下面的代码，此时节点是用字母表示的。在实际应用中，要根据问题选择最合适的表示形式。
 
 ```
@@ -211,9 +211,9 @@ N = {
 }
 ```
 
-邻接矩阵 Adjacency Matrix
+**邻接矩阵 Adjacency Matrix**
 
-使用嵌套的list，用1和0表示点和点之间的连接关系，此时对于它们的连接性判断时间是常数，但是对于度的计算时间是线性的
+使用嵌套的list，用1和0表示点和点之间的连接关系，此时点之间的连接性判断时间是常数，但是对于度的计算时间是线性的
 
 ```
 # An Adjacency Matrix, Implemented with Nested Lists
@@ -250,7 +250,7 @@ W[a][b] < inf # Neighborhood membership
 sum(1 for w in W[a] if w < inf) - 1  # Degree
 ```
 
-**NumPy**：这里作者提到了一个最常用的数值计算模块NumPy，它包含了很多与多维数组计算有关的函数。我可能会在以后的机器学习中详细学习它的使用，到时候可能会写篇文章介绍它的使用
+**NumPy**：这里作者提到了一个最常用的数值计算模块NumPy，它包含了很多与多维数组计算有关的函数。
 
 (2)树的表示 [假设要表示下面的树]
 
@@ -290,9 +290,7 @@ t = Tree(Tree("a", Tree("b", Tree("c", Tree("d")))))
 t.kids.next.next.val  # 'c'
 ```
 
-**[Bunch Pattern]**：有意思的是，上面的实现方式使用了Python中一种常用的设计模式，叫做Bunch Pattern，貌似来自经典书籍Python Cookbook，原书介绍如下：
-
-[因为这个不太好理解和翻译，还是原文比较有味，后期等我深刻理解了我可能会详细介绍它]
+**[Bunch Pattern]**：有意思的是，上面的实现方式使用了Python中一种常用的设计模式，叫做Bunch Pattern，貌似来自经典书籍Python Cookbook，原书介绍如下：[因为这个不太好理解和翻译，还是原文比较有味]
 
 When prototyping (or even finalizing) data structures such as trees, it can be useful to have a flexible class that will allow you to specify arbitrary attributes in the constructor. In these cases, the “Bunch” pattern (named by Alex Martelli in the Python Cookbook) can come in handy. There are many ways of implementing it, but the gist of it is the following:
 
@@ -333,9 +331,9 @@ This pattern isn’t useful only when building trees, of course. You could use i
 
 **[与图有关的python模块]**：
 
-• NetworkX: <http://networkx.lanl.gov>
-• python-graph: <http://code.google.com/p/python-graph>
-• Graphine: <http://gitorious.org/projects/graphine/pages/Home>
+• NetworkX: <http://networkx.lanl.gov>  
+• python-graph: <http://code.google.com/p/python-graph>  
+• Graphine: <http://gitorious.org/projects/graphine/pages/Home>  
 • Pygr: a graph database  <http://bioinfo.mbi.ucla.edu/pygr>  
 • Gato: a graph animation toolbox <http://gato.sourceforge.net>   
 • PADS: a collection of graph algorithms  <http://www.ics.uci.edu/~eppstein/PADS>
@@ -366,7 +364,7 @@ S = set(L)
 sum(0.1 for i in range(10)) == 1.0 # False
 ```
 
-**永远不要使用小数比较结果来作为两者相等的判断依据！**你最多只能判断两个浮点数在有限位数上是相等的，也就是近似相等了。
+**永远不要使用小数比较结果来作为两者相等的判断依据！**你最多只能判断两个浮点数在有限位数上是相等的，也就是近似相等
 
 ```
 def almost_equal(x, y, places=7):
@@ -382,7 +380,8 @@ from decimal import *
 sum(Decimal("0.1") for i in range(10)) == Decimal("1.0")  # Ture
 ```
 
-还有一个有用的`Sage`模块，如下所示，它可以进行数学的符号运算得到准确值，如果需要也可以得到近似的浮点数解。[Sage的官方网址](http://sagemath.org)
+还有一个有用的`Sage`模块，如下所示，它可以进行数学的符号运算得到准确值，如果需要也可以得到近似的浮点数解。  
+[Sage的官方网址](http://sagemath.org)
 
 ```
 sage: 3/5 * 11/7 + sqrt(5239)
