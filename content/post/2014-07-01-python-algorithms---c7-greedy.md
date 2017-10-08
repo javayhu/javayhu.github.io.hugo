@@ -300,6 +300,6 @@ def greedy(E, S, w):
     return T
 ```
 
-练习：[试试这道删数问题吧，这里对比了贪心算法和动态规划算法两种解法](/blog/2014/05/20/delete-number-problem/)
+练习：[试试这道删数问题吧，这里对比了贪心算法和动态规划算法两种解法](/blog/2014/05/20/problem-delete-number-problem/)
 
 返回[Python数据结构与算法设计篇目录](/python/)
