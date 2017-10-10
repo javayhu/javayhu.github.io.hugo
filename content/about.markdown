@@ -19,7 +19,8 @@ date: "2013-11-17"
 
 热爱开源的我自然有GitHub账号啦，欢迎关注： <https://github.com/hujiaweibujidao>  
 
-我有个小专栏，会不定期分享一些热门技术或者实战开发经验，欢迎订阅：<https://xiaozhuanlan.com/u/javayhu>
+我有个小专栏，会不定期分享一些热门技术或者实战开发经验，欢迎订阅：<https://xiaozhuanlan.com/u/javayhu>  
+**>>> 我最近在Android面试指南小专栏里面写了一篇稿子[Android面试——算法面试心得](https://xiaozhuanlan.com/topic/1932587460)，欢迎阅读！<<<**  
 
 各位小爷如果觉得小站还不错的话可以考虑打赏下哈！😘
 
