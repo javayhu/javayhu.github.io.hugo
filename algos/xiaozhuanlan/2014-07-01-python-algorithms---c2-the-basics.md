@@ -63,8 +63,6 @@ the notion of running time complexity (as described in the next section) is base
 timeit.timeit("x = sum(range(10))")
 ```
 
-![image](/images/timeit.png)
-
 (3)Tip 3: To find bottlenecks, use a profiler.
 
 使用`cProfile`模块来获取更多的关于运行情况的内容，从而可以发现问题的瓶颈，如果系统没有`cProfile`模块，可以使用`profile`模块代替，关于这两者的更多内容可以查看[Python standard library-Python Profilers](https://docs.python.org/2/library/profile.html)

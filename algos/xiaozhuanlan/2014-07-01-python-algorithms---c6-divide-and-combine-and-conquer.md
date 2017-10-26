@@ -52,7 +52,7 @@ def divide_and_conquer(S, divide, combine):
 
 ![image](http://owvzfqno0.bkt.clouddn.com/algos_dcc.png)
 
-二分查找是最常用的采用分治策略的算法，我们经常使用的版本控制系统(evision control systems=RCSs)查找代码中发生某个变化是在哪个版本时采用的正是二分查找策略。
+二分查找是最常用的采用分治策略的算法，我们经常使用的版本控制系统(Revision control systems=RCSs)查找代码中发生某个变化是在哪个版本时采用的正是二分查找策略。
 
 Python中`bisect`模块也正是利用了二分查找策略，其中方法`bisect`的作用是返回要找到元素的位置，`bisect_left`是其左边的那个位置，而`bisect_right`和`bisect`的作用是一样的，函数`insort`也是这样设计的。
 
@@ -114,7 +114,7 @@ class Tree:                                     # Simple wrapper
 
 如果我们想要在线性时间内找到一组序列中的前 k 大的元素怎么做呢？很显然，如果这组序列中的数字范围比较大的话，我们就不能使用线性排序算法，而其他的基于比较的排序算法的最好的平均时间复杂度($O(n lg n)$)都超过了线性时间，怎么办呢？
 
-[扩展知识：在Python中如果泥需要求前 k 小或者前 k 大的元素，可以使用`heapq`模块中的`nsmallest`或者`nlargest`函数，如果 k 很小的话这种方式会好些，但是如果 k 很大的话，不如直接去调用`sort`函数]
+[扩展知识：在Python中如果你需要求前 k 小或者前 k 大的元素，可以使用`heapq`模块中的`nsmallest`或者`nlargest`函数，如果 k 很小的话这种方式会好些，但是如果 k 很大的话，不如直接去调用`sort`函数]
 
 要想解决这个问题，我们还是要用分治法，采用类似快排中的`partition`将序列进行划分(divide)，也就是说找一个主元(pivot)，然后用主元作为基准将序列分成两部分，一部分小于主元，另一半大于主元，比较下主元最终的位置值和 k的大小关系，然后确定后面在哪个部分继续进行划分。如果这里不理解的话请移步阅读前面[数据结构篇之排序中的快速排序](/blog/2014/05/07/python-data-structures---c2-sort/)
 
