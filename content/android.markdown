@@ -49,3 +49,5 @@ Android开发学习的过程中也做过一些项目，有初学Android时开发
 参加工作之后明显感觉时间不够用，正在疯狂看书学习中，很多总结都来不及写，回头慢慢补上。  
 
 Keep learning, stay hungry, stay foolish!
+
+**>>> 我最近在Android面试指南小专栏里面写了一篇稿子[Android面试——算法面试心得](https://xiaozhuanlan.com/topic/1932587460)，欢迎阅读！<<<**
