@@ -42,6 +42,7 @@ params:
   authorwebsite: "http://javayhu.me/"
   bio: "Hujiawei is a mobile developer"
   logo: "images/logo.gif"
+  qrcode: "images/qrcode_weixin.jpg"
   githubName: "hujiaweibujidao"
   twitterName: "hujiaweiyinger" #use it as sinaweibo
   #facebookName: "hujiaweiyinger"
