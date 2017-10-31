@@ -7,13 +7,16 @@ date: "2015-11-30"
 
 ### 第12章 Bitmap的加载和Cache
 #### 12.1 Bitmap的高速加载
-(1)**Bitmap是如何加载的？**
-`BitmapFactory`类提供了四类方法：`decodeFile`、`decodeResource`、`decodeStream`和`decodeByteArray`从不同来源加载出一个Bitmap对象，最终的实现是在底层实现的。
-**如何高效加载Bitmap？**
+(1)**Bitmap是如何加载的？**  
+`BitmapFactory`类提供了四类方法：`decodeFile`、`decodeResource`、`decodeStream`和`decodeByteArray`从不同来源加载出一个Bitmap对象，最终的实现是在底层实现的。  
+
+**如何高效加载Bitmap？**  
 采用`BitmapFactory.Options`按照一定的采样率来加载所需尺寸的图片，因为imageview所需的图片大小往往小于图片的原始尺寸。
-(2)BitmapFactory.Options的`inSampleSize`参数，即采样率
-官方文档指出采样率的取值应该是2的指数，例如k，那么采样后的图片宽高均为原图片大小的 1/k。
-**如何获取采样率？**
+
+(2)BitmapFactory.Options的`inSampleSize`参数，即采样率  
+官方文档指出采样率的取值应该是2的指数，例如采样率=k，那么采样后的图片宽高均为原图片大小的 1/k。  
+
+**如何获取采样率？**  
 下面是常用的获取采样率的代码片段：
 ```
 public Bitmap decodeSampledBitmapFromResource(Resources res, int resId, int reqWidth, int reqHeight) {

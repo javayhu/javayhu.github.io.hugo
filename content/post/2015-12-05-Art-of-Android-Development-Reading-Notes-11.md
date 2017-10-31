@@ -23,7 +23,7 @@ date: "2015-12-03"
 1.AsyncTask中有两个线程池：`SerialExecutor`和`THREAD_POOL_EXECUTOR`。前者是用于任务的排队，默认是串行的线程池；后者用于真正执行任务。AsyncTask中还有一个Handler，即`InternalHandler`，用于将执行环境从线程池切换到主线程。AsyncTask内部就是通过InternalHandler来发送任务执行的进度以及执行结束等消息。  
 2.AsyncTask排队执行过程：系统先把参数`Params`封装为`FutureTask`对象，它相当于Runnable；接着将FutureTask交给SerialExecutor的`execute`方法，它先把FutureTask插入到任务队列tasks中，如果这个时候没有正在活动的AsyncTask任务，那么就会执行下一个AsyncTask任务，同时当一个AsyncTask任务执行完毕之后，AsyncTask会继续执行其他任务直到所有任务都被执行为止。  
 (3)`HandlerThread`就是一种可以使用Handler的Thread，它的实现就是在run方法中通过`Looper.prepare()`来创建消息队列，并通过`Looper.loop()`来开启消息循环，这样在实际的使用中就允许在HandlerThread中创建Handler了，外界可以通过Handler的消息方式通知HandlerThread执行一个具体的任务。HandlerThread的run方法是一个无限循环，因此当明确不需要再使用HandlerThread的时候，可以通过它的`quit`或者`quitSafely`方法来终止线程的执行。HandlerThread的最主要的应用场景就是用在IntentService中。  
-(4)`IntentService`是一个继承自Service的抽象类，要使用它就要创建它的子类。IntentService适合执行一些高优先级的后台任务，这样不容易被系统杀死。IntentService的`onCreate`方法中会创建HandlerThread，并使用HandlerThread的Looper来构造一个Handler对象ServiceHandler，这样通过ServiceHandler对象发送的消息最终都会在HandlerThread中执行。IntentService会将Intent封装到Message中，通过ServiceHandler发送出去，在ServiceHandler的`handleMessage`方法中会调用IntentService的抽象方法`onHandleIntent`，所以IntentService的子类都要是实现这个方法。  
+(4)`IntentService`是一个继承自Service的抽象类，要使用它就要创建它的子类。IntentService适合执行一些高优先级的后台任务，这样不容易被系统杀死。IntentService的`onCreate`方法中会创建HandlerThread，并使用HandlerThread的Looper来构造一个Handler对象ServiceHandler，这样通过ServiceHandler对象发送的消息最终都会在HandlerThread中执行。IntentService会将Intent封装到Message中，通过ServiceHandler发送出去，在ServiceHandler的`handleMessage`方法中会调用IntentService的抽象方法`onHandleIntent`，所以IntentService的子类都要实现这个方法。  
 
 #### 11.3 Android中的线程池
 (1)使用线程池的好处：  
@@ -32,7 +32,7 @@ date: "2015-12-03"
 3.能够对线程进行简单的管理，并提供定时执行以及指定间隔循环执行等功能。  
 (2)`Executor`只是一个接口，真正的线程池是`ThreadPoolExecutor`。ThreadPoolExecutor提供了一系列参数来配置线程池，通过不同的参数可以创建不同的线程池，Android的线程池都是通过`Executors`提供的工厂方法得到的。  
 (3)ThreadPoolExecutor的构造参数  
-1.`corePoolSize`：核心线程数，默认情况下，核心线程会在线程中一直存活；  
+1.`corePoolSize`：核心线程数，默认情况下，核心线程会在线程池中一直存活；  
 2.`maximumPoolSize`：最大线程数，当活动线程数达到这个数值后，后续的任务将会被阻塞；  
 3.`keepAliveTime`：非核心线程闲置时的超时时长，超过这个时长，闲置的非核心线程就会被回收；  
 4.`unit`：用于指定keepAliveTime参数的时间单位，有`TimeUnit.MILLISECONDS`、`TimeUnit.SECONDS`、`TimeUnit.MINUTES`等；  
