@@ -47,7 +47,7 @@ mVelocityTracker.recycle(); //一般在onDetachedFromWindow中调用
 以上三种方法的详情可以参考阅读[《Android群英传》读书笔记 (2)](/blog/2015/11/26/android-heroes-reading-notes-2/)中的内容，此处不再细述。  
 (2)**scrollTo和scrollBy方法只能改变view内容的位置而不能改变view在布局中的位置。** scrollBy是基于当前位置的相对滑动，而scrollTo是基于所传参数的绝对滑动。通过View的`getScrollX`和`getScrollY`方法可以得到滑动的距离。  
 (3)使用动画来移动view主要是操作view的translationX和translationY属性，既可以使用传统的view动画，也可以使用属性动画，使用后者需要考虑兼容性问题，如果要兼容Android 3.0以下版本系统的话推荐使用[nineoldandroids](http://nineoldandroids.com/)。  
-[2016-10-21更新：现在一般都不需要再兼容那么低版本的Android系统了，所以nineoldandroids这个库已经不再维护了]
+[2016-10-21更新：现在一般都不需要再兼容那么低版本的Android系统了，所以nineoldandroids这个库已经不再维护了]  
 使用动画还存在一个交互问题：**在android3.0以前的系统上，view动画和属性动画，新位置均无法触发点击事件，同时，老位置仍然可以触发单击事件。从3.0开始，属性动画的单击事件触发位置为移动后的位置，view动画仍然在原位置。**  
 (4)动画兼容库nineoldandroids中的`ViewHelper`类提供了很多的get/set方法来为属性动画服务，例如`setTranslationX`和`setTranslationY`方法，这些方法是没有版本要求的。  
 

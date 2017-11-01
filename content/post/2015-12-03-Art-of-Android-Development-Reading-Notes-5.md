@@ -167,8 +167,8 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
 
 #### 5.2 RemoteViews的内部机制
 (1)RemoteViews的构造方法 `public RemoteViews(String packageName, int layoutId)`，第一个参数是当前应用的包名，第二个参数是待加载的布局文件。  
-(2)RemoteViews只支持部分布局和View组件，下面列举的组件的子类是不支持的
-布局：`FrameLayout、LinearLayout、RelativeLayout、GridLayout`
+(2)RemoteViews只支持部分布局和View组件，下面列举的组件的子类是不支持的  
+布局：`FrameLayout、LinearLayout、RelativeLayout、GridLayout`  
 组件：`Button、ImageButton、ImageView、TextView、ListView、GridView、ViewStub`等  
 (3)RemoteViews提供了一系列的set方法完成view的设置，这是通过反射完成的调用的。  
 例如方法`setInt(int viewId, String methodName, int value)`就是反射调用view对象的名称为methodName的方法，传入参数value，同样的还有`setBoolean`、`setLong`等。  
@@ -178,8 +178,8 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
 (6)系统将view操作封装成`Action`对象，Action同样实现了Parcelable接口，通过Binder传递到SystemServer进程。远程进程通过RemoteViews的`apply`方法来进行view的更新操作，RemoteViews的apply方法内部则会去遍历所有的action对象并调用它们的apply方法来进行view的更新操作。  
 这样做的好处是不需要定义大量的Binder接口，其次批量执行RemoteViews中的更新操作提高了程序性能。  
 (7)RemoteViews的`apply`和`reapply`方法的区别：`apply`方法会加载布局并更新界面，而`reapply`方法则只会更新界面。  
-(8)`setOnClickPendingIntent`、`setPendingIntentTemplate`和`setOnClickFillIntent`的区别
-`setOnClickPendingIntent`用于给普通的view添加点击事件，但是不能给集合(ListView和StackView)中的view设置点击事件，因为开销太大了。如果需要给ListView和StackView中的item添加点击事件，需要结合`setPendingIntentTemplate`和`setOnClickFillIntent`一起使用。[并没有尝试(⊙o⊙)]  
+(8)`setOnClickPendingIntent`、`setPendingIntentTemplate`和`setOnClickFillIntent`的区别  
+`setOnClickPendingIntent`用于给普通的view添加点击事件，但是不能给集合(ListView和StackView)中的view设置点击事件，因为开销太大了。如果需要给ListView和StackView中的item添加点击事件，需要结合`setPendingIntentTemplate`和`setOnClickFillIntent`一起使用。  
 
 #### 5.3 RemoteViews的意义
 RemoteViews的最大的意义是实现了跨进程的UI更新，这节作者实现了一个模拟通知栏效果的应用来演示跨进程的UI更新，[源码传送门](https://github.com/singwhatiwanna/android-art-res/blob/master/Chapter_5/src/com/ryg/chapter_5/MainActivity.java)。
