@@ -9,8 +9,8 @@ date: "2015-11-30"
 
 ### 第6章 Android的Drawable
 #### 6.1 Drawable简介
-(1)Android的`Drawable`表示的是一种可以在`Canvas`上进行绘制的概念，它的种类很多，最常见的就是图片和颜色了。它有两个重要的优点：一是比自定义view要简单；二是非图片类型的drawable占用空间小，利于减小apk大小。
-(2)Drawable是抽象类，是所有Drawable对象的基类。
+(1)Android的`Drawable`表示的是一种可以在`Canvas`上进行绘制的概念，它的种类很多，最常见的就是图片和颜色了。它有两个重要的优点：一是比自定义view要简单；二是非图片类型的drawable占用空间小，利于减小apk大小。  
+(2)Drawable是抽象类，是所有Drawable对象的基类。  
 (3)Drawable的内部宽/高可以通过`getIntrinsicWidth`和`getIntrinsicHeight`方法获取，但是并不是所有Drawable都有内部宽/高。图片Drawable的内部宽高就是图片的宽高，但是颜色Drawable就没有宽高的概念，它一般是作为view的背景，所以会去适应view的大小，这两个方法都是返回-1。
 
 #### 6.2 Drawable分类
@@ -28,12 +28,12 @@ date: "2015-11-30"
                       "center" | "fill" | "clip_vertical" | "clip_horizontal"]
     android:tileMode=["disabled" | "clamp" | "repeat" | "mirror"] />
 ```
-属性分析：
-`android:antialias`：是否开启图片抗锯齿功能。开启后会让图片变得平滑，同时也会一定程度上降低图片的清晰度，建议开启；
-`android:dither`：是否开启抖动效果。当图片的像素配置和手机屏幕像素配置不一致时，开启这个选项可以让高质量的图片在低质量的屏幕上还能保持较好的显示效果，建议开启。
-`android:filter`：是否开启过滤效果。当图片尺寸被拉伸或压缩时，开启过滤效果可以保持较好的显示效果，建议开启；
-`android:gravity`：当图片小于容器的尺寸时，设置此选项可以对图片进行定位。
-`android:tileMode`：平铺模式，有四种选项`["disabled" | "clamp" | "repeat" | "mirror"]`。当开启平铺模式后，gravity属性会被忽略。repeat是指水平和竖直方向上的平铺效果；mirror是指在水平和竖直方向上的镜面投影效果；clamp是指图片四周的像素会扩展到周围区域，这个比较特别。
+属性分析：  
+`android:antialias`：是否开启图片抗锯齿功能。开启后会让图片变得平滑，同时也会一定程度上降低图片的清晰度，建议开启；  
+`android:dither`：是否开启抖动效果。当图片的像素配置和手机屏幕像素配置不一致时，开启这个选项可以让高质量的图片在低质量的屏幕上还能保持较好的显示效果，建议开启。  
+`android:filter`：是否开启过滤效果。当图片尺寸被拉伸或压缩时，开启过滤效果可以保持较好的显示效果，建议开启；  
+`android:gravity`：当图片小于容器的尺寸时，设置此选项可以对图片进行定位。  
+`android:tileMode`：平铺模式，有四种选项`["disabled" | "clamp" | "repeat" | "mirror"]`。当开启平铺模式后，gravity属性会被忽略。repeat是指水平和竖直方向上的平铺效果；mirror是指在水平和竖直方向上的镜面投影效果；clamp是指图片四周的像素会扩展到周围区域，这个比较特别。  
 
 (2)ShapeDrawable
 ```
@@ -75,10 +75,10 @@ date: "2015-11-30"
 </shape>
 ```
 
-`android:shape`：默认的shape是矩形，`line`和`ring`这两种形状需要通过`<stroke>`来制定线的宽度和颜色，否则看不到效果。
-`gradient`：`solid`表示纯色填充，而`gradient`表示渐变效果。`andoid:angle`指渐变的角度，默认为0，其值必须是45的倍数，0表示从左到右，90表示从下到上，其他类推。
-`padding`：这个表示的是包含它的view的空白，四个属性分别表示四个方向上的padding值。
-`size`：ShapeDrawable默认情况下是没有宽高的概念的，但是可以如果指定了size，那么这个时候shape就有了所谓的固有宽高，但是作为view的背景时，shape还是会被拉伸或者缩小为view的大小。
+`android:shape`：默认的shape是矩形，`line`和`ring`这两种形状需要通过`<stroke>`来制定线的宽度和颜色，否则看不到效果。  
+`gradient`：`solid`表示纯色填充，而`gradient`表示渐变效果。`andoid:angle`指渐变的角度，默认为0，其值必须是45的倍数，0表示从左到右，90表示从下到上，其他类推。  
+`padding`：这个表示的是包含它的view的空白，四个属性分别表示四个方向上的padding值。  
+`size`：ShapeDrawable默认情况下是没有宽高的概念的，但是可以如果指定了size，那么这个时候shape就有了所谓的固有宽高，但是作为view的背景时，shape还是会被拉伸或者缩小为view的大小。  
 
 (3)LayerDrawble
 对应标签`<layer-list>`，表示层次化的Drawable集合，实现一种叠加后的效果。
