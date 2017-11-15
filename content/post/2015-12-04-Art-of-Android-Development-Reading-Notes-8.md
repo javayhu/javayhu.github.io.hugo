@@ -32,7 +32,7 @@ flags参数解析：
 
 type参数表示window的类型，**window共有三种类型：应用window，子window和系统window。应用window对应着一个Activity，子window不能独立存在，需要附属在特定的父window之上，比如Dialog就是子window。系统window是需要声明权限才能创建的window，比如Toast和系统状态栏这些都是系统window，需要声明的权限是`<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />`。**  
 (3)window是分层的，每个window都对应着`z-ordered`，层级大的会覆盖在层级小的上面，应用window的层级范围是`1~99`，子window的层级范围是`1000~1999`，系统window的层级范围是`2000~2999`。   
-[注意，应用window的层级范围并不是`1~999`哟]  
+[注意，应用window的层级范围并不是`1~999`哟]   
 (4)WindowManager继承自`ViewManager`，常用的只有三个方法：`addView`、`updateView`和`removeView`。  
 
 #### 8.2 Window的内部机制

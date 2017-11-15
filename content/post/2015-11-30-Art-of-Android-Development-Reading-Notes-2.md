@@ -7,7 +7,8 @@ date: "2015-12-05"
 
 ### 第2章 IPC机制
 #### 2.1 Android IPC简介
-(1)任何一个操作系统都需要有相应的IPC机制，Linux上可以通过命名通道、共享内存、信号量等来进行进程间通信。Android系统不仅可以使用Binder机制来实现IPC，还可以使用Socket实现任意两个终端之间的通信。  
+(1)任何一个操作系统都需要有相应的IPC机制，Linux上可以通过命名通道、共享内存、信号量等来进行进程间通信。  
+(2)Android系统不仅可以使用Binder机制来实现IPC，还可以使用Socket实现任意两个终端之间的通信。  
 
 #### 2.2 Android中的多进程模式
 (1)通过给四大组件指定`android:process`属性就可以开启多进程模式，默认进程的进程名是包名packageName，进程名以`:`开头的进程属于当前应用的私有进程，其他应用的组件不可以和它跑在同一个进程中，而进程名不以`:`开头的进程属于全局进程，其他应用通过`ShareUID`方法可以和它跑在同一个进程中。  
@@ -113,7 +114,7 @@ mRemoteBookManager.asBinder().linkToDeath(mDeathRecipient, 0);
 
 (3)**使用Messenger**：`Messenger`是一种轻量级的IPC方案，它的底层实现就是AIDL。Messenger是以串行的方式处理请求的，即服务端只能一个个处理，不存在并发执行的情形，详细的示例见原书。
 
-(4)**使用AIDL**
+(4)**使用AIDL**  
 大致流程：首先建一个Service和一个AIDL接口，接着创建一个类继承自AIDL接口中的Stub类并实现Stub类中的抽象方法，在Service的onBind方法中返回这个类的对象，然后客户端就可以绑定服务端Service，建立连接后就可以访问远程服务端的方法了。  
 1.AIDL支持的数据类型：基本数据类型、`String`和`CharSequence`、`ArrayList`、`HashMap`、`Parcelable`以及`AIDL`；  
 2.某些类即使和AIDL文件在同一个包中也要显式import进来；  
@@ -122,13 +123,13 @@ mRemoteBookManager.asBinder().linkToDeath(mDeathRecipient, 0);
 5.为了方便AIDL的开发，建议把所有和AIDL相关的类和文件全部放入同一个包中，这样做的好处是，当客户端是另一个应用的时候，可以直接把整个包复制到客户端工程中。  
 6.`RemoteCallbackList`是系统专门提供的用于删除跨进程Listener的接口。RemoteCallbackList是一个泛型，支持管理任意的AIDL接口，因为所有的AIDL接口都继承自`IInterface`接口。  
 
-(5)**使用ContentProvider**
+(5)**使用ContentProvider**  
 1.ContentProvider主要以表格的形式来组织数据，并且可以包含多个表；  
 2.ContentProvider还支持文件数据，比如图片、视频等，系统提供的`MediaStore`就是文件类型的ContentProvider；  
 3.ContentProvider对底层的数据存储方式没有任何要求，可以是SQLite、文件，甚至是内存中的一个对象都行；  
 4.要观察ContentProvider中的数据变化情况，可以通过`ContentResolver`的`registerContentObserver`方法来注册观察者；  
 
-(6)**使用Socket**
+(6)**使用Socket**  
 Socket是网络通信中“套接字”的概念，分为流式套接字和用户数据包套接字两种，分别对应网络的传输控制层的TCP和UDP协议。
 
 #### 2.5 Binder连接池
