@@ -10,7 +10,7 @@ buildDrafts: true
 metaDataFormat: "yaml"
 defaultLayout: "post"
 theme: "casper"
-Copyright: "All rights reserved &copy; 2013 - 2018"
+Copyright: "All rights reserved &copy; 2013 - 2020"
 
 # duoshuo short_name but with param name "DisqusShortname"
 DisqusShortname: hujiaweibujidao
