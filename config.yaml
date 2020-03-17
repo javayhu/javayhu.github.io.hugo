@@ -57,18 +57,18 @@ menu:
       weight: -120                          # order it appears more negative == closer to top of list
       identifier: "home"                    # TODO: not sure what this is responsible for
       url: "/"                              # link address to use when user clicks on menu option
-    - name: "Android"
-      weight: -110
-      identifier: "android"
-      url: "/android"
-    - name: "Python"
-      weight: -100
-      identifier: "python"
-      url: "/python"
-    - name: "Swift"
-      weight: -90
-      identifier: "swift"
-      url: "/swift"
+    # - name: "Android"
+    #   weight: -110
+    #   identifier: "android"
+    #   url: "/android"
+    # - name: "Python"
+    #   weight: -100
+    #   identifier: "python"
+    #   url: "/python"
+    # - name: "Swift"
+    #   weight: -90
+    #   identifier: "swift"
+    #   url: "/swift"
     - name: "About"
       weight: -80
       identifier: "about"
