@@ -1,7 +1,7 @@
 ---
 date: 2017-07-28T10:46:33+08:00
 title: React Native Upgrade
-tags: ["reactnative"]
+tags: ["dev"]
 ---
 本文主要分享Android和iOS端升级RN到0.44.0版本的经验。<!--more-->
 

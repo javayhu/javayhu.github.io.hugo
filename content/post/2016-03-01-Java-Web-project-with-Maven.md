@@ -1,6 +1,6 @@
 ---
 title: Java Web project with Maven
-tags: ["java"]
+tags: ["dev"]
 date: "2016-03-01"
 ---
 最近需要构建一个Java web项目，然后做文本分析和挖掘，于是又体验了下Maven构建Java Web项目的快感。 <!--more-->

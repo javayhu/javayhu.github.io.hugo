@@ -53,7 +53,7 @@ params:
 # the hamburger menu in upper-right hand corner of the site.
 menu:
   main:
-    - name: "Home"                          # name that appears in the menu list
+    - name: "首页"                          # name that appears in the menu list
       weight: -120                          # order it appears more negative == closer to top of list
       identifier: "home"                    # TODO: not sure what this is responsible for
       url: "/"                              # link address to use when user clicks on menu option
@@ -69,7 +69,7 @@ menu:
     #   weight: -90
     #   identifier: "swift"
     #   url: "/swift"
-    - name: "About"
+    - name: "关于"
       weight: -80
       identifier: "about"
       url: "/about"
